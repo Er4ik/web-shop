@@ -42,3 +42,60 @@
     color: white;
     margin: auto;
 }
+
+.list-button {
+    margin-top: 10px;
+}
+
+.rectangle {
+    margin-top: 5px;
+    margin-left: 163px;
+    width: 58px;
+    height: 9px;
+    background: black;
+}
+
+.catalog-name {
+    margin-top: 220px;
+    margin-left: 110px;
+    font-size: 68px;
+    font-family: Arial;
+    font-weight: bold;
+    color: white;
+}
+
+.product-picture {
+    margin-left: 110px;
+    width: 540px;
+    height: 528px;
+    margin-top: 20px;
+}
+
+.about-catalog {
+    display: flex;
+}
+
+.description-product {
+    text-align: center;
+    margin-left: 140px;
+    color: white;
+}
+
+.name-descr {
+    margin-top: 10px;
+    font-size: 54px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.text-descr {
+    font-size: 27px;
+    font-family: Arial, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+
+.number {
+    margin-top: 10px;
+    font-size: 170px;
+    font-family: Arial;
+}
