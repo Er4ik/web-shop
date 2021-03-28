@@ -98,4 +98,42 @@
     margin-top: 10px;
     font-size: 170px;
     font-family: Arial;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.wh {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.wheel {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.scroll-next {
+    margin-top: 50px;
+    margin-left: 220px;
+    display: flex;
+    justify-content: center;
+    height: 10px;
+    width: 180px;
+    background-color: darkorange;
+}
+
+.next {
+    margin-top: -15px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.third-page {
+    margin-top: 100px;
 }
