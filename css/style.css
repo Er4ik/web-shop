@@ -1,3 +1,8 @@
+.logo-mini-header:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .logo-mini-header {
     max-height: 50px;
     margin-left: 110px;
@@ -11,24 +16,37 @@
     display: flex;
 }
 
+.main-logo:hover {
+    width: 740px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .main-logo {
+    width: 90px;
     margin-left: 389px;
     margin-top: 180px;
 }
 
+
 .button {
     margin-top: 10px;
-    margin-left: 170px;
+    margin-left: 155px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.but:hover{
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .but {
     border-radius: 10%;
     width: 200px;
     height: 50px;
-    margin-left: 38px;
+    margin-left: 30px;
     margin-right: 38px;
     display: flex;
     background: black;
@@ -43,25 +61,43 @@
     margin: auto;
 }
 
+
+.list-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .list-button {
     margin-top: 10px;
 }
 
 .rectangle {
     margin-top: 5px;
-    margin-left: 163px;
+    margin-left: 180px;
     width: 58px;
     height: 9px;
     background: black;
 }
 
+.catalog-name:hover {
+    opacity: 0.6;
+    width: 400px;
+}
+
 .catalog-name {
     margin-top: 220px;
     margin-left: 110px;
+    width: 400px;
     font-size: 68px;
     font-family: Arial;
     font-weight: bold;
     color: white;
+    cursor: pointer;
+}
+
+.product-picture:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .product-picture {
@@ -90,7 +126,7 @@
 
 .text-descr {
     font-size: 27px;
-    font-family: Arial, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Arial;
     font-style: italic;
 }
 
@@ -100,6 +136,11 @@
     font-family: Arial;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.wh:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
 
 .wh {
@@ -125,6 +166,11 @@
     height: 10px;
     width: 180px;
     background-color: darkorange;
+}
+
+.next:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .next {
