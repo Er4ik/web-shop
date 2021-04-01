@@ -251,30 +251,3 @@
     margin-top: 100px;
     color: darkorange;
 }
-
-.footer {
-    display: flex;
-    margin-top: 110px;
-    margin-left: 105px;
-    margin-bottom: 20px;
-    color: white;
-    font-family: Arial;
-}
-
-.name-contacts {
-    font-size: 32px;
-}
-
-.cont {
-    font-size: 21px;
-}
-
-.logo-footer:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-.logo-footer {
-    margin-top: 30px;
-    margin-left: 415px;
-}
