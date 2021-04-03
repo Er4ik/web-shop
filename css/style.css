@@ -167,6 +167,7 @@ body {
     display: flex;
     justify-content: center;
     height: 10px;
+    min-width: 180px;
     width: 180px;
     background-color: darkorange;
 }
