@@ -1,3 +1,7 @@
+nav{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .logo-mini-header:hover {
     opacity: 0.8;
     cursor: pointer;
@@ -52,7 +56,6 @@
     background: black;
     justify-content: center;
     font-size: 20px;
-    font-family: Arial;
     font-weight: bold;
 }
 
@@ -89,7 +92,6 @@
     margin-left: 105px;
     width: 400px;
     font-size: 68px;
-    font-family: Arial;
     font-weight: bold;
     color: white;
     cursor: pointer;
@@ -121,21 +123,18 @@
 .name-descr {
     margin-top: 10px;
     font-size: 54px;
-    font-family: Arial;
     font-weight: bold;
     color: darkorange;
 }
 
 .text-descr {
     font-size: 27px;
-    font-family: Arial;
     font-style: italic;
 }
 
 .number {
     margin-top: 10px;
     font-size: 170px;
-    font-family: Arial;
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -177,7 +176,6 @@
 
 .next {
     margin-top: -15px;
-    font-family: Arial;
     font-weight: bold;
     font-size: 35px;
 }
@@ -201,7 +199,6 @@
 
 .service {
     display: flex;
-    font-family: Arial;
 }
 
 .serv:hover, .serv-block:hover {
@@ -258,7 +255,6 @@
     margin-left: 105px;
     margin-bottom: 20px;
     color: white;
-    font-family: Arial;
 }
 
 .name-contacts {
