@@ -26,7 +26,6 @@ body {
 }
 
 .main-logo:hover {
-    width: 740px;
     opacity: 0.8;
     cursor: pointer;
 }
@@ -89,13 +88,11 @@ body {
 
 .catalog-name:hover {
     opacity: 0.6;
-    width: 400px;
 }
 
 .catalog-name {
     margin-top: 220px;
     margin-left: 105px;
-    width: 400px;
     font-size: 68px;
     font-weight: bold;
     color: white;
@@ -110,7 +107,6 @@ body {
 .product-picture {
     margin-left: 105px;
     margin-bottom: 20px;
-    width: 540px;
     height: 550px;
     margin-top: 20px;
 }
@@ -280,4 +276,3 @@ body {
     margin-top: 30px;
     margin-left: 415px;
 } 
-
