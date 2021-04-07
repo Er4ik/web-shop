@@ -82,20 +82,30 @@ body {
   width: 55px;
 }
 
-.main-logo:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
 .main-logo {
-    width: 90px;
-    margin-left: 389px;
-    margin-top: 100px;
+    padding-top: 40px;
+    padding-left: 40px;
+    margin-left: 349px;
+    margin-top: 60px;
+    overflow:hidden;
+    width: 920px;
+    height: 420px;
 }
 
+ .main-logo img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+ }
+ 
+.main-logo img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+ }
 
 .button {
-    margin-left: 155px;
+    margin-left: 160px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
