@@ -4,25 +4,40 @@ body {
     margin-top: 20px;
 }
 
-.logo-mini-header:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
 .sec-head {
     height: 100px;
     display: flex;
 }
 
 .logo-mini-header {
-    max-height: 50px;
     margin-left: 105px;
 }
+
+.logo-min {
+    overflow:hidden;
+    width: 215px;
+    height: 70px;
+}
+
+.logo-mini-header:hover {
+    cursor: pointer;
+}
+
+.logo-mini-header img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+ }
+ 
+.logo-mini-header img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+ }
 
 .header {
     display: flex;
 }
-
 
 .burger {
   width: 100%;
@@ -107,12 +122,9 @@ body {
 .button {
     margin-left: 160px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .but:hover{
-    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -127,6 +139,11 @@ body {
     justify-content: center;
     font-size: 20px;
     font-weight: bold;
+}
+
+.but-font:hover {
+    transition: 0.3s;
+    color: darkorange;
 }
 
 .but-font {
@@ -157,6 +174,7 @@ body {
 }
 
 .catalog-name {
+    width: 400px;
     margin-top: 220px;
     margin-left: 105px;
     font-size: 68px;
@@ -165,17 +183,30 @@ body {
     cursor: pointer;
 }
 
-.product-picture:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
 .product-picture {
+    overflow: hidden;
     margin-left: 105px;
     margin-bottom: 20px;
+    width: 1100px;
     height: 550px;
     margin-top: 20px;
 }
+
+.product-picture:hover {
+    cursor: pointer;
+}
+
+.about-catalog img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+ }
+ 
+.about-catalog img:hover{
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+ }
 
 .about-catalog {
     display: flex;
@@ -239,6 +270,7 @@ body {
 }
 
 .next:hover {
+    transition: 0.2s;
     opacity: 0.8;
     cursor: pointer;
 }
@@ -253,14 +285,25 @@ body {
     margin-top: 100px;
 }
 
-.prosuct-scroll-picture{
+
+.pct, .pct1 {
     margin-left: 105px;
+    overflow: hidden;
+    width: 256px;
+    height: 240px;
 }
 
-.pct:hover, .pct1:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
+.product-scroll-picture img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+ }
+ 
+.product-scroll-picture img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+ }
 
 .pct{
     margin-left: 80px;
@@ -271,12 +314,14 @@ body {
 }
 
 .serv:hover, .serv-block:hover {
-    opacity: 0.8;
     cursor: pointer;
+    transition: 0.3s;
+    color: white;
 }
 
+
 .name-serv {
-    margin-top: 100px;
+    margin-top: 70px;
     margin-left: 110px;
     padding-top: 80px;
     text-align: center;
@@ -336,11 +381,26 @@ body {
 }
 
 .logo-footer:hover {
-    opacity: 0.8;
     cursor: pointer;
 }
 
 .logo-footer {
     margin-top: 30px;
-    margin-left: 415px;
+    margin-left: 450px;
+    overflow:hidden;
+    width: 325px;
+    height: 180px;
 } 
+
+
+.sec-foot-logo img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+ }
+ 
+.sec-foot-logo img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+ }
