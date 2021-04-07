@@ -58,7 +58,7 @@ body {
 
 .menu-icon > span {
   width: 50px;
-  height: 5px;
+  height: 3.2px;
   display: block;
   background-color: black;
   transition: all 0.3s ease-in-out;
@@ -151,7 +151,6 @@ body {
     margin: auto;
 }
 
-
 .list-button:hover {
     opacity: 0.8;
     cursor: pointer;
@@ -183,11 +182,22 @@ body {
     cursor: pointer;
 }
 
-.product-picture {
+.slider {
     overflow: hidden;
+}
+
+.slider-line {
+    width: 1400px;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all 1s ease;
+}
+
+.product-picture {
     margin-left: 105px;
     margin-bottom: 20px;
-    width: 1100px;
+    width: 555px;
     height: 550px;
     margin-top: 20px;
 }
@@ -260,7 +270,7 @@ body {
 
 .scroll-next {
     margin-top: 50px;
-    margin-left: 285px;
+    margin-left: 275px;
     display: flex;
     justify-content: center;
     height: 10px;
@@ -285,6 +295,9 @@ body {
     margin-top: 100px;
 }
 
+.pct:hover, .pct1:hover {
+    cursor: pointer;
+}
 
 .pct, .pct1 {
     margin-left: 105px;
@@ -305,7 +318,7 @@ body {
     -o-transform: scale(1.1);
  }
 
-.pct{
+.pct {
     margin-left: 80px;
 }
 
@@ -318,7 +331,6 @@ body {
     transition: 0.3s;
     color: white;
 }
-
 
 .name-serv {
     margin-top: 70px;
@@ -397,10 +409,10 @@ body {
     -moz-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     -webkit-transition: all 1s ease-out;
- }
+}
  
 .sec-foot-logo img:hover{
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
- }
+}
