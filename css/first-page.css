@@ -1,0 +1,21 @@
+.main-logo {
+    padding-top: 40px;
+    padding-left: 40px;
+    margin-left: 349px;
+    margin-top: 60px;
+    overflow:hidden;
+    width: 920px;
+    height: 420px;
+}
+
+ .main-logo img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+ }
+ 
+.main-logo img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+ }
