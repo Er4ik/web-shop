@@ -78,12 +78,7 @@
     margin-bottom: 0px;
 }
 
-.wh:hover {
-    opacity: 0.6;
-    cursor: pointer;
-}
-
-.wh {
+.wh1, .wh2, .wh3 {
     width: 15px;
     height: 15px;
     margin-left: 10px;
@@ -100,7 +95,7 @@
 
 .scroll-next {
     margin-top: 50px;
-    margin-left: 270px;
+    margin-left: 272px;
     display: flex;
     justify-content: center;
     height: 10px;

@@ -7,12 +7,13 @@
     const serviceDescr = document.querySelector('.descr-serv2');
 
     backButton1.style.backgroundColor = 'black';
+    backButton1.style.color = 'white';
 
     serviceHead.innerHTML = aboutService.HeadServ1;
     serviceDescr.innerHTML = aboutService.DescrServ1;
 
     document.querySelector('.s1').addEventListener('click', function() {
-        changeData('Serv1')
+        changeData('Serv1');
         backButton1.style.backgroundColor = 'black';
         backButton2.style.backgroundColor = '';
         backButton3.style.backgroundColor = '';
@@ -23,7 +24,7 @@
     });
 
     document.querySelector('.s2').addEventListener('click', function () {
-        changeData('Serv2')
+        changeData('Serv2');
         backButton1.style.backgroundColor = '';
         backButton2.style.backgroundColor = 'black';
         backButton3.style.backgroundColor = '';
@@ -33,7 +34,7 @@
     });
 
     document.querySelector('.s3').addEventListener('click', function () {
-        changeData('Serv3')
+        changeData('Serv3');
         backButton1.style.backgroundColor = '';
         backButton2.style.backgroundColor = '';
         backButton3.style.backgroundColor = 'black';
@@ -48,6 +49,5 @@
     };
 }
 
-//buttons
 
 
