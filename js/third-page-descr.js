@@ -12,6 +12,20 @@
     serviceHead.innerHTML = aboutService.HeadServ1;
     serviceDescr.innerHTML = aboutService.DescrServ1;
 
+    const backBut = (clrBack1, clrBack2, clrBack3, clrFont1, clrFont2, clrFont3) => {
+        backButton1.style.backgroundColor = clrBack1;
+        backButton2.style.backgroundColor = clrBack2;
+        backButton3.style.backgroundColor = clrBack3;
+        backButton1.style.color = clrFont1;
+        backButton2.style.color = clrFont2;
+        backButton3.style.color = clrFont3;
+    }
+
+    function changeData(serv) {
+        serviceHead.innerHTML = aboutService[`Head${serv}`];
+        serviceDescr.innerHTML = aboutService[`Descr${serv}`];
+    };
+
     document.querySelector('.s1').addEventListener('click', function() {
         changeData('Serv1');
         backBut('black', '', '', 'white', 'darkorange', 'darkorange');
@@ -26,20 +40,6 @@
         changeData('Serv3');
         backBut('', '', 'black', 'darkorange', 'darkorange', 'white');
     });
-
-    const backBut = (clrBack1, clrBack2, clrBack3, clrFont1, clrFont2, clrFont3) => {
-        backButton1.style.backgroundColor = clrBack1;
-        backButton2.style.backgroundColor = clrBack2;
-        backButton3.style.backgroundColor = clrBack3;
-        backButton1.style.color = clrFont1;
-        backButton2.style.color = clrFont2;
-        backButton3.style.color = clrFont3;
-    }
-
-    function changeData(serv) {
-        serviceHead.innerHTML = aboutService[`Head${serv}`];
-        serviceDescr.innerHTML = aboutService[`Descr${serv}`];
-    };
 }
 
 

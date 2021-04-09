@@ -78,6 +78,11 @@
     margin-bottom: 0px;
 }
 
+.wh1:hover, .wh2:hover, .wh3:hover  {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .wh1, .wh2, .wh3 {
     width: 15px;
     height: 15px;
