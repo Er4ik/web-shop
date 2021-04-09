@@ -49,10 +49,6 @@
     color: darkorange;
 }
 
-.serv {
-    margin-top: 40px;
-}
-
 .description-service {
     border: 10px solid black;
     width: 65.5%;
@@ -61,7 +57,7 @@
     text-align: center;
 }
 
-.descr-serv1 {
+.head-serv1 {
     margin: 10px;
     font-size: 68px;
     font-weight: bold;

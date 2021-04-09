@@ -1,5 +1,8 @@
-const menuIcon = document.querySelector('.menu-icon');
-function toggleMenuIcon() {
-    menuIcon.classList.toggle('active')
+// burger-menu
+{
+    const menuIcon = document.querySelector('.menu-icon');
+    function toggleMenuIcon() {
+        menuIcon.classList.toggle('active')
+    }
+    menuIcon.addEventListener('click', toggleMenuIcon);
 }
-menuIcon.addEventListener('click', toggleMenuIcon);
