@@ -33,10 +33,9 @@
     display: flex;
 }
 
-.serv:hover, .serv-block:hover {
+.serv2:hover, .serv3:hover, .serv1:hover {
     cursor: pointer;
-    transition: 0.3s;
-    color: white;
+    transition: 1s;
 }
 
 .name-serv {
@@ -69,7 +68,6 @@
     font-style: italic;
 }
 
-.serv-block {
+.serv1 {
     width: 280px;
-    background-color: black;
 }
