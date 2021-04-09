@@ -2,7 +2,7 @@
 {
     const sliderLine = document.querySelector('.slider-line');
     const nameProd = document.querySelector('.name-descr');
-    const descrProd = document.querySelector('.text-descr')
+    const descrProd = document.querySelector('.text-descr');
     const scrollNumber = document.querySelector('.number');
     const wheelColor1 = document.querySelector('.wh1');
     const wheelColor2 = document.querySelector('.wh2');
@@ -22,27 +22,30 @@
         countNum++;
         if (countNum > 3) countNum = 1;
         if (countNum === 1) {
+            wheelColor('darkorange', 'white', 'white');
             wheelColor1.style.backgroundColor = 'darkorange';
             wheelColor2.style.backgroundColor = 'white';
-            wheelColor3.style.backgroundColor = 'white';
+            wheelColor3.style.backgroundColor =  'white';
         }
         else if (countNum === 2) {
-            wheelColor1.style.backgroundColor = 'white';
-            wheelColor2.style.backgroundColor = 'darkorange';
-            wheelColor3.style.backgroundColor = 'white';
+            wheelColor('white', 'darkorange', 'white');
         } 
         else {
-            wheelColor1.style.backgroundColor = 'white';
-            wheelColor2.style.backgroundColor = 'white';
-            wheelColor3.style.backgroundColor = 'darkorange';
+            wheelColor('white', 'white', 'darkorange');
         }
+
         let a = document.querySelector('.number').value = countNum;
         document.querySelector('.number').innerHTML = a;
         
         nameProd.innerHTML = aboutCatalog[`Head${countNum}`];
         descrProd.innerHTML = aboutCatalog[`Description${countNum}`];
-        scrollPict()
-        
+        scrollPict();
+    }
+
+    const wheelColor = (clr1, clr2, clr3) => {
+        wheelColor1.style.backgroundColor = clr1;
+        wheelColor2.style.backgroundColor = clr2;
+        wheelColor3.style.backgroundColor = clr3;
     }
 
     function scrollPict() {
