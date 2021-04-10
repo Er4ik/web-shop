@@ -96,11 +96,12 @@
     display: flex;
 }
 
-.but:hover{
+.but1:hover, .but2:hover, .but3:hover{
     cursor: pointer;
 }
 
-.but {
+.but1, .but2, .but3 {
+    transition: 1s;
     border-radius: 10%;
     width: 200px;
     height: 50px;
@@ -113,12 +114,12 @@
     font-weight: bold;
 }
 
-.but-font:hover {
+.but-font1:hover, .but-font2:hover, .but-font3:hover {
     transition: 0.3s;
     color: darkorange;
 }
 
-.but-font {
+.but-font1, .but-font2, .but-font3 {
     color: white;
     margin: auto;
 }
