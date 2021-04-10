@@ -14,8 +14,9 @@
     display: flex;
 }
 
-.catalog-name:hover {
-    opacity: 0.6;
+.plusCat:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .catalog-name {
@@ -25,7 +26,6 @@
     font-size: 68px;
     font-weight: bold;
     color: white;
-    cursor: pointer;
 }
 
 .slider {
@@ -119,4 +119,20 @@
     margin-top: -15px;
     font-weight: bold;
     font-size: 35px;
+}
+
+.catalog{
+    display: flex;
+}
+
+.catDescr {
+    color: white;
+    display: flex;
+    margin-top: 180px;
+    margin-left: 275px;
+}
+
+.butCat {
+    font-size: 50px;
+    margin-left: 72px;
 }
