@@ -17,7 +17,6 @@
     descrProd.innerHTML = aboutCatalog.Description1;
 
     const changeDataPict = (count) => {
-        changeNum(count);
         nameProd.innerHTML = aboutCatalog[`Head${count}`];
         descrProd.innerHTML = aboutCatalog[`Description${count}`];
     }
@@ -51,24 +50,26 @@
         else {
             wheelColor('white', 'white', 'darkorange');
         }
-
-        let a = document.querySelector('.number').value = countNum;
-        document.querySelector('.number').innerHTML = a;
         
         changeNum(countNum);
         scrollPict();
+        changeDataPict(countNum);
     }
 
     document.querySelector('.next').onclick = scrollNum;
     
     document.querySelector('.wh1').addEventListener('click', function() {
+        countNum = 1;
         offset = -650;
+        changeNum(countNum);
         scrollPict();
         changeDataPict('1');
         wheelColor('darkorange', 'white', 'white');
     });
 
     document.querySelector('.wh2').addEventListener('click', function () {
+        countNum = 2;
+        changeNum(countNum);
         offset = 0;
         scrollPict();
         changeDataPict('2');
@@ -76,12 +77,12 @@
     });
 
     document.querySelector('.wh3').addEventListener('click', function () {
+        countNum = 3;
         offset = 650;
+        changeNum(countNum);
         scrollPict();
         changeDataPict('3');
         wheelColor('white', 'white', 'darkorange');
     });
-
-   
 }
 

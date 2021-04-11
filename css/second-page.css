@@ -14,17 +14,32 @@
     display: flex;
 }
 
-.plusCat:hover{
-    cursor: pointer;
-    opacity: 0.8;
+.catalog{
+    display: flex;
+}
+
+.catalog-head {
+    display: flex;
 }
 
 .catalog-name {
-    width: 400px;
+    width: 345px;
     margin-top: 220px;
     margin-left: 105px;
     font-size: 68px;
     font-weight: bold;
+    color: white;
+}
+
+.plusCat:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.plusCat {
+    transition: 1s;
+    margin-top: 220px;
+    font-size: 70px;
     color: white;
 }
 
@@ -121,18 +136,22 @@
     font-size: 35px;
 }
 
-.catalog{
-    display: flex;
+.catDescr {
+    height: 80px;
+    width: 670px;
+    margin-top: 220px;
+    color: white;
+    padding-left: 295px;
 }
 
-.catDescr {
-    color: white;
-    display: flex;
-    margin-top: 180px;
-    margin-left: 275px;
+.butCat:hover {
+    text-decoration: underline;
 }
 
 .butCat {
+    height: 60px;
+    cursor: pointer;
+    margin-top: 10px;
     font-size: 50px;
     margin-left: 72px;
 }
