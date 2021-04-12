@@ -13,5 +13,5 @@ const aboutService = {
     'HeadServ3': ['CREDIT'],
     'DescrServ1': ['We will be happy to deliver your goods directly to your entrance for free! After all, we will make good money by lifting it to your floor.'],
     'DescrServ2': ['Our company provides you with a guarantee for all purchased products for a year, as well as the ability to return goods within 14 days.'],
-    'DescrServ3': ['The company EAshop also provides the opportunity to purchase goods on credit for up to a year at 20 percent per annum.'],
+    'DescrServ3': ['The company EAshop also provides the opportunity to purchase goods on credit for up to a year at 20 percent<br> per annum.'],
 }

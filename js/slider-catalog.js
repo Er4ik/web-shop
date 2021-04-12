@@ -10,11 +10,13 @@ const showCat = () => {
         catDescr.style.display = 'none';
         plusCat.style.transform = 'rotate(-180deg)';
         plusCat.style.color = 'white';
+        plusCat.style.opacity = 0.3;
         flag = 1;
     } else {
         catDescr.style.display = 'flex';
         plusCat.style.transform = 'rotate(225deg)';
         plusCat.style.color = 'darkorange'
+        plusCat.style.opacity = 1;
         flag = 0;
     }
 }

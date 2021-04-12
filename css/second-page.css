@@ -33,11 +33,11 @@
 
 .plusCat:hover{
     cursor: pointer;
-    opacity: 0.6;
 }
 
 .plusCat {
     transition: 1s;
+    opacity: 0.3;
     margin-top: 220px;
     font-size: 70px;
     color: white;
