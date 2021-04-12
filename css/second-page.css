@@ -56,11 +56,12 @@
 }
 
 .product-picture {
-    margin-left: 105px;
+    position: relative;
+    margin-left: 100px;
     margin-bottom: 20px;
     width: 555px;
     height: 550px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .product-picture:hover {
@@ -114,7 +115,7 @@
 }
 
 .scroll-next {
-    margin-top: 50px;
+    margin-top: 25px;
     margin-left: 272px;
     display: flex;
     justify-content: center;
@@ -154,4 +155,25 @@
     margin-top: 10px;
     font-size: 50px;
     margin-left: 72px;
+}
+
+.prod1 {
+    margin-left: 100px;
+}
+
+.prod3 {
+    margin-left: 90px;
+}
+
+.pict {
+    display: flex;
+}
+
+.pictBack1, .pictBack2, .pictBack3 {
+    width: 200px;
+    font-size: 22px;
+    margin-top: 150px;
+    padding-right: 150px;
+    margin-left: -340px;
+    color: white;
 }
