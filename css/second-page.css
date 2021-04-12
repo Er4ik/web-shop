@@ -177,3 +177,22 @@
     margin-left: -340px;
     color: white;
 }
+
+.pictBack2 {
+    margin-top: 100px;
+}
+
+.headText {
+    margin-top: 220px;
+    text-align: center;
+    font-size: 72px;
+    color: white;
+}
+
+.text {
+    margin-left: 198px;
+    text-align: justify;
+    max-width: 1100px;
+    color: white;
+    font-size: 32px;
+}
