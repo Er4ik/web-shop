@@ -1,0 +1,73 @@
+.third-page {
+    margin-top: 100px;
+}
+
+.pct:hover, .pct1:hover {
+    cursor: pointer;
+}
+
+.pct, .pct1 {
+    margin-left: 105px;
+    overflow: hidden;
+    width: 256px;
+    height: 240px;
+}
+
+.product-scroll-picture img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+ }
+ 
+.product-scroll-picture img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+ }
+
+.pct {
+    margin-left: 80px;
+}
+
+.service {
+    display: flex;
+}
+
+.serv2:hover, .serv3:hover, .serv1:hover {
+    cursor: pointer;
+    transition: 1s;
+}
+
+.name-serv {
+    margin-top: 70px;
+    margin-left: 110px;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: darkorange;
+}
+
+.description-service {
+    border: 10px solid black;
+    width: 65.5%;
+    height: 100%;
+    margin-top: 125px;
+    text-align: center;
+}
+
+.head-serv1 {
+    margin: 10px;
+    font-size: 68px;
+    font-weight: bold;
+}
+
+.descr-serv2 {
+    margin: 10px;
+    font-size: 38px;
+    font-style: italic;
+}
+
+.serv1 {
+    width: 280px;
+}

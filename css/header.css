@@ -1,0 +1,134 @@
+.sec-head {
+    height: 100px;
+    display: flex;
+}
+
+.logo-mini-header {
+    margin-left: 105px;
+}
+
+.logo-min {
+    overflow:hidden;
+    width: 215px;
+    height: 70px;
+}
+
+.logo-mini-header:hover {
+    cursor: pointer;
+}
+
+.logo-mini-header img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+ }
+ 
+.logo-mini-header img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+ }
+
+.header {
+    display: flex;
+}
+
+.burger {
+  width: 100%;
+  height: 55px;
+  margin-top: -2px;
+  margin-left: 190px;
+}
+
+.menu-icon {
+  margin: auto;
+  display: grid;
+  place-items: center;
+  height: 55px;
+  width: 55px;
+  cursor: pointer;
+  overflow:hidden;
+}
+
+.menu-icon > span {
+  width: 50px;
+  height: 3.2px;
+  display: block;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+  justify-self: end;
+}
+
+.menu-icon > span:nth-child(1) {
+  width: 42px;
+}
+
+.menu-icon > span:nth-child(2) {
+  width: 35px;
+}
+
+.menu-icon:hover > span:nth-child(1) {
+  width: 30px;
+}
+
+.menu-icon:hover > span:nth-child(2) {
+  width: 40px;
+}
+
+.menu-icon.active span:nth-child(1) {
+  transform-origin: center center;
+  transform: rotate(-45deg) translate(-20%, 500%);
+  width: 55px;
+}
+
+.menu-icon.active span:nth-child(2) {
+  transform: translateX(40px);
+}
+
+.menu-icon.active span:nth-child(3) {
+  transform-origin: center center;
+  transform: rotate(45deg) translate(-20%, -500%);
+  width: 55px;
+}
+
+.button {
+    margin-left: 160px;
+    display: flex;
+}
+
+.but1:hover, .but2:hover, .but3:hover{
+    cursor: pointer;
+}
+
+.but1, .but2, .but3 {
+    transition: 1s;
+    border-radius: 10%;
+    width: 200px;
+    height: 50px;
+    margin-left: 30px;
+    margin-right: 38px;
+    display: flex;
+    background: black;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.but-font1:hover, .but-font2:hover, .but-font3:hover {
+    transition: 0.3s;
+    color: darkorange;
+}
+
+.but-font1, .but-font2, .but-font3 {
+    color: white;
+    margin: auto;
+}
+
+.list-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.list-button {
+    margin-top: 10px;
+}

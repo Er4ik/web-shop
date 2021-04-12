@@ -4,105 +4,144 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1496px, height=100%">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/first-page.css">
+    <link rel="stylesheet" href="css/second-page.css">
+    <link rel="stylesheet" href="css/third-page.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>EAshop</title>
-    <script src="js/main_shop.js"></script>
 </head>
 
-<body class="main-page" background="pictures/background/background.jpg" width="100%" height="100%">
-    <div class="header">
-        <div class=logo-mini-header>
+<body class="container" background="pictures/background/background.jpg">
+    <header class="header">
+        <nav class="nav-head">
+            <section class="sec-head">
+                <div class=logo-mini-header>
+                    <a href="https://er4ik.github.io/Web_Site_Shop/">
+                        <img src="pictures/logo/logo-head.png" alt="EAshop" class="log-min">
+                    </a>
+                </div>
+                <div class="button">
+                    <div class="but1">
+                        <p class="but-font1">MY ORDERS</p>
+                    </div>
+                    <div class="but2">
+                        <p class="but-font2">ABOUT COMPANY</p>
+                    </div>
+                    <div class="but3">
+                        <p class="but-font3">SIGN IN</p>
+                    </div>
+                </div>
+                <div class="burger">
+                    <div class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <section class="first-page">
+        <div class="main-logo">
             <a href="https://er4ik.github.io/Web_Site_Shop/">
-                <img src="pictures/logo/logo-head.png" alt="EAshop">
+                <img src="pictures/logo/logo-main.png" alt="EAshop" class="main-log">  
             </a>
         </div>
-        <div class="button">
-            <div class="but">
-                <p class="but-font">MY ORDERS</p>
-            </div>
-            <div class="but">
-                <p class="but-font">ABOUT COMPANY</p>
-            </div>
-            <div class="but">
-                <p class="but-font">SIGN IN</p>
-            </div>
-        </div>
-        <div class="list-button">
-            <div class="rectangle"></div>
-            <div class="rectangle"></div>
-            <div class="rectangle"></div>
-        </div>
-    </div>
-    <div class="main-logo">
-        <a href="https://er4ik.github.io/Web_Site_Shop/">
-            <img src="pictures/logo/logo-main.png" alt="EAshop">
-        </a>
-    </div>
-    <div class="second-page">
+    </section>
+    <section class="second-page">
         <div class="catalog">
-            <p class="catalog-name" href="#">CATALOG +</p>
+            <div class='catalog-head'>
+                <p class="catalog-name" href="#">CATALOG</p>
+                <p class="plusCat">+</p>
+            </div>
+            <div class=catDescr>
+                <p href="#" class="butCat">Phone<p>
+                <p href="#" class="butCat">Watch<p>
+                <p href="#" class="butCat">Laptop<p>
+            </div>
         </div>
         <div class="about-catalog">
-            <img class="product-picture" src="pictures/scroll-picture/phones.jpg" alt="phone">
+            <div class="slider">
+                <div class="slider-line">
+                    <img class="product-picture" src="pictures/scroll-picture/phones.jpg" alt="phone">
+                    <img class="product-picture" src="pictures/scroll-picture/watch.jpg" alt="watch">
+                    <img class="product-picture" src="pictures/scroll-picture/laptop.jpg" alt="laptop">
+                </div>
+            </div>
             <div class="description-product">
-                <p class="name-descr">NEW GENERATION<br>SMARTPHONES</p>
-                <p class="text-descr">The latest technology, the highest speed of work,<br>compactness and incredibly
-                    beautiful appearance.</p>
-                <p class="number">1</p>
+                <p class="name-descr"></p>
+                <p class="text-descr"></p>
+                <p class="number"></p>
                 <div class="wheel">
-                    <div class=wh></div>
-                    <div class=wh></div>
-                    <div class=wh></div>
+                    <div class=wh1></div>
+                    <div class=wh2></div>
+                    <div class=wh3></div>
                 </div>
                 <div class="scroll-next">
                     <p class="next">NEXT</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="third-page">
-        <div class="prosuct-scroll-picture">
-            <img class="pct1" src="pictures/logo/phone.jpg" alt="">
-            <img class="pct" src="pictures/logo/notebook.jpg" alt="">
-            <img class="pct" src="pictures/logo/smart-watch.jpg" alt="">
-            <img class="pct" src="pictures/logo/camera.jpg" alt="">
+    </section>
+
+    <section class="third-page">
+        <div class="product-scroll-picture">
+            <img class="pct1" href="#" src="pictures/logo/phone.jpg" alt="">
+            <img class="pct" href="#" src="pictures/logo/notebook.jpg" alt="">
+            <img class="pct" href="#" src="pictures/logo/smart-watch.jpg" alt="">
+            <img class="pct" href="#" src="pictures/logo/camera.jpg" alt="">
         </div>
         <div class="service">
             <div class="name-serv">
-                <div class="serv-block">
-                    <p class="">DELIVERY</p>
+                <div class="serv1">
+                    <p class="s1">DELIVERY</p>
                 </div>
-                <div class="">
-                    <p class="serv">GUARANTEE</p>
+                <div class="serv2">
+                    <p class="s2">GUARANTEE</p>
                 </div>
-                <div class="">
-                    <p class="serv">CREDIT</p>
+                <div class="serv3">
+                    <p class="s3">CREDIT</p>
                 </div>
             </div>
             <div class="description-service">
-                <p class="descr-serc1">DELIVERY</p>
-                <p class="descr-serc2">We will be happy to deliver your goods directly to your entrance for free! After all, we will make good money by lifting
-                it to your floor.</p>
+                <p class="head-serv1"></p>
+                <p class="descr-serv2"></p>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="about-contacts">
-            <h2 class="name-contacts">CONTACTS</h2>
+    </section>
+    <footer class="footer">
+        <section class="data-contacts">
+            <div class="about-contacts">
+                <h2 class="name-contacts">CONTACTS</h2>
+                <div>
+                    <p class="cont"> <a target="_blank" href="https://github.com/Er4ik">https://github.com/Er4ik</a> -
+                        Osmanov Ervin</p>
+                    <p class="cont"> <a target="_blank"
+                            href="https://github.com/andreykurzantsev">https://github.com/andreykurzantsev</a> -
+                        Andrey Kurzantsev</p>
+                    <p class="cont"> <a target="_blank"
+                            href="https://github.com/rogosnyi">https://github.com/rogosnyi</a> - Alexey Rogosnyi
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="sec-foot-logo">
             <div>
-                <p class="cont"> <a href="https://github.com/Er4ik">https://github.com/Er4ik</a> - Osmanov Ervin</p>
-                <p class="cont"> <a href="https://github.com/andreykurzantsev">https://github.com/andreykurzantsev</a>  - Andrey Kurzantsev</p>
-                <p class="cont"> <a href="https://github.com/rogosnyi">https://github.com/rogosnyi</a> - Alexey Rogosnyi</p>
+                <a href="https://er4ik.github.io/Web_Site_Shop/">
+                    <img class="logo-footer" src="pictures/logo/footer-logo.png" alt="EAshop">
+                </a>
             </div>
-        </div>
-        
-        <div>
-            <a href="https://er4ik.github.io/Web_Site_Shop/">
-                <img class="logo-footer" src="pictures/logo/footer-logo.png" alt="EAshop">
-            </a>
-        </div>
-    </div>
-</body>
+        </section>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/slider-product-picture.js"></script>
+    <script src="js/third-page-descr.js"></script>
+    <script src="js/slider-catalog.js"></script>
 
+
+</body>
 </html>
