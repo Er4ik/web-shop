@@ -40,3 +40,4 @@
     signMenuBut.addEventListener('click', openSignMenu);
     escSignMenu.addEventListener('click', openSignMenu);
 }
+

@@ -37,7 +37,6 @@
   width: 100%;
   height: 55px;
   margin-top: -2px;
-  margin-left: 190px;
 }
 
 .menu-icon {
@@ -93,7 +92,6 @@
 
 .button {
     margin-left: 160px;
-    display: flex;
 }
 
 .but1:hover, .but2:hover, .but3:hover{
