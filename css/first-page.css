@@ -1,4 +1,5 @@
 .main-logo {
+    overflow: fixed;
     padding-top: 40px;
     padding-left: 40px;
     margin-left: 349px;
@@ -12,10 +13,80 @@
     -moz-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     -webkit-transition: all 1s ease-out;
- }
+}
  
 .main-logo img:hover{
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
- }
+}
+
+.main-first {
+    display: flex;
+}
+
+.sign-menu {
+    margin-left: -955px;
+    display: none;
+    background-color: darkgrey;
+    width: 800px;
+    height: 500px;
+}
+
+.input-name {
+    margin: 40px 60px 0px 60px;
+}
+
+.in-name, .in-name-mess {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.in-but {
+    padding-left: 5px;
+    border: none;
+    width: 300px;
+    height: 30px;
+}
+
+.name-email {
+    width: 670px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.in-message {
+    margin-top: 50px;
+}
+
+.in-mess-but {
+    padding: 5px 5px;
+    border: none;
+    width: 660px;
+    height: 150px;
+}
+
+.in-send {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.send-but {
+    width: 300px;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.in-esc {
+    margin: -25px -50px 0px 0px;
+    text-align: right;
+}
+
+.esc {
+    font-size: 16px;
+    color: black;
+}
+
+
