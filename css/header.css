@@ -100,6 +100,10 @@
     cursor: pointer;
 }
 
+.but1 a, .but2 a, .but3 a {
+  text-decoration: none;
+}
+
 .but1, .but2, .but3 {
     transition: 1s;
     border-radius: 10%;

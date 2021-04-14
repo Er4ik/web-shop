@@ -146,10 +146,16 @@
 }
 
 .butCat:hover {
-    text-decoration: underline;
+    transition: 0.5s;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    color: darkorange;
 }
 
 .butCat {
+    text-decoration: none;
+    color: white;
     height: 60px;
     cursor: pointer;
     margin-top: 10px;
