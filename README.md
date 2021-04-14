@@ -1,8 +1,10 @@
-# Web_Site_Shop
-Course work for second semester
+# Course work for second semester - Web_Site_EAshop
 
-https://github.com/Er4ik - Osmanov Ervin
+## Technology stack: 
+*HTML5, CSS3, JavaScript*
 
-https://github.com/andreykurzantsev - Andrey Kurzantsev
+## Contacts:
+* [Osmanov Ervin](https://github.com/Er4ik) 
+* [Andrey Kurzantsev](https://github.com/andreykurzantsev)
+* [Alexey Rogosnyi](https://github.com/rogosnyi) 
 
-https://github.com/rogosnyi - Alexey Rogosnyi
