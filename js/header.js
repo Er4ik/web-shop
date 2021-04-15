@@ -16,7 +16,7 @@
         menuIcon.classList.toggle('active');
         if (flag == 0) {
             but.style.display = 'flex';
-            burger.style.marginLeft = 190 + 'px';
+            burger.style.marginLeft = 135 + 'px';
             flag = 1;
         } else {
             but.style.display = 'none';

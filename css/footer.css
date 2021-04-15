@@ -1,9 +1,19 @@
-footer {
+
+
+.foot-content {
+    padding: 70px 0;
+    color: #fff;
     display: flex;
-    margin-top: 140px;
-    margin-left: 105px;
-    margin-bottom: 30px;
-    color: white;
+}
+
+.link-foot {
+    padding-top: 20px;
+}
+
+.data-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .name-contacts {
@@ -27,11 +37,8 @@ footer {
 }
 
 .logo-footer {
-    margin-top: 30px;
-    margin-left: 450px;
     overflow:hidden;
-    width: 325px;
-    height: 180px;
+    margin-left: 150%;
 } 
 
 

@@ -11,9 +11,17 @@ body {
 }
 
 .white {
-    background-color: #fff;
+    background: linear-gradient(to top , #000, #ffff, #000);
 } 
+
+.white1 {
+    background: linear-gradient(to top , #000, #fff);
+}
 
 .black {
     background-color: #000;
+}
+
+.black-foot {
+    background-color: rgb(26, 25, 25);
 }

@@ -21,7 +21,7 @@ updownElem1.onclick = function () {
     let pageY = window.pageYOffset;
     if (this.className === 'pct1') {
         pageYLabel = pageY;
-        window.scrollTo(0, 2500);
+        window.scrollTo(0, 2400);
         this.className = 'pct1';
     }
 }
@@ -30,7 +30,7 @@ updownElem2.onclick = function () {
     let pageY = window.pageYOffset;
     if (this.className === 'pct2') {
         pageYLabel = pageY;
-        window.scrollTo(0, 4100);
+        window.scrollTo(0, 3950);
         this.className = 'pct2';
     }
 }
@@ -39,7 +39,7 @@ updownElem3.onclick = function () {
     let pageY = window.pageYOffset;
         if (this.className === 'pct3') {
         pageYLabel = pageY;
-        window.scrollTo(0, 3300);
+        window.scrollTo(0, 3150);
         this.className = 'pct3';
     }
 }
