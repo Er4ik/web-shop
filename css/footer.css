@@ -10,8 +10,16 @@
     font-size: 32px;
 }
 
+.cont a {
+    text-decoration: none;
+}
+
 .cont {
     font-size: 21px;
+}
+
+.link-con {
+    color: darkorange;
 }
 
 .logo-footer:hover {

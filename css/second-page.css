@@ -69,6 +69,7 @@
 }
 
 .description-product {
+    justify-content: center;
     width: 100%;
     text-align: center;
     margin-left: 140px;
@@ -116,7 +117,7 @@
 
 .scroll-next {
     margin-top: 25px;
-    margin-left: 272px;
+    margin-left: 268px;
     display: flex;
     justify-content: center;
     height: 10px;
