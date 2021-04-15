@@ -1,11 +1,11 @@
+.first-page{
+    padding-bottom: 35px;
+}
+
 .main-logo {
-    padding-top: 40px;
-    padding-left: 40px;
-    margin-left: 349px;
-    margin-top: 60px;
+    margin: 50px auto;
+    padding: 40px;
     overflow: hidden;
-    width: 920px;
-    height: 420px;
 }
 
  .main-logo img {

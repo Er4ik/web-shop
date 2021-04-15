@@ -33,8 +33,8 @@
     }
 
     function scrollPict() {
-        offset += 650;
-        if (offset > 1300) offset = 0;
+        offset += 555;
+        if (offset > 1110) offset = 0;
         sliderLine.style.left = -offset + 'px';
     }
 
@@ -60,7 +60,7 @@
     
     document.querySelector('.wh1').addEventListener('click', function() {
         countNum = 1;
-        offset = -650;
+        offset = -555;
         changeNum(countNum);
         scrollPict();
         changeDataPict('1');
@@ -78,7 +78,7 @@
 
     document.querySelector('.wh3').addEventListener('click', function () {
         countNum = 3;
-        offset = 650;
+        offset = 555;
         changeNum(countNum);
         scrollPict();
         changeDataPict('3');

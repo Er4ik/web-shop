@@ -1,5 +1,5 @@
 .third-page {
-    margin-top: 100px;
+    padding: 100px 0;
 }
 
 .pct1:hover, .pct2:hover, .pct3:hover {
@@ -7,13 +7,13 @@
 }
 
 .pct1, .pct2, .pct3, .pct4 {
-    margin-left: 105px;
     width: 256px;
     height: 240px;
 }
 
-.pct2, .pct3, .pct4 {
-    margin-left: 80px;
+.product-scroll-picture {
+    display: flex;
+    justify-content: space-around;
 }
 
 .product-scroll-picture img {
@@ -38,9 +38,10 @@
 }
 
 .name-serv {
-    margin-top: 70px;
-    margin-left: 110px;
-    padding-top: 80px;
+    margin: 150px 0 50px 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     text-align: center;
     font-size: 28px;
     font-weight: bold;

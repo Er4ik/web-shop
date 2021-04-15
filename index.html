@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1496">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/first-page.css">
@@ -15,38 +16,40 @@
     <title>EAshop</title>
 </head>
 
-<body background="pictures/background/background.jpg">
-    <div class="container">
-        <section class="first-page">
-            <header class="header">
-                <nav class="nav-head">
-                    <section class="sec-head">
-                        <div class=logo-mini-header>
-                            <a href="#">
-                                <img src="pictures/logo/logo-head.png" alt="EAshop" class="log-min">
-                            </a>
+<body>
+    <header">
+        <div class="container">
+            <nav class="nav-head">
+                <div class="sec-head">
+                    <div class=logo-mini-header>
+                        <a href="#">
+                            <img src="pictures/logo/logo-head.png" alt="EAshop" class="log-min">
+                        </a>
+                    </div>
+                    <div class="button">
+                        <div class="but1">
+                            <a href="#" class="but-font1">MY ORDERS</a>
                         </div>
-                        <div class="button">
-                            <div class="but1">
-                                <a href="#" class="but-font1">MY ORDERS</a>
-                            </div>
-                            <div class="but2">
-                                <a target="_blank" href="about-company.html" class="but-font2">ABOUT COMPANY</a>
-                            </div>
-                            <div class="but3">
-                                <a href="#" class="but-font3">SIGN IN</a>
-                            </div>
+                        <div class="but2">
+                            <a target="_blank" href="about-company.html" class="but-font2">ABOUT COMPANY</a>
                         </div>
-                        <div class="burger">
-                            <div class="menu-icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                        <div class="but3">
+                            <a href="#" class="but-font3">SIGN IN</a>
                         </div>
-                    </section>
-                </nav>
-            </header>
+                    </div>
+                    <div class="burger">
+                        <div class="menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="first-page white">
+        <div class="container">
             <div class="main-first">
                 <div class="main-logo">
                     <a href="#">
@@ -80,8 +83,10 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="second-page">
+        </div>
+    </section>
+    <section class="second-page black">
+        <div class="container">
             <div class="catalog">
                 <div class='catalog-head'>
                     <p class="catalog-name" href="#">CATALOG</p>
@@ -113,21 +118,27 @@
                     </div>
                 </div>
                 <div class="description-product">
-                    <p class="name-descr"></p>
-                    <p class="text-descr"></p>
-                    <p class="number"></p>
-                    <div class="wheel">
-                        <div class=wh1></div>
-                        <div class=wh2></div>
-                        <div class=wh3></div>
+                    <div class="fl-block">
+                        <p class="name-descr"></p>
+                        <p class="text-descr"></p>
                     </div>
-                    <div class="scroll-next">
-                        <p class="next">NEXT</p>
+                    <div class="fl-block">
+                        <p class="number"></p>
+                        <div class="wheel">
+                            <div class=wh1></div>
+                            <div class=wh2></div>
+                            <div class=wh3></div>
+                        </div>
+                        <div class="scroll-next">
+                            <p class="next">NEXT</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="third-page">
+        </div>
+    </section>
+    <section class="third-page white">
+        <div class="container">
             <div class="product-scroll-picture">
                 <img class="pct1" href="#" src="pictures/logo/phone.jpg" alt="phone-icon">
                 <img class="pct2" href="#" src="pictures/logo/notebook.jpg" alt="watch-icon">
@@ -156,19 +167,25 @@
                     <img class="serv-icon3" src="pictures/service-icon/credit.png" alt="delivery">
                 </div>
             </div>
-        </section>
-        <section class="prod_descr">
+        </div>
+    </section>
+    <section class="prod_descr black">
+        <div class="container">
             <div class="phoneDescr pd">
                 <div class="phone-pict">
                     <img class="pc1" src="pictures/picture prod/iPhone_12_Pro_1.webp" alt="">
                 </div>
-                <div class="pd-descr pd1">
+                <div class="pd-descr text-right">
                     <h3 class="head-pd-descr hd1"></h3>
                     <p class="phone-text pt1"></p>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="bl-5 white">
+        <div class="container">
             <div class="watchDescr pd">
-                <div class="pd-descr">
+                <div class="pd-descr text-left">
                     <h3 class="head-pd-descr hd2"></h3>
                     <p class="watch-text pt2"></p>
                 </div>
@@ -176,43 +193,53 @@
                     <img class="pc2" src="pictures/picture prod/applewatch.webp" alt="">
                 </div>
             </div>
+        </div>
+    </section>           
+    <section class="bl-6 black">
+        <div class="container">
             <div class="laptopDescr pd">
                 <div class="laptop-pict">
                     <img class="pc3" src="pictures/picture prod/macbook.jpg" alt="">
                 </div>
-                <div class="pd-descr">
+                <div class="pd-descr text-right">
                     <h3 class="head-pd-descr hd3"></h3>
                     <p class="laptop-text pt3"></p>
                 </div>
             </div>
-        </section>
-        <footer class="footer">
-            <section class="data-contacts">
+        </div>
+    </section>
+    <footer class="black">
+        <div class="container">
+            <div class="data-contacts">
                 <div class="about-contacts">
                     <h2 class="name-contacts">CONTACTS</h2>
                     <div>
-                        <p class="cont"> <a class="link-con" target="_blank" href="https://github.com/Er4ik">https://github.com/Er4ik</a> - Osmanov Ervin</p>
-                        <p class="cont"> <a class="link-con" target="_blank" href="https://github.com/andreykurzantsev">https://github.com/andreykurzantsev</a> -
+                        <p class="cont"> <a target="_blank" href="https://github.com/Er4ik">https://github.com/Er4ik</a> -
+                            Osmanov Ervin</p>
+                        <p class="cont"> <a target="_blank"
+                                href="https://github.com/andreykurzantsev">https://github.com/andreykurzantsev</a> -
                             Andrey Kurzantsev</p>
-                        <p class="cont"> <a class="link-con" target="_blank" href="https://github.com/rogosnyi">https://github.com/rogosnyi</a> - Alexey Rogosnyi</p>
+                        <p class="cont"> <a target="_blank"
+                                href="https://github.com/rogosnyi">https://github.com/rogosnyi</a> - Alexey Rogosnyi
+                        </p>
                     </div>
                 </div>
-            </section>
-            <section class="sec-foot-logo">
+            </div>
+            <div class="sec-foot-logo">
                 <div>
                     <a href="https://er4ik.github.io/Web_Site_Shop/">
                         <img class="logo-footer" src="pictures/logo/footer-logo.png" alt="EAshop">
                     </a>
                 </div>
-            </section>
-        </footer>
-        <script src="js/data.js"></script>
-        <script src="js/header.js"></script>
-        <script src="js/slider-product-picture.js"></script>
-        <script src="js/third-page-descr.js"></script>
-        <script src="js/slider-catalog.js"></script>
-        <script src="js/picture-back.js"></script>
-        <script src="js/prodPictDescr.js"></script>
-    </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/slider-product-picture.js"></script>
+    <script src="js/third-page-descr.js"></script>
+    <script src="js/slider-catalog.js"></script>
+    <script src="js/picture-back.js"></script>
+    <script src="js/prodPictDescr.js"></script>
 </body>
 </html>

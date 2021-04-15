@@ -1,3 +1,7 @@
+.second-page{
+    padding: 70px 0;
+}
+
 .about-catalog img {
     -moz-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
@@ -12,10 +16,12 @@
 
 .about-catalog {
     display: flex;
+    margin-top: 30px;
 }
 
 .catalog{
-    display: flex;
+    display: flex; 
+    justify-content: space-between;
 }
 
 .catalog-head {
@@ -23,9 +29,6 @@
 }
 
 .catalog-name {
-    width: 345px;
-    margin-top: 220px;
-    margin-left: 105px;
     font-size: 68px;
     font-weight: bold;
     color: white;
@@ -38,17 +41,17 @@
 .plusCat {
     transition: 1s;
     opacity: 0.3;
-    margin-top: 220px;
+    margin-left: 20px;
     font-size: 70px;
     color: white;
 }
 
 .slider {
+    width: 1100px;
     overflow: hidden;
 }
 
 .slider-line {
-    width: 1400px;
     display: flex;
     position: relative;
     left: 0;
@@ -57,11 +60,8 @@
 
 .product-picture {
     position: relative;
-    margin-left: 100px;
-    margin-bottom: 20px;
     width: 555px;
-    height: 550px;
-    margin-top: 15px;
+    height: 555px;
 }
 
 .product-picture:hover {
@@ -69,10 +69,12 @@
 }
 
 .description-product {
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 100%;
     text-align: center;
-    margin-left: 140px;
+    /* margin-left: 140px; */
     color: white;
 }
 
@@ -111,13 +113,12 @@
 .wheel {
     display: flex;
     justify-content: center;
-    margin-left: 7px;
-    margin-top: 10px;
 }
 
 .scroll-next {
-    margin-top: 25px;
-    margin-left: 268px;
+    /* margin-top: 25px;
+    margin-left: 268px; */
+    margin: 30px auto;
     display: flex;
     justify-content: center;
     height: 10px;
@@ -140,10 +141,8 @@
 
 .catDescr {
     height: 80px;
-    width: 670px;
-    margin-top: 220px;
+    /* width: 670px; */
     color: white;
-    padding-left: 295px;
 }
 
 .butCat:hover {
@@ -161,15 +160,7 @@
     cursor: pointer;
     margin-top: 10px;
     font-size: 50px;
-    margin-left: 72px;
-}
-
-.prod1 {
-    margin-left: 100px;
-}
-
-.prod3 {
-    margin-left: 90px;
+    margin-left: 13%;
 }
 
 .pict {
@@ -179,27 +170,8 @@
 .pictBack1, .pictBack2, .pictBack3 {
     width: 200px;
     font-size: 22px;
-    margin-top: 150px;
+    margin: 150px 0 0 -340px;
     padding-right: 150px;
-    margin-left: -340px;
     color: white;
-}
+} 
 
-.pictBack2 {
-    margin-top: 100px;
-}
-
-.headText {
-    margin-top: 220px;
-    text-align: center;
-    font-size: 72px;
-    color: white;
-}
-
-.text {
-    margin-left: 198px;
-    text-align: justify;
-    max-width: 1100px;
-    color: white;
-    font-size: 32px;
-}

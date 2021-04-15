@@ -3,14 +3,8 @@
     display: flex;
 }
 
-.logo-mini-header {
-    margin-left: 105px;
-}
-
 .logo-min {
     overflow:hidden;
-    width: 215px;
-    height: 70px;
 }
 
 .logo-mini-header:hover {
@@ -29,13 +23,12 @@
     -o-transform: scale(1.1);
  }
 
-.header {
+header {
     display: flex;
 }
 
 .burger {
   width: 100%;
-  height: 55px;
   margin-top: -2px;
 }
 
