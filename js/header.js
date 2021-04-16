@@ -33,6 +33,7 @@
         if (flagMenu === 0) {
             mainLogo.style.display = 'none';
             signMenu.style.display = 'block';
+            signMenu.classList.add('b-show');
             flagMenu = 1;
         }
         else {
