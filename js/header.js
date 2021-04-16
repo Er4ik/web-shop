@@ -1,5 +1,6 @@
 // burger-menu
 {
+    const mainLogo = document.querySelector('.main-log')
     const but = document.querySelector('.button');
     const burger = document.querySelector('.burger');
     const menuIcon = document.querySelector('.menu-icon');
@@ -30,10 +31,12 @@
 
     function openSignMenu() {
         if (flagMenu === 0) {
-            signMenu.style.display = 'flex';
+            mainLogo.style.display = 'none';
+            signMenu.style.display = 'block';
             flagMenu = 1;
         }
         else {
+            mainLogo.style.display = 'block';
             signMenu.style.display = 'none';
             flagMenu = 0;
         }

@@ -129,7 +129,7 @@ header {
 
 .but-font1:hover, .but-font2:hover, .but-font3:hover {
     transition: 0.3s;
-    color: darkorange;
+    color: #FF8C00;
 }
 
 .but-font1, .but-font2, .but-font3 {
@@ -170,12 +170,15 @@ header {
 
 .main-first {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sign-menu {
-    margin-left: -955px;
+    border-radius: 15%;
+    margin: -10% 22% 2%;
     display: none;
-    background-color: darkgrey;
+    background: linear-gradient(to top , #000, #fff);
     width: 800px;
     height: 500px;
 }
@@ -190,6 +193,7 @@ header {
 }
 
 .in-but {
+    background-color: #fff;
     padding-left: 5px;
     border: none;
     width: 300px;
@@ -220,6 +224,7 @@ header {
 }
 
 .send-but {
+    background-color: #fff;
     width: 300px;
     border: none;
     font-size: 28px;
@@ -235,6 +240,7 @@ header {
     font-size: 16px;
     color: black;
 }
+
 
 .headText {
     text-align: center;
@@ -350,7 +356,7 @@ header {
     margin-top: 10px;
     font-size: 54px;
     font-weight: bold;
-    color: darkorange;
+    color: #FF8C00;
 }
 
 .text-descr {
@@ -366,7 +372,7 @@ header {
 }
 
 .wh1 {
-    background-color: darkorange;
+    background-color: #FF8C00;
 }
 
 .wh1:hover, .wh2:hover, .wh3:hover  {
@@ -396,7 +402,7 @@ header {
     height: 10px;
     min-width: 180px;
     width: 180px;
-    background-color: darkorange;
+    background-color: #FF8C00;
 }
 
 .next:hover {
@@ -422,7 +428,7 @@ header {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
-    color: darkorange;
+    color: #FF8C00;
 }
 
 .butCat {
@@ -642,7 +648,7 @@ header {
 }
 
 .link-con {
-    color: darkorange;
+    color: #FF8C00;
 }
 
 .logo-footer:hover {
