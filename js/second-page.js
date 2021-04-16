@@ -1,3 +1,31 @@
+//slider catalog
+{
+    const plusCat = document.querySelector('.plusCat');
+    const catDescr = document.querySelector('.catDescr');
+
+    catDescr.style.display = 'none';
+    let flag = 1;
+
+    const showCat = () => {
+        if (flag === 0) {
+            catDescr.style.display = 'none';
+            plusCat.style.transform = 'rotate(-180deg)';
+            plusCat.style.color = 'white';
+            plusCat.style.opacity = 0.3;
+            flag = 1;
+        } else {
+            catDescr.style.display = 'flex';
+            catDescr.classList.add('p-show');
+            plusCat.style.transform = 'rotate(225deg)';
+            plusCat.style.color = 'darkorange'
+            plusCat.style.opacity = 1;
+            flag = 0;
+        }
+    }
+
+    plusCat.addEventListener('click', showCat);
+}
+
 //slider description
 {
     const sliderLine = document.querySelector('.slider-line');
@@ -46,19 +74,19 @@
         }
         else if (countNum === 2) {
             wheelColor('white', 'darkorange', 'white');
-        } 
+        }
         else {
             wheelColor('white', 'white', 'darkorange');
         }
-        
+
         changeNum(countNum);
         scrollPict();
         changeDataPict(countNum);
     }
 
     document.querySelector('.next').onclick = scrollNum;
-    
-    document.querySelector('.wh1').addEventListener('click', function() {
+
+    document.querySelector('.wh1').addEventListener('click', function () {
         countNum = 1;
         offset = -555;
         changeNum(countNum);
@@ -86,3 +114,42 @@
     });
 }
 
+// slider picture_Back_Text
+{
+    const prodPict1 = document.querySelector('.prod1');
+    const prodPict2 = document.querySelector('.prod2');
+    const prodPict3 = document.querySelector('.prod3');
+    const dataBackPict1 = document.querySelector('.pictBack1');
+    const dataBackPict2 = document.querySelector('.pictBack2');
+    const dataBackPict3 = document.querySelector('.pictBack3');
+
+    dataBackPict1.innerHTML = aboutProductBack.prod1;
+    dataBackPict2.innerHTML = aboutProductBack.prod2;
+    dataBackPict3.innerHTML = aboutProductBack.prod3;
+
+    let flag1 = 1;
+
+    const rotatePict = (pict) => {
+        if (flag1 === 1) {
+            pict.style.transform = 'rotateY(180deg)';
+            pict.style.opacity = 0.2;
+            flag1 = 0;
+        } else {
+            pict.style.transform = '';
+            pict.style.opacity = 1;
+            flag1 = 1;
+        }
+    }
+
+    prodPict1.addEventListener('click', function () {
+        rotatePict(prodPict1);
+    });
+
+    prodPict2.addEventListener('click', function () {
+        rotatePict(prodPict2);
+    });
+
+    prodPict3.addEventListener('click', function () {
+        rotatePict(prodPict3);
+    });
+}
