@@ -1,4 +1,4 @@
-# Course work for second semester - Web_Site_EAshop
+# Course work for second term - Web_Site_EAshop
 
 ## Technology stack: 
 *HTML5, CSS3, JavaScript*
