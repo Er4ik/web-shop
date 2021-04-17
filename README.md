@@ -7,4 +7,5 @@
 * [Osmanov Ervin](https://github.com/Er4ik) 
 * [Andrey Kurzantsev](https://github.com/andreykurzantsev)
 * [Alexey Rogosnyi](https://github.com/rogosnyi) 
+* [Viktor Shalyapin](https://github.com/V1k70R-I)
 
