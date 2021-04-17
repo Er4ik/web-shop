@@ -70,6 +70,7 @@
     const DescrPict1 = document.querySelector('.phone-text');
     const DescrPict2 = document.querySelector('.watch-text');
     const DescrPict3 = document.querySelector('.laptop-text');
+    const pc = document.querySelector('.pc1');
 
     headDescrPict1.innerHTML = descrProdPict.head1;
     headDescrPict2.innerHTML = descrProdPict.head2;
