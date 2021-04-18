@@ -38,7 +38,7 @@ header {
   margin: auto;
   display: grid;
   place-items: center;
-  height: 55px;
+  height: 57px;
   width: 55px;
   cursor: pointer;
   overflow:hidden;
