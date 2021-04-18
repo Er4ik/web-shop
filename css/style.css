@@ -614,10 +614,16 @@ header {
     text-align: center;
 }
 
+.phoneDescr, .laptopDescr, .watchDescr {
+    opacity: 0;
+}
+
+.showObj {
+    transition: 1.5s;
+    opacity: 1;
+}
+
 /*Footer*/
-
-
-
 .foot-content {
     padding: 70px 0;
     color: #fff;
