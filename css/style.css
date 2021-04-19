@@ -38,7 +38,7 @@ header {
   margin: auto;
   display: grid;
   place-items: center;
-  height: 55px;
+  height: 57px;
   width: 55px;
   cursor: pointer;
   overflow:hidden;
@@ -180,16 +180,24 @@ header {
     display: none;
     background: linear-gradient(to top , #000, #fff);
     width: 800px;
-    height: 500px;
+    height: 480px;
 }
 
 .input-name {
-    margin: 40px 60px 0px 60px;
+    margin: 0px 60px 0px 60px;
 }
 
-.in-name, .in-name-mess {
+.in-name, .in-name-mess, .in-pass-name {
+    margin: 10px auto;
     font-size: 24px;
     margin-bottom: 5px;
+}
+
+.in-pass-but {
+    background-color: #fff;
+    padding-left: 5px;
+    width: 665px;
+    height: 30px;
 }
 
 .in-but {
@@ -208,7 +216,7 @@ header {
 }
 
 .in-message {
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .in-mess-but {
@@ -237,6 +245,7 @@ header {
 }
 
 .esc {
+
     font-size: 16px;
     color: black;
 }
@@ -361,7 +370,7 @@ header {
 
 .text-descr {
     font-size: 27px;
-    font-style: italic;
+    font-family: URW Chancery L, cursive;
 }
 
 .number {
@@ -514,15 +523,16 @@ header {
 }
 
 .head-serv1 {
-    margin: 10px;
+    margin: 5px;
     font-size: 64px;
     font-weight: bold;
+    font-family: URW Chancery L, cursive;
 }
 
 .descr-serv2 {
     margin: 10px;
     font-size: 34px;
-    font-style: italic;
+    font-family: URW Chancery L, cursive;
 }
 
 .serv1 {
@@ -558,6 +568,7 @@ header {
 }
 
 .pc2 {
+    margin-top: 50px;
     width: 500px;
     height: 555px;
 }
@@ -606,10 +617,12 @@ header {
 }
 
 .pd-descr > h3 {
+    font-family: URW Chancery L, cursive;
     text-align: center;
 }
 
 .pd-descr > p {
+    font-family: URW Chancery L, cursive;
     margin-top: 20px;
     text-align: center;
 }
