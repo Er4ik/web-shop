@@ -1,12 +1,12 @@
-// burger-menu
+// burger-menu and Sign-menu
 {
     const mainLogo = document.querySelector('.main-log')
     const but = document.querySelector('.button');
     const burger = document.querySelector('.burger');
-    const menuIcon = document.querySelector('.menu-icon');
-    const signMenuBut = document.querySelector('.but-font3');
+    const menuIcon = burger.querySelector('.menu-icon');
+    const signMenuBut = but.querySelector('.but-font3');
     const signMenu = document.querySelector('.sign-menu');
-    const escSignMenu = document.querySelector('.esc');
+    const escSignMenu = signMenu.querySelector('.esc');
 
     let flag = 0;
     let flagMenu = 0;

@@ -157,6 +157,7 @@ header {
 }
 
  .main-logo img {
+     cursor: pointer;
     -moz-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     -webkit-transition: all 1s ease-out;
@@ -203,7 +204,6 @@ header {
 .in-but {
     background-color: #fff;
     padding-left: 5px;
-    border: none;
     width: 300px;
     height: 30px;
 }
@@ -221,20 +221,22 @@ header {
 
 .in-mess-but {
     padding: 5px 5px;
-    border: none;
     width: 660px;
     height: 150px;
+    max-height: 150px;
+    min-height: 150px;
+    max-width: 660px;
+    min-width: 660px;
 }
 
 .in-send {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .send-but {
     background-color: #fff;
     width: 300px;
-    border: none;
     font-size: 28px;
     cursor: pointer;
 }
@@ -249,7 +251,6 @@ header {
     font-size: 16px;
     color: black;
 }
-
 
 .headText {
     text-align: center;
