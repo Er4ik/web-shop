@@ -1,123 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1496px, height=100%">
+    <meta name="viewport" content="width=1496">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>EAshop</title>
-    <script src="js/main_shop.js"></script>
 </head>
-
-<body class="container" background="pictures/background/background.jpg">
-    <header class="header">
-        <nav class="nav-head">
-            <section class="sec-head">
-                <div class=logo-mini-header>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-head">
+                <div class="sec-head">
+                    <div class=logo-mini-header>
+                        <img src="pictures/logo/logo-head.png" alt="EAshop" class="log-min">
+                    </div>
+                    <div class="button">
+                        <div class="but1">
+                            <a href="#" class="but-font1">MY ORDERS</a>
+                        </div>
+                        <div class="but2">
+                            <a target="_blank" href="about-company.html" class="but-font2">ABOUT COMPANY</a>
+                        </div>
+                        <div class="but3">
+                            <a href="#" class="but-font3">SIGN IN</a>
+                        </div>
+                    </div>
+                    <div class="burger">
+                        <div class="menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="first-page white1">
+        <div class="container">
+            <div class="main-first">
+                <div class="main-logo">
+                    <img src="pictures/logo/logo-main.png" alt="EAshop" class="main-log">
+                </div>
+                <form action="js/validate-form.js" class="formValid">
+                    <div class="sign-menu">
+                        <div class="input-name">
+                            <div class="in-content">
+                                <div class="in-esc">
+                                    <button class="esc">X</button>
+                                </div>
+                                <div class="name-email">
+                                    <div class="ne1">
+                                        <h3 class="in-name">Name</h3>
+                                        <input class="in-but in-name-but" type="name" placeholder="Name and Surname">
+                                    </div>
+                                    <div class="ne2">
+                                        <h3 class="in-name">E-mail Address</h3>
+                                        <input class="in-but in-email-but"type="text" placeholder="email@example.com">
+                                    </div>
+                                </div>
+                                <div class="ne3">
+                                    <h3 class="in-pass-name">Password</h3>
+                                    <input class="in-but in-pass-but" type="password" placeholder="Password">
+                                </div>
+                                <div class="in-message">
+                                    <h3 class="in-name-mess">Description</h3>
+                                    <textarea class="in-but in-mess-but" cols="30" rows="10" type="textarea" placeholder="Description yourself"></textarea>
+                                </div>
+                                <div class="in-send">
+                                    <button class="send-but">Sign In</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="second-page black">
+        <div class="container con2">
+            <div class="catalog">
+                <div class='catalog-head'>
+                    <p class="catalog-name" href="#">CATALOG</p>
+                    <p class="plusCat">+</p>
+                </div>
+                <div class=catDescr>
+                    <a href="#" class="butCat">Phone<a>
+                    <a href="#" class="butCat">Watch<a>
+                    <a href="#" class="butCat">Laptop<a>
+                </div>
+            </div>
+            <div class="help-text">
+                <p class="hptext">Click on the picture to view the description</p>
+            </div>
+            <div class="about-catalog">
+                <div class="slider">
+                    <div class="slider-line">
+                        <div class="pict">               
+                            <img class="product-picture prod1" src="pictures/scroll-picture/phones.jpg" alt="phone">
+                            <p class="pictBack1"></p>
+                        </div>
+                    
+                        <div class="pict">              
+                            <img class="product-picture prod2" src="pictures/scroll-picture/watch.jpg" alt="watch">
+                            <p class="pictBack2"></p>
+                        </div>                    
+                        <div class="pict">
+                            <img class="product-picture prod3" src="pictures/scroll-picture/laptop.jpg" alt="laptop">
+                            <p class="pictBack3"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="description-product">
+                    <div class="fl-block">
+                        <p class="name-descr"></p>
+                        <p class="text-descr"></p>
+                    </div>
+                    <div class="fl-block">
+                        <p class="number"></p>
+                        <div class="wheel">
+                            <div class=wh1></div>
+                            <div class=wh2></div>
+                            <div class=wh3></div>
+                        </div>
+                        <div class="scroll-next">
+                            <p class="next">NEXT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="third-page white">
+        <div class="container">
+            <div class="product-scroll-picture">
+                <img class="pct1" href="#" src="pictures/logo/phone.jpg" alt="phone-icon">
+                <img class="pct2" href="#" src="pictures/logo/notebook.jpg" alt="watch-icon">
+                <img class="pct3" href="#" src="pictures/logo/smart-watch.jpg" alt="laptop-icon">
+                <img class="pct4" href="#" src="pictures/logo/camera.jpg" alt="camera-icon">
+            </div>
+            <div class="service">
+                <div class="name-serv">
+                    <div class="serv1">
+                        <p class="s1">DELIVERY</p>
+                    </div>
+                    <div class="serv2">
+                        <p class="s2">GUARANTEE</p>
+                    </div>
+                    <div class="serv3">
+                        <p class="s3">CREDIT</p>
+                    </div>
+                </div>
+                <div class="description-service">
+                    <p class="head-serv1"></p>
+                    <p class="descr-serv2"></p>
+                </div>
+                <div class="serv-icon">
+                    <img class="serv-icon1" src="pictures/service-icon/delivery.png" alt="delivery">
+                    <img class="serv-icon2" src="pictures/service-icon/quarantee.png" alt="delivery">
+                    <img class="serv-icon3" src="pictures/service-icon/credit.png" alt="delivery">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="prod_descr black">
+        <div class="container">
+            <div class="phoneDescr pd">
+                <div class="phone-pict">
+                    <img class="pc1" src="pictures/picture prod/iPhone_12_Pro_1.webp" alt="">
+                </div>
+                <div class="pd-descr text-right">
+                    <h3 class="head-pd-descr hd1"></h3>
+                    <p class="phone-text pt1"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bl-5 white">
+        <div class="container">
+            <div class="watchDescr pd">
+                <div class="pd-descr text-left">
+                    <h3 class="head-pd-descr hd2"></h3>
+                    <p class="watch-text pt2"></p>
+                </div>
+                <div class="watch-pict">
+                    <img class="pc2" src="pictures/picture prod/applewatch.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </section>           
+    <section class="bl-6 black">
+        <div class="container">
+            <div class="laptopDescr pd">
+                <div class="laptop-pict">
+                    <img class="pc3" src="pictures/picture prod/macbook.jpg" alt="">
+                </div>
+                <div class="pd-descr text-right">
+                    <h3 class="head-pd-descr hd3"></h3>
+                    <p class="laptop-text pt3"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="black-foot">
+        <div class="container">
+            <div class="foot-content">
+                <div class="data-contacts">
+                    <div class="about-contacts">
+                        <h2 class="name-contacts">CONTACTS</h2>
+                        <div class="link-foot">
+                            <p class="cont"> <a class="link-con" target="_blank" href="https://github.com/Er4ik">https://github.com/Er4ik</a> - Osmanov Ervin</p>
+                            <p class="cont"> <a class="link-con" target="_blank" href="https://github.com/andreykurzantsev">https://github.com/andreykurzantsev</a> - Andrey Kurzantsev</p>
+                            <p class="cont"> <a class="link-con" target="_blank" href="https://github.com/rogosnyi">https://github.com/rogosnyi</a> - Alexey Rogosnyi
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec-foot-logo">
                     <a href="https://er4ik.github.io/Web_Site_Shop/">
-                        <img src="pictures/logo/logo-head.png" alt="EAshop">
+                        <img class="logo-footer" src="pictures/logo/footer-logo.png" alt="EAshop">
                     </a>
                 </div>
-                <div class="button">
-                    <div class="but">
-                        <p class="but-font">MY ORDERS</p>
-                    </div>
-                    <div class="but">
-                        <p class="but-font">ABOUT COMPANY</p>
-                    </div>
-                    <div class="but">
-                        <p class="but-font">SIGN IN</p>
-                    </div>
-                </div>
-                <div class="list-button">
-                    <div class="rectangle"></div>
-                    <div class="rectangle"></div>
-                    <div class="rectangle"></div>
-                </div>
-            </section>
-        </nav>
-    </header>
-    <section class="first-page">
-        <div class="main-logo">
-            <a href="https://er4ik.github.io/Web_Site_Shop/">
-                <img src="pictures/logo/logo-main.png" alt="EAshop">
-            </a>
-        </div>
-    </section>
-    <section class="second-page">
-        <div class="catalog">
-            <p class="catalog-name" href="#">CATALOG +</p>
-        </div>
-        <div class="about-catalog">
-            <img class="product-picture" src="pictures/scroll-picture/phones.jpg" alt="phone">
-            <div class="description-product">
-                <p class="name-descr">NEW GENERATION<br>SMARTPHONES</p>
-                <p class="text-descr">The latest technology, the highest speed of work,<br>compactness and incredibly
-                    beautiful appearance.</p>
-                <p class="number">1</p>
-                <div class="wheel">
-                    <div class=wh></div>
-                    <div class=wh></div>
-                    <div class=wh></div>
-                </div>
-                <div class="scroll-next">
-                    <p class="next">NEXT</p>
-                </div>
             </div>
         </div>
-    </section>
-
-    <section class="third-page">
-        <div class="prosuct-scroll-picture">
-            <img class="pct1" src="pictures/logo/phone.jpg" alt="">
-            <img class="pct" src="pictures/logo/notebook.jpg" alt="">
-            <img class="pct" src="pictures/logo/smart-watch.jpg" alt="">
-            <img class="pct" src="pictures/logo/camera.jpg" alt="">
-        </div>
-        <div class="service">
-            <div class="name-serv">
-                <div class="serv-block">
-                    <p class="">DELIVERY</p>
-                </div>
-                <div class="">
-                    <p class="serv">GUARANTEE</p>
-                </div>
-                <div class="">
-                    <p class="serv">CREDIT</p>
-                </div>
-            </div>
-            <div class="description-service">
-                <p class="descr-serc1">DELIVERY</p>
-                <p class="descr-serc2">We will be happy to deliver your goods directly to your entrance for free! After
-                    all, we will make good money by lifting
-                    it to your floor.</p>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <section class="data-contacts">
-            <div class="about-contacts">
-                <h2 class="name-contacts">CONTACTS</h2>
-                <div>
-                    <p class="cont"> <a target="_blank" href="https://github.com/Er4ik">https://github.com/Er4ik</a> -
-                        Osmanov Ervin</p>
-                    <p class="cont"> <a target="_blank"
-                            href="https://github.com/andreykurzantsev">https://github.com/andreykurzantsev</a> -
-                        Andrey Kurzantsev</p>
-                    <p class="cont"> <a target="_blank"
-                            href="https://github.com/rogosnyi">https://github.com/rogosnyi</a> - Alexey Rogosnyi
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="sec-foot-logo">
-            <div>
-                <a href="https://er4ik.github.io/Web_Site_Shop/">
-                    <img class="logo-footer" src="pictures/logo/footer-logo.png" alt="EAshop">
-                </a>
-            </div>
-        </section>
     </footer>
+    <script src="js/data.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/validate-form.js"></script>
 </body>
 </html>
