@@ -153,7 +153,6 @@ header {
 .main-logo {
     margin: 50px auto;
     padding: 40px;
-    overflow: hidden;
 }
 
  .main-logo img {
@@ -299,6 +298,7 @@ header {
 }
 
 .catalog-name {
+    padding-left: 100px;
     font-size: 68px;
     font-weight: bold;
     color: white;
@@ -309,10 +309,13 @@ header {
 }
 
 .plusCat {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
     transition: 1s;
+    text-align: center;
     opacity: 0.3;
     margin-left: 20px;
-    font-size: 70px;
+    font-size: 75px;
     color: white;
 }
 
@@ -371,7 +374,7 @@ header {
 
 .text-descr {
     font-size: 27px;
-    font-family: URW Chancery L, cursive;
+    font-family: 'Lato', sans-serif;
 }
 
 .number {
@@ -448,7 +451,7 @@ header {
     cursor: pointer;
     margin-top: 10px;
     font-size: 50px;
-    margin-left: 13%;
+    margin-left: 8%;
 }
 
 .pict {
@@ -505,7 +508,7 @@ header {
 }
 
 .name-serv {
-    margin: 150px 0 50px 110px;
+    margin: 150px 0 40px 110px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -513,6 +516,12 @@ header {
     font-size: 28px;
     font-weight: bold;
     color: black;
+}
+
+.hptext {
+    padding: 10px 100px;
+    font-size: 22px;
+    color: #fff;
 }
 
 .description-service {
@@ -527,13 +536,13 @@ header {
     margin: 5px;
     font-size: 64px;
     font-weight: bold;
-    font-family: URW Chancery L, cursive;
+    font-family: 'Lato', sans-serif;
 }
 
 .descr-serv2 {
     margin: 10px;
     font-size: 34px;
-    font-family: URW Chancery L, cursive;
+    font-family: 'Lato', sans-serif;
 }
 
 .serv1 {
@@ -580,7 +589,6 @@ header {
 
 .pt1 {
     margin-left: 50px;
-    font-style: italic;
     text-align: center;
     font-size: 26px;
     width: 600px;
@@ -588,7 +596,6 @@ header {
 }
 
 .pt3 {
-    font-style: italic;
     text-align: center;
     font-size: 26px;
     width: 550px;
@@ -596,7 +603,6 @@ header {
 }
 
 .pt2 {
-    font-style: italic;
     text-align: center;
     font-size: 26px;
     width: 600px;
@@ -618,12 +624,12 @@ header {
 }
 
 .pd-descr > h3 {
-    font-family: URW Chancery L, cursive;
+    font-family: 'Lato', sans-serif;
     text-align: center;
 }
 
 .pd-descr > p {
-    font-family: URW Chancery L, cursive;
+    font-family: 'Lato', sans-serif;
     margin-top: 20px;
     text-align: center;
 }

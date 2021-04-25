@@ -1,6 +1,6 @@
 // burger-menu and Sign-menu
 {
-    const mainLogo = document.querySelector('.main-log')
+    const mainLogo = document.querySelector('.main-log');
     const but = document.querySelector('.button');
     const burger = document.querySelector('.burger');
     const menuIcon = burger.querySelector('.menu-icon');
@@ -16,7 +16,7 @@
         menuIcon.classList.toggle('active');
         if (flag == 0) {
             but.style.display = 'flex';
-            burger.style.marginLeft = 189 + 'px';
+            burger.style.marginLeft = 190 + 'px';
             flag = 1;
         } else {
             but.style.display = 'none';
@@ -305,7 +305,7 @@
     const phoneDescr = document.querySelector('.phoneDescr');
     const watchDescr = document.querySelector('.watchDescr');
     const laptopDescr = document.querySelector('.laptopDescr');
-
+    
     window.addEventListener('scroll', function () {
         let scrollTop = window.scrollY;
         (scrollTop >= 1500) && (scrollTop <= 3100) ? phoneDescr.classList.add('showObj') : phoneDescr.classList.remove('showObj');
