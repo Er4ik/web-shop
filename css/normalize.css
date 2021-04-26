@@ -9,6 +9,8 @@ body {
 
 input::-webkit-input-placeholder { font-weight: 600; }
 input[type~="name"], input[type~="email"] {font-weight: 600;}
+input {outline:none;}
+
 .container {
     max-width: 1400px;
     margin: 0 auto;

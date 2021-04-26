@@ -26,3 +26,5 @@
 
     menuIcon.addEventListener('click', toggleMenuIcon);
 }
+
+

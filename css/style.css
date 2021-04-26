@@ -629,6 +629,7 @@ header {
     width: 500px;
     height: 650px;
     margin: 20px auto;
+    margin-bottom: 300px;
     padding: 10px;
 }
 
@@ -675,7 +676,6 @@ hr {
 }
 
 .submit-but:hover {
-    opacity: 0.6;
     cursor: pointer;
 }
 
@@ -683,6 +683,10 @@ hr {
     width: 150px;
     font-weight: 600;
     font-size: 18px;
+}
+
+.name-input:focus, .name-input:hover, .but-border:hover {
+    border: 2px solid black;
 }
 
 .but-border {
