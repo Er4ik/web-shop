@@ -4,8 +4,11 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 600;
     margin-top: 20px;
+    -webkit-input-placeholder: Georgia;
 }
 
+input::-webkit-input-placeholder { font-weight: 600; }
+input[type~="name"], input[type~="email"] {font-weight: 600;}
 .container {
     max-width: 1400px;
     margin: 0 auto;

@@ -174,83 +174,6 @@ header {
     justify-content: center;
 }
 
-.sign-menu {
-    border-radius: 15%;
-    margin: -10% 22% 2%;
-    display: none;
-    background: linear-gradient(to top , #000, #fff);
-    width: 800px;
-    height: 480px;
-}
-
-.input-name {
-    margin: 0px 60px 0px 60px;
-}
-
-.in-name, .in-name-mess, .in-pass-name {
-    margin: 10px auto;
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.in-pass-but {
-    background-color: #fff;
-    padding-left: 5px;
-    width: 665px;
-    height: 30px;
-}
-
-.in-but {
-    background-color: #fff;
-    padding-left: 5px;
-    width: 300px;
-    height: 30px;
-}
-
-.name-email {
-    width: 670px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.in-message {
-    margin-top: 10px;
-}
-
-.in-mess-but {
-    padding: 5px 5px;
-    width: 660px;
-    height: 150px;
-    max-height: 150px;
-    min-height: 150px;
-    max-width: 660px;
-    min-width: 660px;
-}
-
-.in-send {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.send-but {
-    background-color: #fff;
-    width: 300px;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-.in-esc {
-    margin: -25px -50px 0px 0px;
-    text-align: right;
-}
-
-.esc {
-
-    font-size: 16px;
-    color: black;
-}
-
 .headText {
     text-align: center;
     font-size: 72px;
@@ -697,3 +620,80 @@ header {
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
+
+/*Sign-menu*/
+.sign-menu-form {
+    border-radius: 5%;
+    border: 4px solid rgb(236, 236, 236);
+    background-color: #fff;
+    width: 500px;
+    height: 650px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign-head {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 30px auto;
+    width: 100%;
+    height: 50px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    color: rgb(236, 236, 236);
+    background-color: rgb(236, 236, 236);
+}
+
+.name-input {
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    margin: 30px auto;
+    padding: 0 30px;
+    border: 4px solid rgb(236, 236, 236);
+    width: 80%;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+.links {
+    height: 50px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.submit-but:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.submit-but {
+    width: 150px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.but-border {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    border: 2px solid rgb(236, 236, 236);
+    background-color: rgb(245, 244, 244);
+    border-radius: 25px;
+    width: 50%;
+    height: 40px;
+    font-weight: 600;
+}
+
