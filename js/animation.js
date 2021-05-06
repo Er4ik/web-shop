@@ -1,53 +1,3 @@
-// burger-menu and Sign-menu
-{
-    const mainLogo = document.querySelector('.main-log');
-    const but = document.querySelector('.button');
-    const burger = document.querySelector('.burger');
-    const menuIcon = burger.querySelector('.menu-icon');
-    const signMenuBut = but.querySelector('.but-font3');
-    const signMenu = document.querySelector('.sign-menu');
-    const escSignMenu = signMenu.querySelector('.esc');
-
-    let flag = 0;
-    let flagMenu = 0;
-    burger.style.marginLeft = 1155 + 'px';
-
-    function toggleMenuIcon() {
-        menuIcon.classList.toggle('active');
-        if (flag == 0) {
-            but.style.display = 'flex';
-            burger.style.marginLeft = 190 + 'px';
-            flag = 1;
-        } else {
-            but.style.display = 'none';
-            burger.style.marginLeft = 1155 + 'px';
-            flag = 0;
-        }
-    }
-
-    burger.addEventListener('click', function () {
-        but.classList.add('b-show');
-    });
-
-    function openSignMenu() {
-        if (flagMenu === 0) {
-            mainLogo.style.display = 'none';
-            signMenu.style.display = 'block';
-            signMenu.classList.add('b-show');
-            flagMenu = 1;
-        }
-        else {
-            mainLogo.style.display = 'block';
-            signMenu.style.display = 'none';
-            flagMenu = 0;
-        }
-    }
-
-    menuIcon.addEventListener('click', toggleMenuIcon);
-    signMenuBut.addEventListener('click', openSignMenu);
-    escSignMenu.addEventListener('click', openSignMenu);
-}
-
 //slider catalog
 {
     const plusCat = document.querySelector('.plusCat');
@@ -307,10 +257,18 @@
     const laptopDescr = document.querySelector('.laptopDescr');
     
     window.addEventListener('scroll', function () {
-        let scrollTop = window.scrollY;
-        (scrollTop >= 1500) && (scrollTop <= 3100) ? phoneDescr.classList.add('showObj') : phoneDescr.classList.remove('showObj');
-        (scrollTop >= 2300) && (scrollTop <= 4000) ? watchDescr.classList.add('showObj') : watchDescr.classList.remove('showObj');
-        (scrollTop >= 3100) && (scrollTop <= 5200) ? laptopDescr.classList.add('showObj') : laptopDescr.classList.remove('showObj');
+        let windowWidth = window.innerWidth;
+        if (windowWidth < 768) {
+            phoneDescr.classList.add('showObj');
+            watchDescr.classList.add('showObj');
+            laptopDescr.classList.add('showObj');
+        } else {
+            let scrollTop = window.scrollY;
+            if ((scrollTop >= 1500) && (scrollTop <= 3100)) phoneDescr.classList.add('showObj');
+            if ((scrollTop >= 2300) && (scrollTop <= 4000)) watchDescr.classList.add('showObj');
+            if ((scrollTop >= 3100) && (scrollTop <= 5200)) laptopDescr.classList.add('showObj');
+        }
     });
 }
+
 
