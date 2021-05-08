@@ -257,10 +257,17 @@
     const laptopDescr = document.querySelector('.laptopDescr');
     
     window.addEventListener('scroll', function () {
-        let scrollTop = window.scrollY;
-        (scrollTop >= 1500) && (scrollTop <= 3100) ? phoneDescr.classList.add('showObj') : phoneDescr.classList.remove('showObj');
-        (scrollTop >= 2300) && (scrollTop <= 4000) ? watchDescr.classList.add('showObj') : watchDescr.classList.remove('showObj');
-        (scrollTop >= 3100) && (scrollTop <= 5200) ? laptopDescr.classList.add('showObj') : laptopDescr.classList.remove('showObj');
+        let windowWidth = window.innerWidth;
+        if (windowWidth < 768) {
+            phoneDescr.classList.add('showObj');
+            watchDescr.classList.add('showObj');
+            laptopDescr.classList.add('showObj');
+        } else {
+            let scrollTop = window.scrollY;
+            if ((scrollTop >= 1500) && (scrollTop <= 3100)) phoneDescr.classList.add('showObj');
+            if ((scrollTop >= 2300) && (scrollTop <= 4000)) watchDescr.classList.add('showObj');
+            if ((scrollTop >= 3100) && (scrollTop <= 5200)) laptopDescr.classList.add('showObj');
+        }
     });
 }
 
