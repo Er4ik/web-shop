@@ -3,23 +3,24 @@
     const plusCat = document.querySelector('.plusCat');
     const catDescr = document.querySelector('.catDescr');
 
+
+    catDescr.classList.add('p-show');
     catDescr.style.display = 'none';
-    let flag = 1;
+    let openCat = true;
+
+    function showCatalog(disp, transform, colour, opac, flag) {
+        catDescr.style.display = disp;
+        plusCat.style.transform = transform;
+        plusCat.style.color = colour;
+        plusCat.style.opacity = opac;
+        openCat = flag;
+    }
 
     const showCat = () => {
-        if (flag === 0) {
-            catDescr.style.display = 'none';
-            plusCat.style.transform = 'rotate(-180deg)';
-            plusCat.style.color = 'white';
-            plusCat.style.opacity = 0.3;
-            flag = 1;
+        if (openCat === false) {
+            showCatalog('none', 'rotate(-180deg)', 'white', 0.3, true);
         } else {
-            catDescr.style.display = 'flex';
-            catDescr.classList.add('p-show');
-            plusCat.style.transform = 'rotate(225deg)';
-            plusCat.style.color = 'darkorange'
-            plusCat.style.opacity = 1;
-            flag = 0;
+            showCatalog('flex', 'rotate(225deg)', 'darkorange', 1, false);
         }
     }
 
@@ -127,17 +128,17 @@
     dataBackPict2.innerHTML = aboutProductBack.prod2;
     dataBackPict3.innerHTML = aboutProductBack.prod3;
 
-    let flag1 = 1;
+    let flagRotate = true;
 
     const rotatePict = (pict) => {
-        if (flag1 === 1) {
+        if (flagRotate) {
             pict.style.transform = 'rotateY(180deg)';
             pict.style.opacity = 0.2;
-            flag1 = 0;
+            flagRotate = false;
         } else {
             pict.style.transform = '';
             pict.style.opacity = 1;
-            flag1 = 1;
+            flagRotate = true;
         }
     }
 
@@ -226,7 +227,6 @@
     const DescrPict1 = document.querySelector('.phone-text');
     const DescrPict2 = document.querySelector('.watch-text');
     const DescrPict3 = document.querySelector('.laptop-text');
-    const pc = document.querySelector('.pc1');
 
     headDescrPict1.innerHTML = descrProdPict.head1;
     headDescrPict2.innerHTML = descrProdPict.head2;
