@@ -666,6 +666,15 @@ hr {
     height: 60px;
 }
 
+.ni3 {
+    margin: 0px auto;
+    margin-right: 0%;
+}
+
+.ni4 {
+    margin-right: 0%;
+}
+
 .links {
     height: 50px;
     margin: 10px auto;
@@ -699,5 +708,23 @@ hr {
     width: 50%;
     height: 40px;
     font-weight: 600;
+}
+
+.pass-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+
+.view:hover, .viewRep:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.view, .viewRep {
+    height: 18px;
+    width: 25px;
+    margin: auto 2%;
 }
 

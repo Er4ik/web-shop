@@ -42,6 +42,7 @@ input {outline:none;}
 input {
   background: none;
   border: none;
+  font-weight: bold;
 }
 
 button {
