@@ -8,11 +8,17 @@ const viewRepeatPassword = document.querySelector('.viewRep');
 
 const urlAddress = "https://er4ik.github.io/Web_Site_Shop/";
 
+inName.setAttribute('maxlength', '30');
+inPassword.setAttribute('maxlength', '30');
+inPasswordCorrect.setAttribute('maxlength', '30');
+
 let flagPassView = true;
 
 const emailrx = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
 const namerx = /\w \w/;
 const minimum8Chars = /^.{8,}$/;
+
+
 
 const validateForm = (inBut, rx) => {
     if(!rx.test(inBut.value)) {
@@ -24,7 +30,7 @@ const validateForm = (inBut, rx) => {
 }
 
 const validPassword = (passBut, passRepeat) => {
-    if(passBut === passRepeat) return true;
+    if (passBut.value === passRepeat.value) return true;
     return false;
 }
 
@@ -34,11 +40,13 @@ const viewPass = (pass, viewBut) => {
         viewBut.src = 'pictures/sign-icon/viewclose.jpg';
         viewBut.style.height = '22px';
         flagPassView = false;
+        return true;
     } else {
         pass.type = 'password';
         viewBut.src = 'pictures/sign-icon/viewopen.jpg';
         viewBut.style.height = '18px';
         flagPassView = true;
+        return true;
     }
 }
 
@@ -74,7 +82,7 @@ submitForm.addEventListener('submit', function(event) {
     if(validateForm(inName, namerx) &&
     validateForm(inEmail, emailrx) &&
     validateForm(inPassword, minimum8Chars) &&
-    validPassword) {
+    validPassword(inPassword, inPasswordCorrect)) {
 
         let dataPerson = {
             'name': inName.value,
@@ -86,10 +94,11 @@ submitForm.addEventListener('submit', function(event) {
         const requestForm = new XMLHttpRequest();
         requestForm.open('GET', urlAddress);
         requestForm.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        requestForm.send(dataPerson);
-        for(key in dataPerson) {
+        requestForm.send();
+        for (key in dataPerson) {
             console.dir(key + ': ' + dataPerson[key]);
         }
     }
 })
 
+export { validateForm };

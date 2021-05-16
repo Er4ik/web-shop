@@ -4,19 +4,21 @@
     const burger = document.querySelector('.burger');
     const menuIcon = document.querySelector('.menu-icon');
 
-    let flag = 0;
+    let flag = true;
     burger.style.marginLeft = 1155 + 'px';
 
     function toggleMenuIcon() {
         menuIcon.classList.toggle('active');
-        if (flag == 0) {
+        if (flag) {
             but.style.display = 'flex';
             burger.style.marginLeft = 189 + 'px';
-            flag = 1;
+            flag = false;
+            return true;
         } else {
             but.style.display = 'none';
             burger.style.marginLeft = 1155 + 'px';
-            flag = 0;
+            flag = true;
+            return true;
         }
     }
 

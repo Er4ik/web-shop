@@ -14,6 +14,7 @@
         plusCat.style.color = colour;
         plusCat.style.opacity = opac;
         openCat = flag;
+        return true;
     }
 
     const showCat = () => {
@@ -46,8 +47,14 @@
     descrProd.innerHTML = aboutCatalog.Description1;
 
     const changeDataPict = (count) => {
-        nameProd.innerHTML = aboutCatalog[`Head${count}`];
-        descrProd.innerHTML = aboutCatalog[`Description${count}`];
+        if (count in aboutCatalog) {
+            nameProd.innerHTML = aboutCatalog[`Head${count}`];
+            descrProd.innerHTML = aboutCatalog[`Description${count}`];
+            return true;
+        } else {
+            aboutCatalog.count = '';
+            return false;
+        }
     }
 
     const changeNum = (count) => {
@@ -59,12 +66,14 @@
         wheelColor1.style.backgroundColor = clr1;
         wheelColor2.style.backgroundColor = clr2;
         wheelColor3.style.backgroundColor = clr3;
+        return true;
     }
 
     function scrollPict() {
         offset += 555;
         if (offset > 1110) offset = 0;
         sliderLine.style.left = -offset + 'px';
+        return offset;
     }
 
     function scrollNum() {
@@ -83,6 +92,7 @@
         changeNum(countNum);
         scrollPict();
         changeDataPict(countNum);
+        return true;
     }
 
     document.querySelector('.next').onclick = scrollNum;
@@ -135,10 +145,12 @@
             pict.style.transform = 'rotateY(180deg)';
             pict.style.opacity = 0.2;
             flagRotate = false;
+            return flagRotate;
         } else {
             pict.style.transform = '';
             pict.style.opacity = 1;
             flagRotate = true;
+            return flagRotate;
         }
     }
 
@@ -181,17 +193,23 @@
         backButton1.style.color = clrFont1;
         backButton2.style.color = clrFont2;
         backButton3.style.color = clrFont3;
+        return true;
     }
 
     function changeData(serv) {
-        serviceHead.innerHTML = aboutService[`Head${serv}`];
-        serviceDescr.innerHTML = aboutService[`Descr${serv}`];
+        if (serv in aboutService) {
+            serviceHead.innerHTML = aboutService[`Head${serv}`];
+            serviceDescr.innerHTML = aboutService[`Descr${serv}`];
+            return true;
+        }
+        return false;
     };
 
     function servIconVisible(vis1, vis2, vis3) {
         servIcon1.style.display = vis1;
         servIcon2.style.display = vis2;
         servIcon3.style.display = vis3;
+        return true;
     }
 
     document.querySelector('.s1').addEventListener('click', function () {
@@ -237,6 +255,7 @@
 
     function handleButtonClick(elem) {
         elem.scrollIntoView({ block: "center", behavior: "smooth" });
+        return true;
     }
 
     updownElem1.addEventListener('click', function () {
@@ -262,13 +281,14 @@
             phoneDescr.classList.add('showObj');
             watchDescr.classList.add('showObj');
             laptopDescr.classList.add('showObj');
+            return true;
         } else {
             let scrollTop = window.scrollY;
             if ((scrollTop >= 1500) && (scrollTop <= 3100)) phoneDescr.classList.add('showObj');
             if ((scrollTop >= 2300) && (scrollTop <= 4000)) watchDescr.classList.add('showObj');
             if ((scrollTop >= 3100) && (scrollTop <= 5200)) laptopDescr.classList.add('showObj');
+            return true;
         }
     });
 }
-
 
