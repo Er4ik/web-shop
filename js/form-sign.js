@@ -21,7 +21,7 @@ const minimum8Chars = /^.{8,}$/;
 
 
 const validateForm = (inBut, rx) => {
-    if(!rx.test(inBut.value)) {
+    if (!rx.test(inBut.value)) {
         inBut.style.border = '1px solid red';
         return false;
     }
@@ -59,7 +59,7 @@ const encryptionPass = (num) => {
     }
 
     for (item in passArrCipher) {
-        passArrCipher[item] += num; 
+        passArrCipher[item] += num;
         passArrCipher[item] = String.fromCharCode(passArrCipher[item]);
     }
 
@@ -75,14 +75,14 @@ viewRepeatPassword.addEventListener('click', function () {
     viewPass(inPasswordCorrect, viewRepeatPassword);
 })
 
-submitForm.addEventListener('submit', function(event) {
+submitForm.addEventListener('submit', function (event) {
 
     event.preventDefault();
 
-    if(validateForm(inName, namerx) &&
-    validateForm(inEmail, emailrx) &&
-    validateForm(inPassword, minimum8Chars) &&
-    validPassword(inPassword, inPasswordCorrect)) {
+    if (validateForm(inName, namerx) &&
+        validateForm(inEmail, emailrx) &&
+        validateForm(inPassword, minimum8Chars) &&
+        validPassword(inPassword, inPasswordCorrect)) {
 
         let dataPerson = {
             'name': inName.value,
@@ -100,5 +100,3 @@ submitForm.addEventListener('submit', function(event) {
         }
     }
 })
-
-export { validateForm };
