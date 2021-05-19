@@ -769,11 +769,14 @@ hr {
     text-align: center;
 }
 
+.mob-head {
+    margin: 25px auto;
+}
+
 .choice-box {
-    margin: 50px 0px 0 79%;
     height: 820px;
     width: 285px;
-    border: 4px solid #FF8C00;
+    border: 3px solid rgb(153 153 153);
     border-radius: 20px 20px 20px 20px;
     background-color: #fff;
 }
@@ -782,7 +785,7 @@ hr {
     font-size: 30px;
     text-align: center;
     padding: 10px 0 10px 0;
-    border-bottom: 4px solid #FF8C00;
+    border-bottom: 3px solid rgb(153 153 153);
 }
 
 .choice-head {
@@ -804,7 +807,7 @@ hr {
 }
 
 .variant:hover {
-    color: orange;
+    color: #FF8C00;
     cursor: pointer;
 }
 
@@ -815,7 +818,7 @@ hr {
 .res-see,
 .reset {
     color: #fff;
-    border: 4px solid #FF8C00;
+    border: 2px solid rgb(153 153 153);
     border-radius: 30px;
     font-size: 30px;
     font-weight: bolder;
@@ -826,8 +829,8 @@ hr {
 
 .res-see:hover,
 .reset:hover {
-    background-color: #FF8C00;
-    border: 4px solid #000;
+    background-color: rgb(153 153 153);
+    border: 2px solid #000;
     cursor: pointer;
     transition: 1s;
 }
@@ -835,15 +838,19 @@ hr {
 /*phones-list*/
 .list-name {
     font-family: Trebuchet MS;
-    text-shadow: 2px 2px 5px #FF8C00;
+    text-shadow: 3px solid rgb(153 153 153);
     font-size: 30px;
-    padding: 0 0 10px 25px;
+    padding: 0 0 10px 45px;
     text-align: start;
     text-decoration: underline;
 }
 
 .phone-container {
-    height: 1100px;
+    height: 1200px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .prod-list {
@@ -864,7 +871,7 @@ hr {
     margin: 0px 0 30px 0;
     height: 300px;
     width: 250px;
-    border: 4px solid #FF8C00;
+    border: 3px solid rgb(153 153 153);
     border-radius: 20px 20px 20px 20px;
     background-color: #000;
 }
@@ -872,4 +879,9 @@ hr {
 .product:hover {
     cursor: pointer;
     transition: 1s;
+}
+
+.white__phone {
+    margin: 0px auto;
+    max-width: 1300px;
 }
