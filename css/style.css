@@ -764,14 +764,13 @@ hr {
 }
 
 /*phones-page*/
-
 .mob-head-name {
     font-size: 60px;
     text-align: center;
 }
 
 .choice-box {
-    margin: 100px 0px 0 79%;
+    margin: 50px 0px 0 79%;
     height: 820px;
     width: 285px;
     border: 4px solid #FF8C00;
@@ -829,6 +828,48 @@ hr {
 .reset:hover {
     background-color: #FF8C00;
     border: 4px solid #000;
+    cursor: pointer;
+    transition: 1s;
+}
+
+/*phones-list*/
+.list-name {
+    font-family: Trebuchet MS;
+    text-shadow: 2px 2px 5px #FF8C00;
+    font-size: 30px;
+    padding: 0 0 10px 25px;
+    text-align: start;
+    text-decoration: underline;
+}
+
+.phone-container {
+    height: 1100px;
+}
+
+.prod-list {
+    float: left;
+    height: 1000px;
+    width: 78%;
+    /*border: 4px solid #FF8C00;*/
+    align-items: flex-start;
+
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product {
+    margin: 0px 0 30px 0;
+    height: 300px;
+    width: 250px;
+    border: 4px solid #FF8C00;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #000;
+}
+
+.product:hover {
     cursor: pointer;
     transition: 1s;
 }
