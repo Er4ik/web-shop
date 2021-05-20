@@ -873,15 +873,21 @@ hr {
     width: 250px;
     border: 3px solid rgb(153 153 153);
     border-radius: 20px 20px 20px 20px;
-    background-color: #000;
+    background: linear-gradient(to top, rgb(44, 42, 42), rgb(226, 162, 109));
 }
 
 .product:hover {
     cursor: pointer;
-    transition: 1s;
 }
 
 .white__phone {
     margin: 0px auto;
     max-width: 1300px;
+}
+
+.model {
+    display: block;
+    margin: 10px auto 10px auto;
+    width: auto;
+    height: 280px;
 }
