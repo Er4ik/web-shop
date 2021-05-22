@@ -883,9 +883,6 @@ hr {
 }
 
 .model {
-    -moz-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    -webkit-transition: all 1s ease-out;
     display: block;
     margin: 10px auto 10px auto;
     width: auto;
@@ -895,7 +892,7 @@ hr {
 .frame {
     display: flex;
     flex-direction: column;
-    border: 2px solid rgb(153, 153, 153);
+    border: 3px solid rgb(153, 153, 153);
     border-radius: 20px 20px 20px 20px;
     height: 372px;
     width: 230px;
@@ -928,13 +925,6 @@ hr {
     background-color: rgb(245, 132, 57);
 }
 
-.wrap1:hover,
-.wrap2:hover {
-    cursor: pointer;
-    transform: scale(0.95);
-    transition: 1s;
-}
-
 .basket {
     height: 45px;
 }
@@ -943,27 +933,4 @@ hr {
     display: block;
     margin: 3px auto 0px auto;
     height: 40px;
-}
-
-.p-name {
-    /*visibility: hidden;*/
-    position: relative;
-    bottom: 280px;
-    font-size: 22px;
-    text-align: center;
-}
-
-.info {
-    /*visibility: hidden;*/
-    position: relative;
-    left: 10px;
-    bottom: 150px;
-    font-size: 22px;
-    color: #fff;
-    line-height: 30px
-}
-
-.price {
-    color: rgb(255, 0, 0);
-    font-size: 35px;
 }
