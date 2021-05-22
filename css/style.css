@@ -946,24 +946,32 @@ hr {
 }
 
 .p-name {
-    /*visibility: hidden;*/
+    font-family: 'Trebuchet MS';
+    text-decoration: underline;
+    transition: 1s;
+    opacity: 0;
     position: relative;
     bottom: 280px;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
 }
 
 .info {
-    /*visibility: hidden;*/
+    font-family: 'Trebuchet MS';
+    transition: 1s;
+    opacity: 0;
     position: relative;
     left: 10px;
-    bottom: 150px;
-    font-size: 22px;
+    bottom: 170px;
+    font-size: 20px;
     color: #fff;
     line-height: 30px
 }
 
 .price {
-    color: rgb(255, 0, 0);
-    font-size: 35px;
+    line-height: 60px;
+    font-family: 'Trebuchet MS';
+    font-weight: 100;
+    color: rgb(219, 33, 33);
+    font-size: 33px;
 }
