@@ -65,7 +65,7 @@
                 this.descrProd.innerHTML = aboutCatalog[`Description${count}`];
                 return true;
             } else {
-                aboutCatalog.count = '';
+                aboutCatalog[`Head${count}`] = '';
                 return false;
             }
         }
@@ -239,7 +239,6 @@
 
     desrcServ.bodyValue.but.map(function (elem) {
         document.querySelector(elem).addEventListener('click', function () {
-            console.log(desrcServ.bodyValue.but.indexOf(elem));
             desrcServ.changeDescrService(...desrcServ.bodyValue[`valArr${desrcServ.bodyValue.but.indexOf(elem)+1}`]);
         })
     })
