@@ -1,30 +1,41 @@
 // burger-menu
 {
-    const but = document.querySelector('.button');
-    const burger = document.querySelector('.burger');
-    const menuIcon = document.querySelector('.menu-icon');
+    class Burger {
+        constructor(flag) {
+            this.flag = flag;
+            this.but = document.querySelector('.button');
+            this.burger = document.querySelector('.burger');
+            this.menuIcon = document.querySelector('.menu-icon');
+            this.burger.style.marginLeft = 1155 + 'px';
+        }
 
-    let flag = 0;
-    burger.style.marginLeft = 1155 + 'px';
+        
 
-    function toggleMenuIcon() {
-        menuIcon.classList.toggle('active');
-        if (flag == 0) {
-            but.style.display = 'flex';
-            burger.style.marginLeft = 189 + 'px';
-            flag = 1;
-        } else {
-            but.style.display = 'none';
-            burger.style.marginLeft = 1155 + 'px';
-            flag = 0;
+        toggleMenuIcon() {
+            this.menuIcon.classList.toggle('active');
+            if (this.flag) {
+                this.but.style.display = 'flex';
+                this.burger.style.marginLeft = 189 + 'px';
+                this.flag = false;
+                return true;
+            } else {
+                this.but.style.display = 'none';
+                this.burger.style.marginLeft = 1155 + 'px';
+                this.flag = true;
+                return true;
+            }
         }
     }
 
-    burger.addEventListener('click', function () {
-        but.classList.add('b-show');
+    const burgerMenu = new Burger(true);    
+
+    burgerMenu.burger.addEventListener('click', function () {
+        burgerMenu.but.classList.add('b-show');
     });
 
-    menuIcon.addEventListener('click', toggleMenuIcon);
+    burgerMenu.menuIcon.addEventListener('click', function () {
+        burgerMenu.toggleMenuIcon()
+    });
 }
 
 

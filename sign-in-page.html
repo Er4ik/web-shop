@@ -45,15 +45,21 @@
         <section class="first-page white1">
             <div class="container">
                 <div class="main-first">
-                    <form class="sign-menu-form" action="https://er4ik.github.io/Web_Site_Shop/">
+                    <form class="sign-menu-form" name="signMenu" action="https://er4ik.github.io/Web_Site_Shop/">
                         <div class="sign-head">
                             <a href="index.html"><img src="pictures/logo/logo-head.png" alt="EAshop"></a>
                         </div>
                         <hr>
                         <input class="name-input ni1" type="name" placeholder="name and lastname">
                         <input class="name-input ni2" type="email" placeholder="example@gmail.com">
-                        <input class="name-input ni3" type="password" placeholder="password">
-                        <input class="name-input ni4" type="password" placeholder="repeat password">
+                        <div class="pass-block">
+                            <input class="name-input ni3" type="password" placeholder="password">
+                            <img class="view" src="pictures/sign-icon/viewopen.jpg" alt="">
+                        </div>
+                        <div class="pass-block">
+                            <input class="name-input ni4" type="password" placeholder="repeat password">
+                            <img class="viewRep" src="pictures/sign-icon/viewopen.jpg" alt="">
+                        </div>
                         <hr>
                         <div class="links">
                             <a target="_blank" href="https://www.facebook.com/"><img class="icon-sign" src="pictures/sign-icon/facebook.png" alt="facebook"></a>
@@ -70,5 +76,6 @@
             </div>
         </section>
     <script src="js/burger-menu.js"></script>
+    <script src="js/form-sign.js"></script>
 </body>
 </html>
