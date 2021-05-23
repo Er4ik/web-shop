@@ -886,6 +886,8 @@ hr {
     -moz-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     -webkit-transition: all 1s ease-out;
+    position: relative;
+    z-index: 2;
     display: block;
     margin: 10px auto 10px auto;
     width: auto;
@@ -972,6 +974,6 @@ hr {
     line-height: 60px;
     font-family: 'Trebuchet MS';
     font-weight: 100;
-    color: rgb(219, 33, 33);
+    color: rgb(248, 23, 23);
     font-size: 33px;
 }
