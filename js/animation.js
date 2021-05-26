@@ -75,7 +75,7 @@
             document.querySelector('.number').innerHTML = a;
         }
 
-        wheelColor = (clr1, clr2, clr3) => {
+        wheelColorChange = (clr1, clr2, clr3) => {
             this.wheelColor1.style.backgroundColor = clr1;
             this.wheelColor2.style.backgroundColor = clr2;
             this.wheelColor3.style.backgroundColor = clr3;
@@ -93,13 +93,13 @@
             this.countNum++;
             if (this.countNum > 3) this.countNum = 1;
             if (this.countNum === 1) {
-                this.wheelColor('darkorange', 'white', 'white');
+                this.wheelColorChange('darkorange', 'white', 'white');
             }
             else if (this.countNum === 2) {
-                this.wheelColor('white', 'darkorange', 'white');
+                this.wheelColorChange('white', 'darkorange', 'white');
             }
             else {
-                this.wheelColor('white', 'white', 'darkorange');
+                this.wheelColorChange('white', 'white', 'darkorange');
             }
             this.changeNum(this.countNum);
             this.scrollPict();
@@ -113,7 +113,7 @@
             this.changeNum(this.countNum);
             this.scrollPict();
             this.changeDataPict(this.countNum);
-            this.wheelColor(...color);
+            this.wheelColorChange(...color);
         }
     }
     
@@ -134,10 +134,7 @@
 {
     class RotPict {
         constructor(flag) {
-            this.prodPict1 = document.querySelector('.prod1');
-            this.prodPict2 = document.querySelector('.prod2');
-            this.prodPict3 = document.querySelector('.prod3');
-            this.prodArr = [this.prodPict1, this.prodPict2, this.prodPict3];
+            this.prodPict = document.querySelectorAll('.product-picture');
             this.dataBackPict1 = document.querySelector('.pictBack1');
             this.dataBackPict2 = document.querySelector('.pictBack2');
             this.dataBackPict3 = document.querySelector('.pictBack3');
@@ -156,6 +153,8 @@
         }
 
         rotatePict = (pict) => {
+            if (pict.style.opacity == 0.2) this.flagRotate = false;
+            else this.flagRotate = true;
             if (this.flagRotate) {
                 this.conditionForRetutrn(pict, 'rotateY(180deg)', false, 0.2);
             } else {
@@ -166,9 +165,9 @@
 
     const rotatePicture = new RotPict(true);
 
-    rotatePicture.prodArr.map(function(prod) {
-        prod.addEventListener('click', function () {
-            rotatePicture.rotatePict(prod);
+    rotatePicture.prodPict.forEach((elem) => {
+        elem.addEventListener('click', function () {
+            rotatePicture.rotatePict(elem);
         });
     })
 }
@@ -248,25 +247,16 @@
 {
     class ScrollIconPicture {
         constructor() {
-            this.headDescrPict1 = document.querySelector('.hd1');
-            this.headDescrPict2 = document.querySelector('.hd2');
-            this.headDescrPict3 = document.querySelector('.hd3');
+            this.numHead = 1;
+            this.numText = 1;
+            this.headDescrPict = document.querySelectorAll('.head-pd-descr')
+            this.DescrPict = document.querySelectorAll('.text')
             this.updownElem1 = document.querySelector('.pct1');
             this.updownElem2 = document.querySelector('.pct2');
             this.updownElem3 = document.querySelector('.pct3');
             this.hiddenElement1 = document.querySelector(".phoneDescr");
-            this.hiddenElement2 = document.querySelector(".watchDescr");
-            this.hiddenElement3 = document.querySelector(".laptopDescr");
-            this.DescrPict1 = document.querySelector('.phone-text');
-            this.DescrPict2 = document.querySelector('.watch-text');
-            this.DescrPict3 = document.querySelector('.laptop-text');
-
-            this.headDescrPict1.innerHTML = descrProdPict.head1;
-            this.headDescrPict2.innerHTML = descrProdPict.head2;
-            this.headDescrPict3.innerHTML = descrProdPict.head3;
-            this.DescrPict1.innerHTML = descrProdPict.descr1;
-            this.DescrPict2.innerHTML = descrProdPict.descr2;
-            this.DescrPict3.innerHTML = descrProdPict.descr3;
+            this.hiddenElement2 = document.querySelector(".laptopDescr");
+            this.hiddenElement3 = document.querySelector(".watchDescr");
 
             this.hidElem = [this.hiddenElement1, this.hiddenElement2, this.hiddenElement3];
             this.upDownElem = [this.updownElem1, this.updownElem2, this.updownElem3];
@@ -280,6 +270,14 @@
     }
 
     const scrollWin = new ScrollIconPicture;
+
+    scrollWin.headDescrPict.forEach((elem) => {
+        elem.innerHTML = descrProdPict[`head${scrollWin.numHead++}`];
+    })
+
+    scrollWin.DescrPict.forEach((elem) => {
+        elem.innerHTML = descrProdPict[`descr${scrollWin.numText++}`];
+    })
 
     scrollWin.upDownElem.map(function(elem) {
         elem.addEventListener('click', function () {
