@@ -906,6 +906,7 @@ hr {
 }
 
 .p-name {
+    text-shadow: 1px 1px 2px #fff, 0 0 1em rgb(95, 95, 95), 0 0 0.2em rgb(0, 0, 0);
     font-family: 'Trebuchet MS';
     text-decoration: underline;
     transition: 1s;
@@ -916,22 +917,30 @@ hr {
     text-align: center;
 }
 
+.brand,
+.rate,
+.memory {
+    font-family: 'Trebuchet MS';
+}
+
 .info {
     font-family: 'Trebuchet MS';
     transition: 1s;
     opacity: 0;
     position: relative;
     left: 10px;
-    bottom: 170px;
+    bottom: 180px;
     font-size: 20px;
-    color: #fff;
+
+    color: rgb(0, 0, 0);
     line-height: 30px
 }
 
 .price {
-    line-height: 60px;
+    line-height: 70px;
     font-family: 'Trebuchet MS';
     font-weight: 100;
     color: rgb(248, 23, 23);
     font-size: 33px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(4, 4, 15);
 }
