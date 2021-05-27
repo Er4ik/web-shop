@@ -34,19 +34,19 @@ class SignMenuForm {
         return false;
     }
 
+    view = (pass, viewBut, type, src, heigth, flag) => {
+        pass.type = type;
+        viewBut.src = src;
+        viewBut.style.height = heigth;
+        this.flagPassView = flag;
+        return flag;
+    }
+
     viewPass = (pass, viewBut) => {
         if (this.flagPassView) {
-            pass.type = 'text';
-            viewBut.src = 'pictures/sign-icon/viewclose.jpg';
-            viewBut.style.height = '22px';
-            this.flagPassView = false;
-            return true;
+            this.view(pass, viewBut, 'text', 'pictures/sign-icon/viewclose.jpg', '22px', false);
         } else {
-            pass.type = 'password';
-            viewBut.src = 'pictures/sign-icon/viewopen.jpg';
-            viewBut.style.height = '18px';
-            this.flagPassView = true;
-            return true;
+            this.view(pass, viewBut, 'password', 'pictures/sign-icon/viewopen.jpg', '18px', true);
         }
     }
 
