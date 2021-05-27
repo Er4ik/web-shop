@@ -531,7 +531,8 @@ header {
     color: #fff;
 }
 
-.text-left>h3, .text-left>p {
+.text-left>h3,
+.text-left>p {
     margin-left: 0px;
     width: 600px;
     color: #000;
