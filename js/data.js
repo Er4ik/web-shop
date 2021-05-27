@@ -4,7 +4,7 @@ const aboutCatalog = {
     'Head3': ['THE BEST LAPTOPS<br>OF OUR RIME'],
     'Description1': ['The latest technology, the highest speed of work,<br>compactness and incredibly beautiful appearance'],
     'Description2': ['A computerized wristwatch with extended functionality: comfortable, beautiful, cool'],
-    'Description3': ['Excellent laptops with high performance and autonomy, thin bezels and luminous keyboard'],
+    'Description3': ['Excellent laptops with high performance and <br>autonomy, thin bezels and luminous keyboard'],
 }
 
 const aboutService = {
