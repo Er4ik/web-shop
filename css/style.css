@@ -732,7 +732,7 @@ hr {
 }
 
 .choice-box {
-    height: 1020px;
+    height: 1050px;
     width: 285px;
     border: 3px solid rgb(153 153 153);
     border-radius: 20px 20px 20px 20px;
@@ -776,10 +776,12 @@ hr {
     color: #FF8C00;
     cursor: pointer;
     transition: 1s;
-    transform: scale(0.95);
+    transform: scale(1.1);
 }
 
 .res-but {
+    margin-top: 5px;
+    border-top: 3px solid rgb(153 153 153);
     padding: 10px 0px 0px 0px;
 }
 
@@ -824,11 +826,11 @@ hr {
 .prod-list {
     display: flex;
     flex-wrap: wrap;
-    height: 1300px;
+    height: 50%;
     width: 78%;
     /*border: 4px solid #FF8C00;*/
     align-items: flex-start;
-    justify-content: space-around;
+
 }
 
 .product {
@@ -867,7 +869,7 @@ hr {
     border-radius: 20px 20px 20px 20px;
     height: 372px;
     width: 230px;
-    margin-bottom: 50px;
+    margin: 0 50px 50px 50px;
     background: linear-gradient(to top, rgb(17, 17, 17), rgb(158, 156, 156), rgb(255, 142, 67));
 }
 
