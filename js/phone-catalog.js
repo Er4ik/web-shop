@@ -58,3 +58,20 @@ heart.forEach((item) => {
         likeClick(item);
     })
 });
+
+//filterForm
+const filterBox = document.querySelectorAll('.frame');
+const form = document.querySelector('.choice-form');
+
+form.addEventListener('click', (event) => {
+    if (event.target.className !== ('variant')) return false;
+    else {
+        let filterClass = event.target.dataset['f'];
+        filterBox.forEach(elem => {
+            elem.classList.remove('hide');
+            if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+                elem.classList.add('hide');
+            }
+        });
+    }
+});
