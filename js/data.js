@@ -1,3 +1,5 @@
+'use strict';
+
 const aboutCatalog = {
     'Head1': ['NEW GENERATION<br>SMARTPHONES'],
     'Head2': ['THE MOST ADVANCED SMARTWATCH'],
