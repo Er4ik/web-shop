@@ -1,10 +1,12 @@
+'use strict';
+
 const aboutCatalog = {
     'Head1': ['NEW GENERATION<br>SMARTPHONES'],
     'Head2': ['THE MOST ADVANCED SMARTWATCH'],
     'Head3': ['THE BEST LAPTOPS<br>OF OUR RIME'],
     'Description1': ['The latest technology, the highest speed of work,<br>compactness and incredibly beautiful appearance'],
     'Description2': ['A computerized wristwatch with extended functionality: comfortable, beautiful, cool'],
-    'Description3': ['Excellent laptops with high performance and autonomy, thin bezels and luminous keyboard'],
+    'Description3': ['Excellent laptops with high performance and <br>autonomy, thin bezels and luminous keyboard'],
 }
 
 const aboutService = {
@@ -66,12 +68,12 @@ const phonesInfo = {
     'brand9': ['Samsung'],
     'memory1': ['256gb'],
     'memory2': ['128gb'],
-    'memory3': ['128'],
+    'memory3': ['32gb'],
     'memory4': ['64gb'],
     'memory5': ['128gb'],
     'memory6': ['512gb'],
-    'memory7': ['128'],
-    'memory8': ['128'],
+    'memory7': ['128gb'],
+    'memory8': ['128gb'],
     'memory9': ['500mb'],
     'rate1': ['60Hz'],
     'rate2': ['90Hz'],
@@ -82,4 +84,4 @@ const phonesInfo = {
     'rate7': ['120Hz'],
     'rate8': ['120Hz'],
     'rate9': ['30Hz'],
-} 
+}

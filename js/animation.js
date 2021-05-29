@@ -1,4 +1,7 @@
+'use strict';
+
 //slider catalog
+
 {
     class SliderCatalog {
         constructor(flag) {
@@ -18,7 +21,7 @@
             return true;
         }
 
-        showCat = () => {
+        showCat() {
             if (!this.flag) {
                 return this.showCatalog('none', 'rotate(-180deg)', 'white', 0.3, true);
             }
@@ -59,23 +62,22 @@
             this.descrProd.innerHTML = aboutCatalog.Description1;
         }
 
-        changeDataPict = (count) => {
+        changeDataPict(count) {
             if (`Head${count}` in aboutCatalog) {
                 this.nameProd.innerHTML = aboutCatalog[`Head${count}`];
                 this.descrProd.innerHTML = aboutCatalog[`Description${count}`];
                 return true;
-            } else {
-                aboutCatalog[`Head${count}`] = '';
-                return false;
             }
+            aboutCatalog[`Head${count}`] = '';
+            return false;
         }
 
-        changeNum = (count) => {
+        changeNum(count) {
             let a = document.querySelector('.number').value = count;
             document.querySelector('.number').innerHTML = a;
         }
 
-        wheelColor = (clr1, clr2, clr3) => {
+        wheelColorChange(clr1, clr2, clr3) {
             this.wheelColor1.style.backgroundColor = clr1;
             this.wheelColor2.style.backgroundColor = clr2;
             this.wheelColor3.style.backgroundColor = clr3;
@@ -93,13 +95,13 @@
             this.countNum++;
             if (this.countNum > 3) this.countNum = 1;
             if (this.countNum === 1) {
-                this.wheelColor('darkorange', 'white', 'white');
+                this.wheelColorChange('darkorange', 'white', 'white');
             }
             else if (this.countNum === 2) {
-                this.wheelColor('white', 'darkorange', 'white');
+                this.wheelColorChange('white', 'darkorange', 'white');
             }
             else {
-                this.wheelColor('white', 'white', 'darkorange');
+                this.wheelColorChange('white', 'white', 'darkorange');
             }
             this.changeNum(this.countNum);
             this.scrollPict();
@@ -107,13 +109,13 @@
             return true;
         }
 
-        changeWheel = (num, off, color) => {
+        changeWheel(num, off, color) {
             this.countNum = num;
             this.offset = off;
             this.changeNum(this.countNum);
             this.scrollPict();
             this.changeDataPict(this.countNum);
-            this.wheelColor(...color);
+            this.wheelColorChange(...color);
         }
     }
     
@@ -134,10 +136,7 @@
 {
     class RotPict {
         constructor(flag) {
-            this.prodPict1 = document.querySelector('.prod1');
-            this.prodPict2 = document.querySelector('.prod2');
-            this.prodPict3 = document.querySelector('.prod3');
-            this.prodArr = [this.prodPict1, this.prodPict2, this.prodPict3];
+            this.prodPict = document.querySelectorAll('.product-picture');
             this.dataBackPict1 = document.querySelector('.pictBack1');
             this.dataBackPict2 = document.querySelector('.pictBack2');
             this.dataBackPict3 = document.querySelector('.pictBack3');
@@ -148,14 +147,16 @@
             this.dataBackPict3.innerHTML = aboutProductBack.prod3;
         }
 
-        conditionForRetutrn = (picture, rotate, flag, num) => {
+        conditionForRetutrn(picture, rotate, flag, num) {
             picture.style.transform = rotate;
             picture.style.opacity = num;
             this.flagRotate = flag;
             return this.flagRotate;
         }
 
-        rotatePict = (pict) => {
+        rotatePict(pict) {
+            if (pict.style.opacity == 0.2) this.flagRotate = false;
+            else this.flagRotate = true;
             if (this.flagRotate) {
                 this.conditionForRetutrn(pict, 'rotateY(180deg)', false, 0.2);
             } else {
@@ -166,9 +167,9 @@
 
     const rotatePicture = new RotPict(true);
 
-    rotatePicture.prodArr.map(function(prod) {
-        prod.addEventListener('click', function () {
-            rotatePicture.rotatePict(prod);
+    rotatePicture.prodPict.forEach((elem) => {
+        elem.addEventListener('click', function () {
+            rotatePicture.rotatePict(elem);
         });
     })
 }
@@ -195,7 +196,7 @@
             this.servIcon3.style.display = 'none';
         }
 
-        backBut = (clrBack1, clrBack2, clrBack3, clrFont1, clrFont2, clrFont3) => {
+        backBut(clrBack1, clrBack2, clrBack3, clrFont1, clrFont2, clrFont3) {
             this.backButton1.style.backgroundColor = clrBack1;
             this.backButton2.style.backgroundColor = clrBack2;
             this.backButton3.style.backgroundColor = clrBack3;
@@ -221,7 +222,7 @@
             return true;
         }
 
-        changeDescrService = (data, but, visible) => {
+        changeDescrService(data, but, visible) {
             this.changeData(data);
             this.backBut(...but);
             this.servIconVisible(...visible);
@@ -248,25 +249,16 @@
 {
     class ScrollIconPicture {
         constructor() {
-            this.headDescrPict1 = document.querySelector('.hd1');
-            this.headDescrPict2 = document.querySelector('.hd2');
-            this.headDescrPict3 = document.querySelector('.hd3');
+            this.numHead = 1;
+            this.numText = 1;
+            this.headDescrPict = document.querySelectorAll('.head-pd-descr')
+            this.DescrPict = document.querySelectorAll('.text')
             this.updownElem1 = document.querySelector('.pct1');
             this.updownElem2 = document.querySelector('.pct2');
             this.updownElem3 = document.querySelector('.pct3');
             this.hiddenElement1 = document.querySelector(".phoneDescr");
-            this.hiddenElement2 = document.querySelector(".watchDescr");
-            this.hiddenElement3 = document.querySelector(".laptopDescr");
-            this.DescrPict1 = document.querySelector('.phone-text');
-            this.DescrPict2 = document.querySelector('.watch-text');
-            this.DescrPict3 = document.querySelector('.laptop-text');
-
-            this.headDescrPict1.innerHTML = descrProdPict.head1;
-            this.headDescrPict2.innerHTML = descrProdPict.head2;
-            this.headDescrPict3.innerHTML = descrProdPict.head3;
-            this.DescrPict1.innerHTML = descrProdPict.descr1;
-            this.DescrPict2.innerHTML = descrProdPict.descr2;
-            this.DescrPict3.innerHTML = descrProdPict.descr3;
+            this.hiddenElement2 = document.querySelector(".laptopDescr");
+            this.hiddenElement3 = document.querySelector(".watchDescr");
 
             this.hidElem = [this.hiddenElement1, this.hiddenElement2, this.hiddenElement3];
             this.upDownElem = [this.updownElem1, this.updownElem2, this.updownElem3];
@@ -280,6 +272,14 @@
     }
 
     const scrollWin = new ScrollIconPicture;
+
+    scrollWin.headDescrPict.forEach((elem) => {
+        elem.innerHTML = descrProdPict[`head${scrollWin.numHead++}`];
+    })
+
+    scrollWin.DescrPict.forEach((elem) => {
+        elem.innerHTML = descrProdPict[`descr${scrollWin.numText++}`];
+    })
 
     scrollWin.upDownElem.map(function(elem) {
         elem.addEventListener('click', function () {
@@ -297,7 +297,7 @@
             this.laptopDescr = document.querySelector('.laptopDescr');
         }
 
-        scrollPage = () => {
+        scrollPage() {
             let windowWidth = window.innerWidth;
             if (windowWidth < 768) {
                 this.phoneDescr.classList.add('showObj');
@@ -320,4 +320,3 @@
         scrollToPict.scrollPage();
     });
 }
-

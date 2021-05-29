@@ -1,38 +1,89 @@
-const icons = document.querySelectorAll('.icon img'); //массив
-const positionName = document.querySelectorAll('.p-name');
-const price = document.querySelectorAll('.price');
-const info = document.querySelectorAll('.info');
-const brand = document.querySelectorAll('.brand');
-const memory = document.querySelectorAll('.memory');
-const rate = document.querySelectorAll('.rate');
-let eventor = true;
-for (let key = 0; key < 9; key++) {
-    positionName[key].innerHTML = phonesInfo[`model${key + 1}`];
-    price[key].innerHTML = 'Price: ' + phonesInfo[`price${key + 1}`];
-    brand[key].innerHTML = 'Brand: ' + phonesInfo[`brand${key + 1}`];
-    memory[key].innerHTML = 'Memory size: ' + phonesInfo[`memory${key + 1}`];
-    rate[key].innerHTML = 'Rephresh rate: ' + phonesInfo[`rate${key + 1}`];
-}
-const Rotator = (pict, info, name) => {
-    if (eventor) {
-        info.style.opacity = 1;
-        name.style.opacity = 1;
-        pict.style.transform = 'rotateY(180deg)';
-        pict.style.opacity = 0.1;
-        eventor = false;
-        return eventor;
-    } else {
-        info.style.opacity = 0;
-        name.style.opacity = 0;
-        pict.style.transform = "";
-        pict.style.opacity = 1;
-        eventor = true;
-        return eventor;
+'use strict';
+
+
+//icons-rotate
+class RotIcon {
+    constructor() {
+        this.icons = document.querySelectorAll('.icon img');
+        this.positionName = document.querySelectorAll('.p-name');
+        this.price = document.querySelectorAll('.price');
+        this.info = document.querySelectorAll('.info');
+        this.brand = document.querySelectorAll('.brand');
+        this.memory = document.querySelectorAll('.memory');
+        this.rate = document.querySelectorAll('.rate');
+    }
+
+    infoSet(n) {
+        for (let key = 0; key < n; key++) {
+            this.positionName[key].innerHTML = phonesInfo[`model${key + 1}`];
+            this.price[key].innerHTML = 'Price: ' + phonesInfo[`price${key + 1}`];
+            this.brand[key].innerHTML = 'Brand: ' + phonesInfo[`brand${key + 1}`];
+            this.memory[key].innerHTML = 'Memory size: ' + phonesInfo[`memory${key + 1}`];
+            this.rate[key].innerHTML = 'Rephresh rate: ' + phonesInfo[`rate${key + 1}`];
+        }
+    }
+    settings(pict, info, name, opac, trans, opacPict) {
+        info.style.opacity = opac;
+        name.style.opacity = opac;
+        pict.style.transform = trans;
+        pict.style.opacity = opacPict;
+    }
+    visibleRotate(pict, info, name) {
+        if (info.style.opacity == 0) {
+            this.settings(pict, info, name, '1', 'rotateY(180deg)', '0.05');
+        } else {
+            this.settings(pict, info, name, 0, '', 1);
+        }
     }
 }
-
-icons.forEach((icn, indx) => {
+const Rotor = new RotIcon;
+Rotor.icons.forEach((icn, indx) => {
     icn.addEventListener('click', () => {
-        Rotator(icn, info[indx], positionName[indx]);
+        Rotor.infoSet(9);
+        Rotor.visibleRotate(icn, Rotor.info[indx], Rotor.positionName[indx]);
     })
+});
+
+//like-button
+class Like {
+    constructor() {
+        this.heart = document.querySelectorAll('.like');
+    }
+    setUp(heartpic, link, opa) {
+        heartpic.src = link;
+        heartpic.style.opacity = opa;
+    }
+
+    likeClick(heartpic) {
+        if (heartpic.style.opacity === '0.9') {
+            this.setUp(heartpic, "pictures/product-icons/heart-clicked.png", 1)
+        } else {
+            this.setUp(heartpic, "pictures/product-icons/heart.png", 0.9)
+        }
+    }
+
+}
+const likeChange = new Like;
+likeChange.heart.forEach((item) => {
+    item.style.opacity = 0.9;
+    item.addEventListener('click', () => {
+        likeChange.likeClick(item);
+    })
+});
+
+//filterForm
+const filterBox = document.querySelectorAll('.frame');
+const form = document.querySelector('.choice-form');
+
+form.addEventListener('click', (event) => {
+    if (event.target.className !== 'variant' && event.target.className !== 'reset') {
+        return false;
+    }
+    let filterClass = event.target.dataset['f'];
+    for (let key of filterBox) {
+        key.classList.remove('hide');
+        if (!key.classList.contains(filterClass) && filterClass !== 'all') {
+            key.classList.add('hide');
+        }
+    }
 });
