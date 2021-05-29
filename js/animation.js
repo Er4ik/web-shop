@@ -18,7 +18,7 @@
             return true;
         }
 
-        showCat = () => {
+        showCat() {
             if (!this.flag) {
                 return this.showCatalog('none', 'rotate(-180deg)', 'white', 0.3, true);
             }
@@ -318,4 +318,3 @@
         scrollToPict.scrollPage();
     });
 }
-
