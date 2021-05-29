@@ -1,4 +1,6 @@
 'use strict';
+
+
 //icons-rotate
 class RotIcon {
     constructor() {

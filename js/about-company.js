@@ -1,5 +1,6 @@
+'use strict';
+
 //about-company-page
-'use strict'
 
 const headText = document.querySelector('.headText');
 const text = document.querySelector('.text');

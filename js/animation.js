@@ -1,5 +1,6 @@
+'use strict';
+
 //slider catalog
-'use strict'
 
 {
     class SliderCatalog {

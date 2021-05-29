@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const aboutCatalog = {
     'Head1': ['NEW GENERATION<br>SMARTPHONES'],
