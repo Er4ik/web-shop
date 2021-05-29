@@ -64,10 +64,9 @@
                 this.nameProd.innerHTML = aboutCatalog[`Head${count}`];
                 this.descrProd.innerHTML = aboutCatalog[`Description${count}`];
                 return true;
-            } else {
-                aboutCatalog[`Head${count}`] = '';
-                return false;
             }
+            aboutCatalog[`Head${count}`] = '';
+            return false;
         }
 
         changeNum = (count) => {
