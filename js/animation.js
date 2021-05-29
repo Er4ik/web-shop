@@ -319,4 +319,3 @@
         scrollToPict.scrollPage();
     });
 }
-

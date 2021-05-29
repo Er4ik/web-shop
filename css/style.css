@@ -732,7 +732,7 @@ hr {
 }
 
 .choice-box {
-    height: 820px;
+    height: 1050px;
     width: 285px;
     border: 3px solid rgb(153 153 153);
     border-radius: 20px 20px 20px 20px;
@@ -759,17 +759,29 @@ hr {
 }
 
 .variant {
+    border: 2px solid rgb(153 153 153);
+    padding: 0 5px 0 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 150px;
+    display: block;
+    background: rgb(207, 207, 207);
     font-family: Trebuchet MS;
     font-size: 15px;
     font-weight: 100;
+
 }
 
 .variant:hover {
     color: #FF8C00;
     cursor: pointer;
+    transition: 1s;
+    transform: scale(1.1);
 }
 
 .res-but {
+    margin-top: 5px;
+    border-top: 3px solid rgb(153 153 153);
     padding: 10px 0px 0px 0px;
 }
 
@@ -812,16 +824,13 @@ hr {
 }
 
 .prod-list {
-    height: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50%;
     width: 78%;
     /*border: 4px solid #FF8C00;*/
     align-items: flex-start;
 
-}
-
-.row1 {
-    display: flex;
-    justify-content: space-around;
 }
 
 .product {
@@ -853,13 +862,14 @@ hr {
 }
 
 .frame {
+    margin: 30px;
     display: flex;
     flex-direction: column;
     border: 2px solid rgb(153, 153, 153);
     border-radius: 20px 20px 20px 20px;
     height: 372px;
     width: 230px;
-    margin-bottom: 50px;
+    margin: 0 50px 50px 50px;
     background: linear-gradient(to top, rgb(17, 17, 17), rgb(158, 156, 156), rgb(255, 142, 67));
 }
 
@@ -944,3 +954,22 @@ hr {
     font-size: 33px;
     text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(4, 4, 15);
 }
+
+.hide {
+    /*opacity: 1;
+    animation-name: a1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;*/
+    display: none;
+}
+
+/*@keyframes a1 {
+    to {
+        opacity: 0;
+        min-height: 0;
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+}*/

@@ -68,12 +68,12 @@ const phonesInfo = {
     'brand9': ['Samsung'],
     'memory1': ['256gb'],
     'memory2': ['128gb'],
-    'memory3': ['128'],
+    'memory3': ['32gb'],
     'memory4': ['64gb'],
     'memory5': ['128gb'],
     'memory6': ['512gb'],
-    'memory7': ['128'],
-    'memory8': ['128'],
+    'memory7': ['128gb'],
+    'memory8': ['128gb'],
     'memory9': ['500mb'],
     'rate1': ['60Hz'],
     'rate2': ['90Hz'],
@@ -84,4 +84,4 @@ const phonesInfo = {
     'rate7': ['120Hz'],
     'rate8': ['120Hz'],
     'rate9': ['30Hz'],
-} 
+}
