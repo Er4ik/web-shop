@@ -27,7 +27,6 @@ class RotIcon {
         name.style.opacity = opac;
         pict.style.transform = trans;
         pict.style.opacity = opacPict;
-        return true;
     }
     visibleRotate(pict, info, name) {
         if (info.style.opacity == 0) {
@@ -53,16 +52,13 @@ class Like {
     setUp(heartpic, link, opa) {
         heartpic.src = link;
         heartpic.style.opacity = opa;
-        return true;
     }
 
     likeClick(heartpic) {
-        if (heartpic.style.opacity == 0.9) {
+        if (heartpic.style.opacity === '0.9') {
             this.setUp(heartpic, "pictures/product-icons/heart-clicked.png", 1)
-            return true;
         } else {
             this.setUp(heartpic, "pictures/product-icons/heart.png", 0.9)
-            return false;
         }
     }
 
@@ -82,13 +78,12 @@ const form = document.querySelector('.choice-form');
 form.addEventListener('click', (event) => {
     if (event.target.className !== 'variant' && event.target.className !== 'reset') {
         return false;
-    } else {
-        let filterClass = event.target.dataset['f'];
-        filterBox.forEach(elem => {
-            elem.classList.remove('hide');
-            if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
-                elem.classList.add('hide');
-            }
-        });
+    }
+    let filterClass = event.target.dataset['f'];
+    for (let key of filterBox) {
+        key.classList.remove('hide');
+        if (!key.classList.contains(filterClass) && filterClass !== 'all') {
+            key.classList.add('hide');
+        }
     }
 });
