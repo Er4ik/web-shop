@@ -30,8 +30,7 @@ class SignMenuForm {
     }
 
     validPassword = (passBut, passRepeat) => {
-        if (passBut.value === passRepeat.value) return true;
-        return false;
+        return passBut.value === passRepeat.value;
     }
 
     view = (pass, viewBut, type, src, heigth, flag) => {
