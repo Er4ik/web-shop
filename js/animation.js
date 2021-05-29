@@ -1,4 +1,6 @@
 //slider catalog
+'use strict'
+
 {
     class SliderCatalog {
         constructor(flag) {
@@ -18,7 +20,7 @@
             return true;
         }
 
-        showCat = () => {
+        showCat() {
             if (!this.flag) {
                 return this.showCatalog('none', 'rotate(-180deg)', 'white', 0.3, true);
             }
@@ -59,23 +61,22 @@
             this.descrProd.innerHTML = aboutCatalog.Description1;
         }
 
-        changeDataPict = (count) => {
+        changeDataPict(count) {
             if (`Head${count}` in aboutCatalog) {
                 this.nameProd.innerHTML = aboutCatalog[`Head${count}`];
                 this.descrProd.innerHTML = aboutCatalog[`Description${count}`];
                 return true;
-            } else {
-                aboutCatalog[`Head${count}`] = '';
-                return false;
             }
+            aboutCatalog[`Head${count}`] = '';
+            return false;
         }
 
-        changeNum = (count) => {
+        changeNum(count) {
             let a = document.querySelector('.number').value = count;
             document.querySelector('.number').innerHTML = a;
         }
 
-        wheelColorChange = (clr1, clr2, clr3) => {
+        wheelColorChange(clr1, clr2, clr3) {
             this.wheelColor1.style.backgroundColor = clr1;
             this.wheelColor2.style.backgroundColor = clr2;
             this.wheelColor3.style.backgroundColor = clr3;
@@ -107,7 +108,7 @@
             return true;
         }
 
-        changeWheel = (num, off, color) => {
+        changeWheel(num, off, color) {
             this.countNum = num;
             this.offset = off;
             this.changeNum(this.countNum);
@@ -145,14 +146,14 @@
             this.dataBackPict3.innerHTML = aboutProductBack.prod3;
         }
 
-        conditionForRetutrn = (picture, rotate, flag, num) => {
+        conditionForRetutrn(picture, rotate, flag, num) {
             picture.style.transform = rotate;
             picture.style.opacity = num;
             this.flagRotate = flag;
             return this.flagRotate;
         }
 
-        rotatePict = (pict) => {
+        rotatePict(pict) {
             if (pict.style.opacity == 0.2) this.flagRotate = false;
             else this.flagRotate = true;
             if (this.flagRotate) {
@@ -194,7 +195,7 @@
             this.servIcon3.style.display = 'none';
         }
 
-        backBut = (clrBack1, clrBack2, clrBack3, clrFont1, clrFont2, clrFont3) => {
+        backBut(clrBack1, clrBack2, clrBack3, clrFont1, clrFont2, clrFont3) {
             this.backButton1.style.backgroundColor = clrBack1;
             this.backButton2.style.backgroundColor = clrBack2;
             this.backButton3.style.backgroundColor = clrBack3;
@@ -220,7 +221,7 @@
             return true;
         }
 
-        changeDescrService = (data, but, visible) => {
+        changeDescrService(data, but, visible) {
             this.changeData(data);
             this.backBut(...but);
             this.servIconVisible(...visible);
@@ -295,7 +296,7 @@
             this.laptopDescr = document.querySelector('.laptopDescr');
         }
 
-        scrollPage = () => {
+        scrollPage() {
             let windowWidth = window.innerWidth;
             if (windowWidth < 768) {
                 this.phoneDescr.classList.add('showObj');

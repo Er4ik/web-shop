@@ -1,3 +1,5 @@
+'use strict'
+
 class SignMenuForm {
     constructor(url, flag) {
         this.flagPassView = flag;
@@ -30,8 +32,7 @@ class SignMenuForm {
     }
 
     validPassword = (passBut, passRepeat) => {
-        if (passBut.value === passRepeat.value) return true;
-        return false;
+        return passBut.value === passRepeat.value;
     }
 
     view = (pass, viewBut, type, src, heigth, flag) => {
@@ -81,10 +82,7 @@ signForm.submitForm.addEventListener('submit', function (event) {
 
     event.preventDefault();
 
-    if (signForm.validateForm(signForm.inName, signForm.namerx) &&
-        signForm.validateForm(signForm.inEmail, signForm.emailrx) &&
-        signForm.validateForm(signForm.inPassword, signForm.minimum8Chars) &&
-        signForm.validPassword(signForm.inPassword, signForm.inPasswordCorrect)) {
+    if (signForm.validateForm(signForm.inName, signForm.namerx) && signForm.validateForm(signForm.inEmail, signForm.emailrx) && signForm.validateForm(signForm.inPassword, signForm.minimum8Chars) && signForm.validPassword(signForm.inPassword, signForm.inPasswordCorrect)) {
 
         let dataPerson = {
             'name': signForm.inName.value,
