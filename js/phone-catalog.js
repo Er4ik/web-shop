@@ -81,7 +81,7 @@ form.addEventListener('click', (event) => {
     let filterClass = event.target.dataset['f'];
     const priceGap1 = ['brand', 'priceGap', 'memory', 'rate'];
     for (let elem = 0; elem < 9; elem++) {
-        priceGap1.forEach(function (item) {
+        priceGap1.forEach((item) => {
             filterBox[elem].classList.add(`${phonesInfo[`model${elem + 1}`][item]}`);
         });
     }
@@ -93,3 +93,28 @@ form.addEventListener('click', (event) => {
     }
 
 });
+
+//Description
+class DeskRot {
+    constructor() {
+        this.description = document.querySelector('.list-discript');
+        this.container = document.querySelector('.phone-container');
+    }
+    changeR() {
+        this.container.addEventListener('mouseover', () => {
+            this.description.style.transform = 'rotateZ(720deg)';
+            this.description.style.marginRight = '820px';
+            this.description.innerHTML = 'Click on the product picture to see information about the model';
+        });
+    }
+    reverseR() {
+        this.container.addEventListener('mouseout', () => {
+            this.description.style.transform = 'rotateZ(-720deg)';
+            this.description.style.marginRight = '1400px';
+            this.description.innerHTML = '';
+        })
+    }
+}
+const descriptAnim = new DeskRot;
+descriptAnim.changeR();
+descriptAnim.reverseR();

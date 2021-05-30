@@ -731,6 +731,29 @@ hr {
     margin: 25px auto;
 }
 
+
+.list-discript {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+    font-family: Trebuchet MS;
+    height: 10px;
+    min-width: 5px;
+    font-weight: 200;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(179, 179, 179);
+    background: rgba(196, 193, 193, 0.5);
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: -25px;
+    margin: 0 1400px 10px 45px;
+    padding: 5px 10px 10px 10px;
+    transition: 1s;
+    /**/
+}
+
 .choice-box {
     height: 1050px;
     width: 285px;
@@ -807,6 +830,7 @@ hr {
 
 /*phones-list*/
 .list-name {
+    margin-bottom: -20px;
     font-family: Trebuchet MS;
     text-shadow: 3px solid rgb(153 153 153);
     font-size: 30px;
@@ -815,7 +839,11 @@ hr {
     text-decoration: underline;
 }
 
+
+
 .phone-container {
+    position: relative;
+    z-index: 1;
     height: 1500px;
     margin-top: 25px;
     display: flex;
@@ -956,20 +984,5 @@ hr {
 }
 
 .hide {
-    /*opacity: 1;
-    animation-name: a1;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;*/
     display: none;
 }
-
-/*@keyframes a1 {
-    to {
-        opacity: 0;
-        min-height: 0;
-        min-width: 0;
-        padding: 0;
-        margin: 0;
-        border: 0;
-    }
-}*/
