@@ -39,49 +39,76 @@ const descrProdPict = {
 }
 
 const phonesInfo = {
-    'model1': ['Iphone 12 Pro Max'],
-    'model2': ['Xiaomi Black Shark 3'],
-    'model3': ['Xiaomi Mi 11 Lite'],
-    'model4': ['Iphone XS'],
-    'model5': ['OnePlus 8 Pro'],
-    'model6': ['Samsung Note 20 Ultra'],
-    'model7': ['Huawei P Smart 2021'],
-    'model8': ['Honor 9X'],
-    'model9': ['Samsung gt-e1202 Duos'],
-    'price1': ['1300$'],
-    'price2': ['900$'],
-    'price3': ['499$'],
-    'price4': ['800$'],
-    'price5': ['700$'],
-    'price6': ['1400$'],
-    'price7': ['250$'],
-    'price8': ['500$'],
-    'price9': ['49$'],
-    'brand1': ['Apple'],
-    'brand2': ['Xiaomi'],
-    'brand3': ['Xiaomi'],
-    'brand4': ['Apple'],
-    'brand5': ['OnePlus'],
-    'brand6': ['Samsung'],
-    'brand7': ['Huawei'],
-    'brand8': ['Huawei'],
-    'brand9': ['Samsung'],
-    'memory1': ['256gb'],
-    'memory2': ['128gb'],
-    'memory3': ['32gb'],
-    'memory4': ['64gb'],
-    'memory5': ['128gb'],
-    'memory6': ['512gb'],
-    'memory7': ['128gb'],
-    'memory8': ['128gb'],
-    'memory9': ['500mb'],
-    'rate1': ['60Hz'],
-    'rate2': ['90Hz'],
-    'rate3': ['90Hz'],
-    'rate4': ['60Hz'],
-    'rate5': ['120Hz'],
-    'rate6': ['144Hz'],
-    'rate7': ['120Hz'],
-    'rate8': ['120Hz'],
-    'rate9': ['30Hz'],
+    model1: {
+        name: 'Iphone 12 Pro Max',
+        price: '1300$',
+        brand: 'Apple',
+        memory: '256gb',
+        rate: '60Hz'
+
+    },
+    model2: {
+        name: 'Xiaomi Black Shark 3',
+        price: '900$',
+        brand: 'Xiaomi',
+        memory: '128gb',
+        rate: '90Hz'
+
+    },
+    model3: {
+        name: 'Xiaomi Mi 11 Lite',
+        price: '499$',
+        brand: 'Xiaomi',
+        memory: '32gb',
+        rate: '90Hz'
+
+    },
+    model4: {
+        name: 'Iphone XS',
+        price: '800$',
+        brand: 'Apple',
+        memory: '64gb',
+        rate: '60Hz'
+
+    },
+    model5: {
+        name: 'OnePlus 8 Pro',
+        price: '700$',
+        brand: 'OnePlus',
+        memory: '128gb',
+        rate: '120Hz'
+
+    },
+    model6: {
+        name: 'Samsung Note 20 Ultra',
+        price: '1400$',
+        brand: 'Samsung',
+        memory: '512gb',
+        rate: '144Hz'
+
+    },
+    model7: {
+        name: 'Huawei P Smart 2021',
+        price: '250$',
+        brand: 'Huawei',
+        memory: '128gb',
+        rate: '120Hz'
+    },
+    model8: {
+        name: 'Honor 9X',
+        price: '500$',
+        brand: 'Huawei',
+        memory: '128gb',
+        rate: '120Hz'
+
+    },
+    model9: {
+        name: 'Samsung gt-e1202 Duos',
+        price: '49$',
+        brand: 'Samsung',
+        memory: '500mb',
+        rate: '30Hz'
+
+    }
+
 }

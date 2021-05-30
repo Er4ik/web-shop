@@ -1,6 +1,5 @@
 'use strict';
 
-
 //icons-rotate
 class RotIcon {
     constructor() {
@@ -15,11 +14,11 @@ class RotIcon {
 
     infoSet(n) {
         for (let key = 0; key < n; key++) {
-            this.positionName[key].innerHTML = phonesInfo[`model${key + 1}`];
-            this.price[key].innerHTML = 'Price: ' + phonesInfo[`price${key + 1}`];
-            this.brand[key].innerHTML = 'Brand: ' + phonesInfo[`brand${key + 1}`];
-            this.memory[key].innerHTML = 'Memory size: ' + phonesInfo[`memory${key + 1}`];
-            this.rate[key].innerHTML = 'Rephresh rate: ' + phonesInfo[`rate${key + 1}`];
+            this.positionName[key].innerHTML = phonesInfo[`model${key + 1}`].name;
+            this.price[key].innerHTML = 'Price: ' + phonesInfo[`model${key + 1}`].price;
+            this.brand[key].innerHTML = 'Brand: ' + phonesInfo[`model${key +1 }`].brand;
+            this.memory[key].innerHTML = 'Memory size: ' + phonesInfo[`model${key + 1}`].memory;
+            this.rate[key].innerHTML = 'Rephresh rate: ' + phonesInfo[`model${key + 1}`].rate;
         }
     }
     settings(pict, info, name, opac, trans, opacPict) {
