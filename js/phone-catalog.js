@@ -79,10 +79,17 @@ form.addEventListener('click', (event) => {
         return false;
     }
     let filterClass = event.target.dataset['f'];
+    const priceGap1 = ['brand', 'priceGap', 'memory', 'rate'];
+    for (let elem = 0; elem < 9; elem++) {
+        priceGap1.forEach(function (item) {
+            filterBox[elem].classList.add(`${phonesInfo[`model${elem + 1}`][item]}`);
+        });
+    }
     for (let key of filterBox) {
         key.classList.remove('hide');
         if (!key.classList.contains(filterClass) && filterClass !== 'all') {
             key.classList.add('hide');
         }
     }
+
 });
