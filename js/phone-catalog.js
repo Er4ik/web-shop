@@ -104,20 +104,21 @@ class DeskRot {
   constructor() {
     this.description = document.querySelector(".list-discript");
     this.container = document.querySelector(".phone-container");
+    this.text = "Click on the product picture to see information about the model"
+  }
+  setvisible(description, rotate, marg, text) {
+    description.style.transform = rotate;
+    description.style.marginRight = marg;
+    description.innerHTML = text;
   }
   changeR() {
     this.container.addEventListener("mouseover", () => {
-      this.description.style.transform = "rotateZ(720deg)";
-      this.description.style.marginRight = "820px";
-      this.description.innerHTML =
-        "Click on the product picture to see information about the model";
+      this.setvisible(this.description, "rotateZ(720deg)", "820px", this.text);
     });
   }
   reverseR() {
     this.container.addEventListener("mouseout", () => {
-      this.description.style.transform = "rotateZ(-720deg)";
-      this.description.style.marginRight = "1400px";
-      this.description.innerHTML = "";
+      this.setvisible(this.description, "rotateZ(-720deg)", "1400px", "");
     });
   }
 }
