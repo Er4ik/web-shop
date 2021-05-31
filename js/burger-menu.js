@@ -39,5 +39,3 @@
         burgerMenu.toggleMenuIcon()
     });
 }
-
-
