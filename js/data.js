@@ -42,60 +42,62 @@ const phonesInfo = {
     model1: {
         name: 'Iphone 12 Pro Max',
         price: '1300$',
+        priceGap: 'Over-1000$',
         brand: 'Apple',
         memory: '256gb',
         rate: '60Hz'
-
     },
     model2: {
         name: 'Xiaomi Black Shark 3',
         price: '900$',
+        priceGap: '700-1000$',
         brand: 'Xiaomi',
         memory: '128gb',
         rate: '90Hz'
-
     },
     model3: {
         name: 'Xiaomi Mi 11 Lite',
         price: '499$',
+        priceGap: '300-700$',
         brand: 'Xiaomi',
         memory: '32gb',
         rate: '90Hz'
-
     },
     model4: {
         name: 'Iphone XS',
         price: '800$',
+        priceGap: '700-1000$',
         brand: 'Apple',
         memory: '64gb',
         rate: '60Hz'
-
     },
     model5: {
         name: 'OnePlus 8 Pro',
         price: '700$',
+        priceGap: '700-1000$',
         brand: 'OnePlus',
         memory: '128gb',
         rate: '120Hz'
-
     },
     model6: {
         name: 'Samsung Note 20 Ultra',
         price: '1400$',
+        priceGap: 'Over-1000$',
         brand: 'Samsung',
         memory: '512gb',
         rate: '144Hz'
-
     },
     model7: {
         name: 'Huawei P Smart 2021',
         price: '250$',
+        priceGap: '100-300$',
         brand: 'Huawei',
         memory: '128gb',
         rate: '120Hz'
     },
     model8: {
         name: 'Honor 9X',
+        priceGap: '300-700$',
         price: '500$',
         brand: 'Huawei',
         memory: '128gb',
@@ -104,6 +106,7 @@ const phonesInfo = {
     },
     model9: {
         name: 'Samsung gt-e1202 Duos',
+        priceGap: '100$',
         price: '49$',
         brand: 'Samsung',
         memory: '500mb',
