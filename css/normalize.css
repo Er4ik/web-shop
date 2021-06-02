@@ -1,42 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    margin-top: 20px;
-    -webkit-input-placeholder: Georgia;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  margin-top: 20px;
+  -webkit-input-placeholder: Georgia;
 }
 
-input::-webkit-input-placeholder { font-weight: 600; }
-input[type~="name"], input[type~="email"] {font-weight: 600;}
-input {outline:none;}
+input::-webkit-input-placeholder {
+  font-weight: 600;
+}
+input[type~="name"],
+input[type~="email"] {
+  font-weight: 600;
+}
+input {
+  outline: none;
+}
 
 .container {
-    max-width: 1400px;
-    width: 85%;
-    margin: 0 auto;
+  max-width: 1400px;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .white {
-    background: linear-gradient(to top , #000, #ffff, #000);
-} 
+  background: linear-gradient(to top, #000, #ffff, #000);
+}
 
 .white1 {
-    background: linear-gradient(to top , #000, #fff);
+  background: linear-gradient(to top, #000, #fff);
 }
 
 .black {
-    background-color: #000;
+  background-color: #000;
 }
 
 .black-foot {
-    background-color: rgb(26, 25, 25);
+  background-color: rgb(26, 25, 25);
 }
 
 * {
   margin: 0;
   padding: 0;
   /* box-sizing: border-box; */
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 input {
@@ -57,7 +64,10 @@ a {
   cursor: pointer;
 }
 
-em, strong, b, span {
+em,
+strong,
+b,
+span {
   margin: 0;
   padding: 0;
 }
@@ -69,7 +79,6 @@ img {
 }
 
 ::-webkit-scrollbar {
-  width: 0px; 
-  background: transparent; 
+  width: 0px;
+  background: transparent;
 }
-

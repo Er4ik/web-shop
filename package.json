@@ -1,0 +1,25 @@
+{
+  "name": "web_site_shop",
+  "version": "1.0.0",
+  "description": "A responsive layout of a multi-page site has been made. Set up the work of five sliders. Also added animation of the appearance of objects when scrolling the main page. Set up form validation.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "prettier": "^2.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint --fix . & npx prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Er4ik/Web_Site_Shop.git"
+  },
+  "author": "Er4ik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Er4ik/Web_Site_Shop/issues"
+  },
+  "homepage": "https://github.com/Er4ik/Web_Site_Shop#readme"
+}
