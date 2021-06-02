@@ -126,7 +126,7 @@ const descriptAnim = new DeskRot();
 descriptAnim.changeR();
 descriptAnim.reverseR();
 
-//auto-slider
+//automatic-slider
 const dots = document.querySelectorAll('.dot');
 const dotsArea = document.querySelector('.dots-block');
 const slides = document.querySelectorAll('.slide');
