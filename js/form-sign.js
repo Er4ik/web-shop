@@ -106,7 +106,7 @@ signForm.submitForm.addEventListener("submit", function (event) {
     signForm.validateForm(signForm.inPassword, signForm.minimum8Chars) &&
     signForm.validPassword(signForm.inPassword, signForm.inPasswordCorrect)
   ) {
-    let dataPerson = {
+    const dataPerson = {
       name: signForm.inName.value,
       email: signForm.inEmail.value,
       password: signForm.inPassword.value,
@@ -120,7 +120,8 @@ signForm.submitForm.addEventListener("submit", function (event) {
       "application/x-www-form-urlencoded"
     );
     requestForm.send();
-    for (key in dataPerson) {
+
+    for (let key in dataPerson) {
       console.dir(key + ": " + dataPerson[key]);
     }
   }
