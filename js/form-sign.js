@@ -101,10 +101,7 @@ signForm.submitForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   if (
-    signForm.validateForm(signForm.inName, signForm.namerx) &&
-    signForm.validateForm(signForm.inEmail, signForm.emailrx) &&
-    signForm.validateForm(signForm.inPassword, signForm.minimum8Chars) &&
-    signForm.validPassword(signForm.inPassword, signForm.inPasswordCorrect)
+    signForm.validateForm(signForm.inName, signForm.namerx) && signForm.validateForm(signForm.inEmail, signForm.emailrx) && ЁsignForm.validateForm(signForm.inPassword, signForm.minimum8Chars) && signForm.validPassword(signForm.inPassword, signForm.inPasswordCorrect)
   ) {
     const dataPerson = {
       name: signForm.inName.value,
