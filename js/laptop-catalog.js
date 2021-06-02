@@ -92,11 +92,3 @@ function bodyUnlock() {
     }, timeout);
 }
 
-//closing popup with Escape button
-/*document.addEventListener('keydown', function (e){          
-    if (e.which === 27) {
-        const popupActive = document.querySelector('popup.open');
-        popupClose(popupActive);
-    }
-});
-*/
