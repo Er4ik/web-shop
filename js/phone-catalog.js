@@ -32,7 +32,7 @@ class RotIcon {
     pict.style.opacity = opacPict;
   }
   visibleRotate(pict, info, name) {
-    if (info.style.opacity == 0) {
+    if (info.style.opacity === '0') {
       this.settings(pict, info, name, "1", "rotateY(180deg)", "0.05");
     } else {
       this.settings(pict, info, name, 0, "", 1);
@@ -74,30 +74,40 @@ likeChange.heart.forEach((item) => {
 });
 
 //filterForm
-const filterBox = document.querySelectorAll(".frame");
-const form = document.querySelector(".choice-form");
-
-form.addEventListener("click", (event) => {
-  if (
-    event.target.className !== "variant" &&
-    event.target.className !== "reset"
-  ) {
-    return false;
+class DataFilter {
+  constructor() {
+    this.filterBox = document.querySelectorAll(".frame");
+    this.form = document.querySelector(".choice-form");
+    this.filterClass = '';
+    this.infoGap = [];
   }
-  let filterClass = event.target.dataset["f"];
-  const priceGap1 = ["brand", "priceGap", "memory", "rate"];
-  for (let elem = 0; elem < 9; elem++) {
-    priceGap1.forEach((item) => {
-      filterBox[elem].classList.add(`${phonesInfo[`model${elem + 1}`][item]}`);
+  formFilter() {
+    this.form.addEventListener("click", (event) => {
+      if (
+        event.target.className !== "variant" &&
+        event.target.className !== "reset"
+      ) {
+        return false;
+      }
+      this.filterClass = event.target.dataset["f"];
+      this.infoGap = ["brand", "priceGap", "memory", "rate"];
+      for (let elem = 0; elem < 9; elem++) {
+        this.infoGap.forEach((item) => {
+          this.filterBox[elem].classList.add(`${phonesInfo[`model${elem + 1}`][item]}`);
+        });
+      }
+      for (let key of this.filterBox) {
+        key.classList.remove("hide");
+        if (!key.classList.contains(this.filterClass) && this.filterClass !== "all") {
+          key.classList.add("hide");
+        }
+      }
     });
   }
-  for (let key of filterBox) {
-    key.classList.remove("hide");
-    if (!key.classList.contains(filterClass) && filterClass !== "all") {
-      key.classList.add("hide");
-    }
-  }
-});
+}
+const filterEx = new DataFilter;
+filterEx.formFilter();
+
 
 //Description
 class DeskRot {
@@ -127,54 +137,66 @@ descriptAnim.changeR();
 descriptAnim.reverseR();
 
 //automatic-slider
-const dots = document.querySelectorAll('.dot');
-const dotsArea = document.querySelector('.dots-block');
-const slides = document.querySelectorAll('.slide');
-const prev = document.querySelector('.prev-button');
-const next = document.querySelector('.next-button');
-let slideIndex = 1;
-let timer;
-const showSlides = function (n) {
-  if (n < 1) {
-    slideIndex = slides.length;
-  } else if (n > slides.length) {
-    slideIndex = 1;
+class Slider {
+  constructor() {
+    this.dots = document.querySelectorAll('.dot');
+    this.dotsArea = document.querySelector('.dots-block');
+    this.slides = document.querySelectorAll('.slide');
+    this.prev = document.querySelector('.prev-button');
+    this.next = document.querySelector('.next-button');
+    this.picIndx = 1;
+    this.slideIndex = 1;
+    this.timer;
   }
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].classList.remove('dot-active');
-  }
-  slides[slideIndex - 1].style.display = 'block';
-  dots[slideIndex - 1].classList.add('dot-active');
-}
-showSlides(slideIndex);
-
-let autoSlider = () => {
-  timer = setInterval(slidergo, 5000);
-}
-const plusSlides = function (n) {
-  showSlides(slideIndex += n);
-}
-const currentSlide = function (n) {
-  showSlides(slideIndex = n)
-}
-const slidergo = () => {
-  plusSlides(1);
-}
-prev.addEventListener("click", () => {
-  plusSlides(-1);
-});
-next.addEventListener("click", () => {
-  slidergo();
-});
-
-autoSlider();
-dotsArea.addEventListener("click", (event) => {
-  for (let i = 0; i < dots.length + 1; i++) {
-    if (event.target.classList.contains('dot') && event.target == dots[i - 1]) {
-      currentSlide(i);
+  showSlides(n) {
+    if (n < 1) {
+      this.slideIndex = this.slides.length;
+    } else if (n > this.slides.length) {
+      this.slideIndex = 1;
     }
+    for (let i = 0; i < this.slides.length; i++) {
+      this.slides[i].style.display = 'none';
+    }
+    for (let i = 0; i < this.dots.length; i++) {
+      this.dots[i].classList.remove('dot-active');
+    }
+    this.slides[this.slideIndex - 1].style.display = 'block';
+    this.dots[this.slideIndex - 1].classList.add('dot-active');
   }
-});
+
+  plusSlides(n) {
+    this.showSlides(this.slideIndex += n);
+  }
+  currentSlide(n) {
+    this.showSlides(this.slideIndex = n)
+  }
+
+  autoSlider() {
+    this.timer = setInterval(() => this.plusSlides(1), 5000);
+  }
+  prevBut() {
+    this.prev.addEventListener("click", () => {
+      this.plusSlides(-this.picIndx);
+    });
+  }
+  nextBut() {
+    this.next.addEventListener("click", () => {
+      this.plusSlides(this.picIndx);
+    });
+  }
+  dotTap() {
+    this.dotsArea.addEventListener("click", (event) => {
+      for (let i = 0; i < this.dots.length + 1; i++) {
+        if (event.target.classList.contains('dot') && event.target === this.dots[i - 1]) {
+          this.currentSlide(i);
+        }
+      }
+    });
+  }
+}
+const sliderEx = new Slider;
+sliderEx.showSlides(sliderEx.slideIndex);
+sliderEx.autoSlider();
+sliderEx.prevBut();
+sliderEx.nextBut();
+sliderEx.dotTap();
