@@ -111,7 +111,7 @@ class RotIcon {
     if (info.style.opacity === '0') {
       this.settings(pict, info, name, '1', 'rotateY(180deg)', '0.05');
     } else {
-      this.settings(pict, info, name, 0, '', 1);
+      this.settings(pict, info, name, '0', '', '1');
     }
   }
 }
@@ -142,7 +142,7 @@ class Like {
   }
 }
 const likeChange = new Like();
-likeChange.heart.forEach((item) => {
+likeChange.heart.forEach(item => {
   item.style.opacity = 0.9;
   item.addEventListener('click', () => {
     likeChange.likeClick(item);
@@ -158,7 +158,7 @@ class DataFilter {
     this.infoGap = [];
   }
   formFilter() {
-    this.form.addEventListener('click', (event) => {
+    this.form.addEventListener('click', event => {
       if (
         event.target.className !== 'variant' &&
         event.target.className !== 'reset'
@@ -168,20 +168,23 @@ class DataFilter {
       this.filterClass = event.target.dataset['f'];
       this.infoGap = ['brand', 'priceGap', 'memory', 'rate'];
       for (let elem = 0; elem < 9; elem++) {
-        this.infoGap.forEach((item) => {
-          this.filterBox[elem].classList.add(`${phonesInfo[`model${elem + 1}`][item]}`);
+        this.infoGap.forEach(item => {
+          this.filterBox[elem]
+            .classList
+            .add(`${phonesInfo[`model${elem + 1}`][item]}`);
         });
       }
-      for (let key of this.filterBox) {
+      for (const key of this.filterBox) {
         key.classList.remove('hide');
-        if (!key.classList.contains(this.filterClass) && this.filterClass !== 'all') {
+        if (!key.classList
+          .contains(this.filterClass) && this.filterClass !== 'all') {
           key.classList.add('hide');
         }
       }
     });
   }
 }
-const filterEx = new DataFilter;
+const filterEx = new DataFilter();
 filterEx.formFilter();
 
 
@@ -190,7 +193,8 @@ class DeskRot {
   constructor() {
     this.description = document.querySelector('.list-discript');
     this.container = document.querySelector('.phone-container');
-    this.text = 'Click on the product picture to see information about the model';
+    this.text = `Click on the product picture 
+	to see information about the model`;
   }
   setvisible(description, rotate, marg, text) {
     description.style.transform = rotate;
@@ -261,16 +265,18 @@ class Slider {
     });
   }
   dotTap() {
-    this.dotsArea.addEventListener('click', (event) => {
+    this.dotsArea.addEventListener('click', event => {
       for (let i = 0; i < this.dots.length + 1; i++) {
-        if (event.target.classList.contains('dot') && event.target === this.dots[i - 1]) {
+        if (event.target
+          .classList
+          .contains('dot') && event.target === this.dots[i - 1]) {
           this.currentSlide(i);
         }
       }
     });
   }
 }
-const sliderEx = new Slider;
+const sliderEx = new Slider();
 sliderEx.showSlides(sliderEx.slideIndex);
 sliderEx.autoSlider();
 sliderEx.prevBut();
