@@ -10,6 +10,7 @@
       this.flag = flag;
       this.catDescr.classList.add("p-show");
       this.catDescr.style.display = "none";
+      this.opacityCatalog = 0;
     }
 
     showCatalog(disp, transform, colour, opac, flag) {
@@ -23,9 +24,11 @@
 
     showCat() {
       if (!this.flag) {
-        return this.showCatalog("none", "rotate(-180deg)", "white", 0.3, true);
+        this.opacityCatalog = 0.3;
+        return this.showCatalog("none", "rotate(-180deg)", "white", this.opacityCatalog, true);
       }
-      return this.showCatalog("flex", "rotate(225deg)", "darkorange", 1, false);
+      this.opacityCatalog = 1;
+      return this.showCatalog("flex", "rotate(225deg)", "darkorange", this.opacityCatalog, false);
     }
   }
 
@@ -49,13 +52,14 @@
       this.wheelColor3 = document.querySelector(".wh3");
 
       this.whColor = [this.wheelColor1, this.wheelColor2, this.wheelColor3];
-      this.changeWh1 = [1, -555, ["darkorange", "white", "white"]];
-      this.changeWh2 = [2, 0, ["white", "darkorange", "white"]];
-      this.changeWh3 = [3, 555, ["white", "white", "darkorange"]];
+      this.countNum = countNum;
+      this.offset = offset;
+      this.changeWh2 = [this.countNum = 2, this.offset = 0, ["white", "darkorange", "white"]];
+      this.changeWh3 = [this.countNum = 3, this.offset = 555, ["white", "white", "darkorange"]];
+      this.changeWh1 = [this.countNum = 1, this.offset = -555, ["darkorange", "white", "white"]];
       this.changeWh = [this.changeWh1, this.changeWh2, this.changeWh3];
 
-      this.offset = offset;
-      this.countNum = countNum;
+      this.offset = 0;
       this.scrollNumber.innerHTML = this.countNum;
       this.wheelColor1.style.backgroundColor = "darkorange";
       this.nameProd.innerHTML = aboutCatalog.Head1;
@@ -153,13 +157,11 @@
     }
 
     rotatePict(pict) {
-      if (pict.style.opacity == 0.2) this.flagRotate = false;
-      else this.flagRotate = true;
-      if (this.flagRotate) {
-        this.conditionForRetutrn(pict, "rotateY(180deg)", false, 0.2);
-      } else {
-        this.conditionForRetutrn(pict, "", true, 1);
+      let opacityPicture = 0;
+      if (pict.style.opacity === '0.2') {
+        return this.conditionForRetutrn(pict, "", true, opacityPicture = 1);
       }
+      return  this.conditionForRetutrn(pict, "rotateY(180deg)", false, opacityPicture = 0.2);
     }
   }
 
