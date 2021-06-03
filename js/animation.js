@@ -189,7 +189,7 @@
         prod1: [
           `Packed with Innovative Features Including a Super Retina Display,
 			TrueDepth Camera System, Face ID and A13 Bionic Chipwith Neural
-			Engine`
+			Engine`,
         ],
         prod2: [
           `Move. Exercise. Stand. Track all the ways you're active.
@@ -223,12 +223,7 @@
       if (pict.style.opacity === '0.2') {
         return this.conditionForRetutrn(pict, '', true, 1);
       }
-      return this.conditionForRetutrn(
-        pict,
-        'rotateY(180deg)',
-        false,
-        (0.2)
-      );
+      return this.conditionForRetutrn(pict, 'rotateY(180deg)', false, 0.2);
     }
   }
 
@@ -382,7 +377,7 @@
 			'Ceramic Shield', which was co-developed 
 			with Corning Inc. Apple claims the Ceramic Shield has 
 			'4 times better drop performance' and that it is 
-			'tougher than any smartphone glass'.`
+			'tougher than any smartphone glass'.`,
         ],
         descr2: [
           `Cupertino, California — Apple today announced 
@@ -400,7 +395,7 @@
 			types, and the ability to curate and share watch
 			faces, encouraging customers to be more active,
 			stay connected, and better manage their
-			health in new ways.`
+			health in new ways.`,
         ],
         descr3: [
           `Apple MacBook Pro is a macOS laptop with a 
@@ -420,10 +415,9 @@
 			are older than those in the MacBook, not 
 			to mention the high-resolution
 			innovative display and design of the 
-			more upscale MacBook.`
+			more upscale MacBook.`,
         ],
       };
-
 
       this.hidElem = [
         this.hiddenElement1,

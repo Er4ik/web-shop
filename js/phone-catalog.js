@@ -169,15 +169,17 @@ class DataFilter {
       this.infoGap = ['brand', 'priceGap', 'memory', 'rate'];
       for (let elem = 0; elem < 9; elem++) {
         this.infoGap.forEach(item => {
-          this.filterBox[elem]
-            .classList
-            .add(`${phonesInfo[`model${elem + 1}`][item]}`);
+          this.filterBox[elem].classList.add(
+            `${phonesInfo[`model${elem + 1}`][item]}`
+          );
         });
       }
       for (const key of this.filterBox) {
         key.classList.remove('hide');
-        if (!key.classList
-          .contains(this.filterClass) && this.filterClass !== 'all') {
+        if (
+          !key.classList.contains(this.filterClass) &&
+          this.filterClass !== 'all'
+        ) {
           key.classList.add('hide');
         }
       }
@@ -186,7 +188,6 @@ class DataFilter {
 }
 const filterEx = new DataFilter();
 filterEx.formFilter();
-
 
 //Description
 class DeskRot {
@@ -245,10 +246,10 @@ class Slider {
   }
 
   plusSlides(n) {
-    this.showSlides(this.slideIndex += n);
+    this.showSlides((this.slideIndex += n));
   }
   currentSlide(n) {
-    this.showSlides(this.slideIndex = n);
+    this.showSlides((this.slideIndex = n));
   }
 
   autoSlider() {
@@ -267,9 +268,10 @@ class Slider {
   dotTap() {
     this.dotsArea.addEventListener('click', event => {
       for (let i = 0; i < this.dots.length + 1; i++) {
-        if (event.target
-          .classList
-          .contains('dot') && event.target === this.dots[i - 1]) {
+        if (
+          event.target.classList.contains('dot') &&
+          event.target === this.dots[i - 1]
+        ) {
           this.currentSlide(i);
         }
       }
