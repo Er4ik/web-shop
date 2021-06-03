@@ -100,7 +100,6 @@ class RotIcon {
         'Rephresh rate: ' + phonesInfo[`model${key + 1}`].rate;
     }
   }
-
   settings(pict, info, name, opac, trans, opacPict) {
     info.style.opacity = opac;
     name.style.opacity = opac;
