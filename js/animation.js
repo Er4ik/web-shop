@@ -1,10 +1,5 @@
 'use strict';
 
-const aboutCatalog = require('./data');
-const aboutService = require('./data');
-const aboutProductBack = require('./data');
-const descrProdPict = require('./data');
-
 //slider catalog
 
 {
@@ -68,6 +63,21 @@ const descrProdPict = require('./data');
 			this.wheelColor2 = document.querySelector('.wh2');
 			this.wheelColor3 = document.querySelector('.wh3');
 
+			this.aboutCatalog = {
+				Head1: ['NEW GENERATION<br>SMARTPHONES'],
+				Head2: ['THE MOST ADVANCED SMARTWATCH'],
+				Head3: ['THE BEST LAPTOPS<br>OF OUR RIME'],
+				Description1: [
+					'The latest technology, the highest speed of work,<br>compactness and incredibly beautiful appearance',
+				],
+				Description2: [
+					'A computerized wristwatch with extended functionality: comfortable, beautiful, cool',
+				],
+				Description3: [
+					'Excellent laptops with high performance and <br>autonomy, thin bezels and luminous keyboard',
+				],
+			};
+
 			this.whColor = [this.wheelColor1, this.wheelColor2, this.wheelColor3];
 			this.countNum = countNum;
 			this.offset = offset;
@@ -91,17 +101,17 @@ const descrProdPict = require('./data');
 			this.offset = 0;
 			this.scrollNumber.innerHTML = this.countNum;
 			this.wheelColor1.style.backgroundColor = 'darkorange';
-			this.nameProd.innerHTML = aboutCatalog.Head1;
-			this.descrProd.innerHTML = aboutCatalog.Description1;
+			this.nameProd.innerHTML = this.aboutCatalog.Head1;
+			this.descrProd.innerHTML = this.aboutCatalog.Description1;
 		}
 
 		changeDataPict(count) {
-			if (`Head${count}` in aboutCatalog) {
-				this.nameProd.innerHTML = aboutCatalog[`Head${count}`];
-				this.descrProd.innerHTML = aboutCatalog[`Description${count}`];
+			if (`Head${count}` in this.aboutCatalog) {
+				this.nameProd.innerHTML = this.aboutCatalog[`Head${count}`];
+				this.descrProd.innerHTML = this.aboutCatalog[`Description${count}`];
 				return true;
 			}
-			aboutCatalog[`Head${count}`] = '';
+			this.aboutCatalog[`Head${count}`] = '';
 			return false;
 		}
 
@@ -172,10 +182,22 @@ const descrProdPict = require('./data');
 			this.dataBackPict2 = document.querySelector('.pictBack2');
 			this.dataBackPict3 = document.querySelector('.pictBack3');
 
+			this.aboutProductBack = {
+				prod1: [
+					'Packed with Innovative Features Including a Super Retina Display, TrueDepth Camera System, Face ID and A13 Bionic Chipwith Neural Engine',
+				],
+				prod2: [
+					'Move. Exercise. Stand. Track all the ways you\'re active. Activity rings show your daily activity.Make it your goal to close them every day.Tokeep you motivated there are awards, personalized coaching, and Activity competitions',
+				],
+				prod3: [
+					'13.3-inch (diagonal) LED-backlit display with IPS technology; 2560-by-1600 native resolution at 227 pixels per inch with support for millions of colors',
+				],
+			};
+
 			this.flagRotate = flag;
-			this.dataBackPict1.innerHTML = aboutProductBack.prod1;
-			this.dataBackPict2.innerHTML = aboutProductBack.prod2;
-			this.dataBackPict3.innerHTML = aboutProductBack.prod3;
+			this.dataBackPict1.innerHTML = this.aboutProductBack.prod1;
+			this.dataBackPict2.innerHTML = this.aboutProductBack.prod2;
+			this.dataBackPict3.innerHTML = this.aboutProductBack.prod3;
 		}
 
 		conditionForRetutrn(picture, rotate, flag, num) {
@@ -220,10 +242,25 @@ const descrProdPict = require('./data');
 			this.servIcon2 = document.querySelector('.serv-icon2');
 			this.servIcon3 = document.querySelector('.serv-icon3');
 
+			this.aboutService = {
+				HeadServ1: ['DELIVERY'],
+				HeadServ2: ['GUARANTEE'],
+				HeadServ3: ['CREDIT'],
+				DescrServ1: [
+					'We will be happy to deliver your goods directly to your entrance for free! After all, we will make good money by lifting it to your floor.',
+				],
+				DescrServ2: [
+					'Our company provides you with a guarantee for all purchased products for a year, as well as the ability to return goods within 14 days.',
+				],
+				DescrServ3: [
+					'The company EAshop also provides the opportunity to purchase goods on credit for up to a year at 20 percent<br> per annum.',
+				],
+			};
+
 			this.backButton1.style.backgroundColor = 'black';
 			this.backButton1.style.color = 'white';
-			this.serviceHead.innerHTML = aboutService.HeadServ1;
-			this.serviceDescr.innerHTML = aboutService.DescrServ1;
+			this.serviceHead.innerHTML = this.aboutService.HeadServ1;
+			this.serviceDescr.innerHTML = this.aboutService.DescrServ1;
 			this.servIcon2.style.display = 'none';
 			this.servIcon3.style.display = 'none';
 
@@ -258,9 +295,9 @@ const descrProdPict = require('./data');
 		}
 
 		changeData(serv) {
-			if ([`Head${serv}`] in aboutService) {
-				this.serviceHead.innerHTML = aboutService[`Head${serv}`];
-				this.serviceDescr.innerHTML = aboutService[`Descr${serv}`];
+			if ([`Head${serv}`] in this.aboutService) {
+				this.serviceHead.innerHTML = this.aboutService[`Head${serv}`];
+				this.serviceDescr.innerHTML = this.aboutService[`Descr${serv}`];
 				return true;
 			}
 			return false;
@@ -308,6 +345,22 @@ const descrProdPict = require('./data');
 			this.hiddenElement2 = document.querySelector('.laptopDescr');
 			this.hiddenElement3 = document.querySelector('.watchDescr');
 
+			this.descrProdPict = {
+				head1: ['Iphone 12 Pro Max'],
+				head2: ['Apple Watch Series 6'],
+				head3: ['Macbook Pro M1'],
+				descr1: [
+					'The iPhone 12 Pro features a 6.1-inch display and the larger iPhone 12 Pro Max variant features a <br>6.7-inch display. Both models have the Super Retina XDR OLED display with thinner bezels than previous generation iPhones. The iPhone 12 Pro Max features the largest display on any iPhone to date. The phones also introduce a new glass-ceramic covering, named \'Ceramic Shield\', which was co-developed with Corning Inc. Apple claims the Ceramic Shield has \'4 times better drop performance\' and that it is \'tougher than any smartphone glass\'.',
+				],
+				descr2: [
+					'Cupertino, California — Apple today announced Apple Watch Series 6, introducing a revolutionary Blood Oxygen feature that offers users even more insight into their overall wellness. Apple Watch Series 6 delivers many notable hardware improvements, including a faster S6 System in Package (SiP) and next-generation always-on altimeter, along with its most colorful lineup yet, featuring a beautiful palette of new case finishes and bands. watchOS 7 brings Family Setup, sleep tracking, automatic handwashing detection, new workout types, and the ability to curate and share watch faces, encouraging customers to be more active, stay connected, and better manage their health in new ways.',
+				],
+				descr3: [
+					'Apple MacBook Pro is a macOS laptop with a 13.30-inch display that has a resolution of 2560x1600 pixels. It is powered by a Core i5 processor and it comes with 12GB of RAM. The Apple MacBook Pro packs 512GB of SSD storage. Connectivity options include Wi - Fi 802.11 ac, Bluetooth and it comes with 2 USB ports(2 x USB 3.0), Mic In ports. As of 14th April 2021, Apple MacBook Pro price in India starts at Rs. 159, 900. That compared to the cheaper MacBook Air, the chips used in the Air are older than those in the MacBook, not to mention the high-resolution innovative display and design of the more upscale MacBook.',
+				],
+			};
+
+
 			this.hidElem = [
 				this.hiddenElement1,
 				this.hiddenElement2,
@@ -325,11 +378,11 @@ const descrProdPict = require('./data');
 	const scrollWin = new ScrollIconPicture();
 
 	scrollWin.headDescrPict.forEach((elem) => {
-		elem.innerHTML = descrProdPict[`head${scrollWin.numHead++}`];
+		elem.innerHTML = scrollWin.descrProdPict[`head${scrollWin.numHead++}`];
 	});
 
 	scrollWin.DescrPict.forEach((elem) => {
-		elem.innerHTML = descrProdPict[`descr${scrollWin.numText++}`];
+		elem.innerHTML = scrollWin.descrProdPict[`descr${scrollWin.numText++}`];
 	});
 
 	scrollWin.upDownElem.map(function (elem) {
