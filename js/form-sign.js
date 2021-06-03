@@ -1,21 +1,21 @@
-'use strict';
+"use strict";
 
 class SignMenuForm {
   constructor(url, flag) {
     this.flagPassView = flag;
     this.url = url;
 
-    this.submitForm = document.querySelector('.sign-menu-form');
-    this.inName = document.querySelector('.ni1');
-    this.inEmail = document.querySelector('.ni2');
-    this.inPassword = document.querySelector('.ni3');
-    this.inPasswordCorrect = document.querySelector('.ni4');
-    this.viewPassword = document.querySelector('.view');
-    this.viewRepeatPassword = document.querySelector('.viewRep');
+    this.submitForm = document.querySelector(".sign-menu-form");
+    this.inName = document.querySelector(".ni1");
+    this.inEmail = document.querySelector(".ni2");
+    this.inPassword = document.querySelector(".ni3");
+    this.inPasswordCorrect = document.querySelector(".ni4");
+    this.viewPassword = document.querySelector(".view");
+    this.viewRepeatPassword = document.querySelector(".viewRep");
 
-    this.inName.setAttribute('maxlength', '30');
-    this.inPassword.setAttribute('maxlength', '30');
-    this.inPasswordCorrect.setAttribute('maxlength', '30');
+    this.inName.setAttribute("maxlength", "30");
+    this.inPassword.setAttribute("maxlength", "30");
+    this.inPasswordCorrect.setAttribute("maxlength", "30");
 
     this.emailrx = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
     this.namerx = /\w \w/;
@@ -24,10 +24,10 @@ class SignMenuForm {
 
   validateForm(inBut, rx) {
     if (!rx.test(inBut.value)) {
-      inBut.style.border = '1px solid red';
+      inBut.style.border = "1px solid red";
       return false;
     }
-    inBut.style.border = '4px solid rgb(236, 236, 236)';
+    inBut.style.border = "4px solid rgb(236, 236, 236)";
     return true;
   }
 
@@ -48,25 +48,25 @@ class SignMenuForm {
       this.view(
         pass,
         viewBut,
-        'text',
-        'pictures/sign-icon/viewclose.jpg',
-        '22px',
+        "text",
+        "pictures/sign-icon/viewclose.jpg",
+        "22px",
         false
       );
     } else {
       this.view(
         pass,
         viewBut,
-        'password',
-        'pictures/sign-icon/viewopen.jpg',
-        '18px',
+        "password",
+        "pictures/sign-icon/viewopen.jpg",
+        "18px",
         true
       );
     }
   }
 
   encryptionPass(num) {
-    this.passCipher = this.inPassword.value.split('');
+    this.passCipher = this.inPassword.value.split("");
     this.passArrCipher = [];
     for (this.item in this.passCipher) {
       this.passArrCipher.push(this.passCipher[this.item].charCodeAt(0));
@@ -79,25 +79,25 @@ class SignMenuForm {
       );
     }
 
-    this.passCipher = this.passArrCipher.join('');
+    this.passCipher = this.passArrCipher.join("");
     return this.passCipher;
   }
 }
 
 const signForm = new SignMenuForm(
-  'https://er4ik.github.io/Web_Site_Shop/',
+  "https://er4ik.github.io/Web_Site_Shop/",
   true
 );
 
-signForm.viewPassword.addEventListener('click', () => {
+signForm.viewPassword.addEventListener("click", () => {
   signForm.viewPass(signForm.inPassword, signForm.viewPassword);
 });
 
-signForm.viewRepeatPassword.addEventListener('click', () => {
+signForm.viewRepeatPassword.addEventListener("click", () => {
   signForm.viewPass(signForm.inPasswordCorrect, signForm.viewRepeatPassword);
 });
 
-signForm.submitForm.addEventListener('submit', event => {
+signForm.submitForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   if (
@@ -114,15 +114,15 @@ signForm.submitForm.addEventListener('submit', event => {
     };
 
     const requestForm = new XMLHttpRequest();
-    requestForm.open('GET', signForm.url);
+    requestForm.open("GET", signForm.url);
     requestForm.setRequestHeader(
-      'Content-Type',
-      'application/x-www-form-urlencoded'
+      "Content-Type",
+      "application/x-www-form-urlencoded"
     );
     requestForm.send();
 
     for (const key in dataPerson) {
-      console.dir(key + ': ' + dataPerson[key]);
+      console.dir(key + ": " + dataPerson[key]);
     }
   }
 });

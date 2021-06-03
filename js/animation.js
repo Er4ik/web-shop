@@ -1,15 +1,15 @@
-'use strict';
+"use strict";
 
 //slider catalog
 
 {
   class SliderCatalog {
     constructor(flag) {
-      this.plusCat = document.querySelector('.plusCat');
-      this.catDescr = document.querySelector('.catDescr');
+      this.plusCat = document.querySelector(".plusCat");
+      this.catDescr = document.querySelector(".catDescr");
       this.flag = flag;
-      this.catDescr.classList.add('p-show');
-      this.catDescr.style.display = 'none';
+      this.catDescr.classList.add("p-show");
+      this.catDescr.style.display = "none";
       this.opacityCatalog = 0;
     }
 
@@ -26,18 +26,18 @@
       if (!this.flag) {
         this.opacityCatalog = 0.3;
         return this.showCatalog(
-          'none',
-          'rotate(-180deg)',
-          'white',
+          "none",
+          "rotate(-180deg)",
+          "white",
           this.opacityCatalog,
           true
         );
       }
       this.opacityCatalog = 1;
       return this.showCatalog(
-        'flex',
-        'rotate(225deg)',
-        'darkorange',
+        "flex",
+        "rotate(225deg)",
+        "darkorange",
         this.opacityCatalog,
         false
       );
@@ -46,7 +46,7 @@
 
   const slider = new SliderCatalog(true);
 
-  slider.plusCat.addEventListener('click', () => {
+  slider.plusCat.addEventListener("click", () => {
     slider.showCat();
   });
 }
@@ -55,18 +55,18 @@
 {
   class SliderProd {
     constructor(offset, countNum) {
-      this.sliderLine = document.querySelector('.slider-line');
-      this.nameProd = document.querySelector('.name-descr');
-      this.descrProd = document.querySelector('.text-descr');
-      this.scrollNumber = document.querySelector('.number');
-      this.wheelColor1 = document.querySelector('.wh1');
-      this.wheelColor2 = document.querySelector('.wh2');
-      this.wheelColor3 = document.querySelector('.wh3');
+      this.sliderLine = document.querySelector(".slider-line");
+      this.nameProd = document.querySelector(".name-descr");
+      this.descrProd = document.querySelector(".text-descr");
+      this.scrollNumber = document.querySelector(".number");
+      this.wheelColor1 = document.querySelector(".wh1");
+      this.wheelColor2 = document.querySelector(".wh2");
+      this.wheelColor3 = document.querySelector(".wh3");
 
       this.aboutCatalog = {
-        Head1: ['NEW GENERATION<br>SMARTPHONES'],
-        Head2: ['THE MOST ADVANCED SMARTWATCH'],
-        Head3: ['THE BEST LAPTOPS<br>OF OUR RIME'],
+        Head1: ["NEW GENERATION<br>SMARTPHONES"],
+        Head2: ["THE MOST ADVANCED SMARTWATCH"],
+        Head3: ["THE BEST LAPTOPS<br>OF OUR RIME"],
         Description1: [
           `The latest technology, the highest speed of work,
 			<br>compactness and incredibly beautiful appearance`,
@@ -87,23 +87,23 @@
       this.changeWh2 = [
         (this.countNum = 2),
         (this.offset = 0),
-        ['white', 'darkorange', 'white'],
+        ["white", "darkorange", "white"],
       ];
       this.changeWh3 = [
         (this.countNum = 3),
         (this.offset = 555),
-        ['white', 'white', 'darkorange'],
+        ["white", "white", "darkorange"],
       ];
       this.changeWh1 = [
         (this.countNum = 1),
         (this.offset = -555),
-        ['darkorange', 'white', 'white'],
+        ["darkorange", "white", "white"],
       ];
       this.changeWh = [this.changeWh1, this.changeWh2, this.changeWh3];
 
       this.offset = 0;
       this.scrollNumber.innerHTML = this.countNum;
-      this.wheelColor1.style.backgroundColor = 'darkorange';
+      this.wheelColor1.style.backgroundColor = "darkorange";
       this.nameProd.innerHTML = this.aboutCatalog.Head1;
       this.descrProd.innerHTML = this.aboutCatalog.Description1;
     }
@@ -114,13 +114,13 @@
         this.descrProd.innerHTML = this.aboutCatalog[`Description${count}`];
         return true;
       }
-      this.aboutCatalog[`Head${count}`] = '';
+      this.aboutCatalog[`Head${count}`] = "";
       return false;
     }
 
     changeNum(count) {
-      const a = (document.querySelector('.number').value = count);
-      document.querySelector('.number').innerHTML = a;
+      const a = (document.querySelector(".number").value = count);
+      document.querySelector(".number").innerHTML = a;
     }
 
     wheelColorChange(clr1, clr2, clr3) {
@@ -133,7 +133,7 @@
     scrollPict() {
       this.offset += 555;
       if (this.offset > 1110) this.offset = 0;
-      this.sliderLine.style.left = -this.offset + 'px';
+      this.sliderLine.style.left = -this.offset + "px";
       return this.offset;
     }
 
@@ -141,11 +141,11 @@
       this.countNum++;
       if (this.countNum > 3) this.countNum = 1;
       if (this.countNum === 1) {
-        this.wheelColorChange('darkorange', 'white', 'white');
+        this.wheelColorChange("darkorange", "white", "white");
       } else if (this.countNum === 2) {
-        this.wheelColorChange('white', 'darkorange', 'white');
+        this.wheelColorChange("white", "darkorange", "white");
       } else {
-        this.wheelColorChange('white', 'white', 'darkorange');
+        this.wheelColorChange("white", "white", "darkorange");
       }
       this.changeNum(this.countNum);
       this.scrollPict();
@@ -165,12 +165,12 @@
 
   const change = new SliderProd(0, 1);
 
-  document.querySelector('.next').addEventListener('click', () => {
+  document.querySelector(".next").addEventListener("click", () => {
     change.scrollNum();
   });
 
-  change.whColor.map(elem => {
-    elem.addEventListener('click', () => {
+  change.whColor.map((elem) => {
+    elem.addEventListener("click", () => {
       change.changeWheel(...change.changeWh[change.whColor.indexOf(elem)]);
     });
   });
@@ -180,10 +180,10 @@
 {
   class RotPict {
     constructor(flag) {
-      this.prodPict = document.querySelectorAll('.product-picture');
-      this.dataBackPict1 = document.querySelector('.pictBack1');
-      this.dataBackPict2 = document.querySelector('.pictBack2');
-      this.dataBackPict3 = document.querySelector('.pictBack3');
+      this.prodPict = document.querySelectorAll(".product-picture");
+      this.dataBackPict1 = document.querySelector(".pictBack1");
+      this.dataBackPict2 = document.querySelector(".pictBack2");
+      this.dataBackPict3 = document.querySelector(".pictBack3");
 
       this.aboutProductBack = {
         prod1: [
@@ -220,17 +220,17 @@
     }
 
     rotatePict(pict) {
-      if (pict.style.opacity === '0.2') {
-        return this.conditionForRetutrn(pict, '', true, 1);
+      if (pict.style.opacity === "0.2") {
+        return this.conditionForRetutrn(pict, "", true, 1);
       }
-      return this.conditionForRetutrn(pict, 'rotateY(180deg)', false, 0.2);
+      return this.conditionForRetutrn(pict, "rotateY(180deg)", false, 0.2);
     }
   }
 
   const rotatePicture = new RotPict(true);
 
-  rotatePicture.prodPict.forEach(elem => {
-    elem.addEventListener('click', () => {
+  rotatePicture.prodPict.forEach((elem) => {
+    elem.addEventListener("click", () => {
       rotatePicture.rotatePict(elem);
     });
   });
@@ -240,19 +240,19 @@
 {
   class ServiceDesrc {
     constructor() {
-      this.backButton1 = document.querySelector('.serv1');
-      this.backButton2 = document.querySelector('.serv2');
-      this.backButton3 = document.querySelector('.serv3');
-      this.serviceHead = document.querySelector('.head-serv1');
-      this.serviceDescr = document.querySelector('.descr-serv2');
-      this.servIcon1 = document.querySelector('.serv-icon1');
-      this.servIcon2 = document.querySelector('.serv-icon2');
-      this.servIcon3 = document.querySelector('.serv-icon3');
+      this.backButton1 = document.querySelector(".serv1");
+      this.backButton2 = document.querySelector(".serv2");
+      this.backButton3 = document.querySelector(".serv3");
+      this.serviceHead = document.querySelector(".head-serv1");
+      this.serviceDescr = document.querySelector(".descr-serv2");
+      this.servIcon1 = document.querySelector(".serv-icon1");
+      this.servIcon2 = document.querySelector(".serv-icon2");
+      this.servIcon3 = document.querySelector(".serv-icon3");
 
       this.aboutService = {
-        HeadServ1: ['DELIVERY'],
-        HeadServ2: ['GUARANTEE'],
-        HeadServ3: ['CREDIT'],
+        HeadServ1: ["DELIVERY"],
+        HeadServ2: ["GUARANTEE"],
+        HeadServ3: ["CREDIT"],
         DescrServ1: [
           `We will be happy to deliver your goods directly
 			to your entrance for free!
@@ -272,29 +272,29 @@
         ],
       };
 
-      this.backButton1.style.backgroundColor = 'black';
-      this.backButton1.style.color = 'white';
+      this.backButton1.style.backgroundColor = "black";
+      this.backButton1.style.color = "white";
       this.serviceHead.innerHTML = this.aboutService.HeadServ1;
       this.serviceDescr.innerHTML = this.aboutService.DescrServ1;
-      this.servIcon2.style.display = 'none';
-      this.servIcon3.style.display = 'none';
+      this.servIcon2.style.display = "none";
+      this.servIcon3.style.display = "none";
 
       this.bodyValue = {
-        but: ['.s1', '.s2', '.s3'],
+        but: [".s1", ".s2", ".s3"],
         valArr1: [
-          'Serv1',
-          ['black', '', '', 'white', 'black', 'black'],
-          ['block', 'none', 'none'],
+          "Serv1",
+          ["black", "", "", "white", "black", "black"],
+          ["block", "none", "none"],
         ],
         valArr2: [
-          'Serv2',
-          ['', 'black', '', 'black', 'white', 'black'],
-          ['none', 'block', 'none'],
+          "Serv2",
+          ["", "black", "", "black", "white", "black"],
+          ["none", "block", "none"],
         ],
         valArr3: [
-          'Serv3',
-          ['', '', 'black', 'black', 'black', 'white'],
-          ['none', 'none', 'block'],
+          "Serv3",
+          ["", "", "black", "black", "black", "white"],
+          ["none", "none", "block"],
         ],
       };
     }
@@ -334,8 +334,8 @@
 
   const desrcServ = new ServiceDesrc();
 
-  desrcServ.bodyValue.but.map(elem => {
-    document.querySelector(elem).addEventListener('click', () => {
+  desrcServ.bodyValue.but.map((elem) => {
+    document.querySelector(elem).addEventListener("click", () => {
       desrcServ.changeDescrService(
         ...desrcServ.bodyValue[
           `valArr${desrcServ.bodyValue.but.indexOf(elem) + 1}`
@@ -351,19 +351,19 @@
     constructor() {
       this.numHead = 1;
       this.numText = 1;
-      this.headDescrPict = document.querySelectorAll('.head-pd-descr');
-      this.DescrPict = document.querySelectorAll('.text');
-      this.updownElem1 = document.querySelector('.pct1');
-      this.updownElem2 = document.querySelector('.pct2');
-      this.updownElem3 = document.querySelector('.pct3');
-      this.hiddenElement1 = document.querySelector('.phoneDescr');
-      this.hiddenElement2 = document.querySelector('.laptopDescr');
-      this.hiddenElement3 = document.querySelector('.watchDescr');
+      this.headDescrPict = document.querySelectorAll(".head-pd-descr");
+      this.DescrPict = document.querySelectorAll(".text");
+      this.updownElem1 = document.querySelector(".pct1");
+      this.updownElem2 = document.querySelector(".pct2");
+      this.updownElem3 = document.querySelector(".pct3");
+      this.hiddenElement1 = document.querySelector(".phoneDescr");
+      this.hiddenElement2 = document.querySelector(".laptopDescr");
+      this.hiddenElement3 = document.querySelector(".watchDescr");
 
       this.descrProdPict = {
-        head1: ['Iphone 12 Pro Max'],
-        head2: ['Apple Watch Series 6'],
-        head3: ['Macbook Pro M1'],
+        head1: ["Iphone 12 Pro Max"],
+        head2: ["Apple Watch Series 6"],
+        head3: ["Macbook Pro M1"],
         descr1: [
           `The iPhone 12 Pro features a 6.1-inch display and
 			the larger iPhone 12 Pro Max variant features a <br>
@@ -428,23 +428,23 @@
     }
 
     handleButtonClick(elem) {
-      elem.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      elem.scrollIntoView({ block: "center", behavior: "smooth" });
       return true;
     }
   }
 
   const scrollWin = new ScrollIconPicture();
 
-  scrollWin.headDescrPict.forEach(elem => {
+  scrollWin.headDescrPict.forEach((elem) => {
     elem.innerHTML = scrollWin.descrProdPict[`head${scrollWin.numHead++}`];
   });
 
-  scrollWin.DescrPict.forEach(elem => {
+  scrollWin.DescrPict.forEach((elem) => {
     elem.innerHTML = scrollWin.descrProdPict[`descr${scrollWin.numText++}`];
   });
 
-  scrollWin.upDownElem.map(elem => {
-    elem.addEventListener('click', () => {
+  scrollWin.upDownElem.map((elem) => {
+    elem.addEventListener("click", () => {
       scrollWin.handleButtonClick(
         scrollWin.hidElem[scrollWin.upDownElem.indexOf(elem)]
       );
@@ -456,26 +456,26 @@
 {
   class AnimationScrollVisible {
     constructor() {
-      this.phoneDescr = document.querySelector('.phoneDescr');
-      this.watchDescr = document.querySelector('.watchDescr');
-      this.laptopDescr = document.querySelector('.laptopDescr');
+      this.phoneDescr = document.querySelector(".phoneDescr");
+      this.watchDescr = document.querySelector(".watchDescr");
+      this.laptopDescr = document.querySelector(".laptopDescr");
     }
 
     scrollPage() {
       const windowWidth = window.innerWidth;
       if (windowWidth < 768) {
-        this.phoneDescr.classList.add('showObj');
-        this.watchDescr.classList.add('showObj');
-        this.laptopDescr.classList.add('showObj');
+        this.phoneDescr.classList.add("showObj");
+        this.watchDescr.classList.add("showObj");
+        this.laptopDescr.classList.add("showObj");
         return true;
       } else {
         const scrollTop = window.scrollY;
         if (scrollTop >= 1500 && scrollTop <= 3100)
-          this.phoneDescr.classList.add('showObj');
+          this.phoneDescr.classList.add("showObj");
         if (scrollTop >= 2300 && scrollTop <= 4000)
-          this.watchDescr.classList.add('showObj');
+          this.watchDescr.classList.add("showObj");
         if (scrollTop >= 3100 && scrollTop <= 5200)
-          this.laptopDescr.classList.add('showObj');
+          this.laptopDescr.classList.add("showObj");
         return true;
       }
     }
@@ -483,7 +483,7 @@
 
   const scrollToPict = new AnimationScrollVisible();
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     scrollToPict.scrollPage();
   });
 }
