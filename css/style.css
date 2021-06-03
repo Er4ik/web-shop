@@ -45,7 +45,7 @@ header {
   overflow: hidden;
 }
 
-.menu-icon>span {
+.menu-icon > span {
   width: 50px;
   height: 3.2px;
   display: block;
@@ -54,19 +54,19 @@ header {
   justify-self: end;
 }
 
-.menu-icon>span:nth-child(1) {
+.menu-icon > span:nth-child(1) {
   width: 42px;
 }
 
-.menu-icon>span:nth-child(2) {
+.menu-icon > span:nth-child(2) {
   width: 35px;
 }
 
-.menu-icon:hover>span:nth-child(1) {
+.menu-icon:hover > span:nth-child(1) {
   width: 30px;
 }
 
-.menu-icon:hover>span:nth-child(2) {
+.menu-icon:hover > span:nth-child(2) {
   width: 40px;
 }
 
@@ -532,8 +532,8 @@ header {
   color: #fff;
 }
 
-.text-left>h3,
-.text-left>p {
+.text-left > h3,
+.text-left > p {
   margin-left: 0px;
   width: 600px;
   color: #000;
@@ -762,11 +762,12 @@ hr {
   font-size: 30px;
 }
 
-.interaction {}
+.interaction {
+}
 
 .chart_buy {
   display: inline-block;
-  background: url('../pictures/laptop-page/icons/buy.png') 50% 50% no-repeat;
+  background: url("../pictures/laptop-page/icons/buy.png") 50% 50% no-repeat;
   padding: 100px 60px;
   border-radius: 15px;
   box-shadow: 0px 0px 5px #000;
@@ -780,7 +781,7 @@ hr {
 }
 
 .chart_buy:active {
-  background: url('../pictures/laptop-page/icons/bought.png') 50% 50% no-repeat;
+  background: url("../pictures/laptop-page/icons/bought.png") 50% 50% no-repeat;
 }
 
 .chart_text {
@@ -866,7 +867,8 @@ hr {
   margin: 0px 0px 1em 0px;
 }
 
-.popup_text {}
+.popup_text {
+}
 
 .other_list {
   display: flex;
@@ -1062,10 +1064,12 @@ hr {
   height: 372px;
   width: 230px;
   margin: 0 50px 50px 50px;
-  background: linear-gradient(to top,
-      rgb(17, 17, 17),
-      rgb(158, 156, 156),
-      rgb(255, 142, 67));
+  background: linear-gradient(
+    to top,
+    rgb(17, 17, 17),
+    rgb(158, 156, 156),
+    rgb(255, 142, 67)
+  );
 }
 
 .buy-buts {
@@ -1174,7 +1178,7 @@ hr {
   height: 95%;
   left: 0;
   top: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .slides-container img {
