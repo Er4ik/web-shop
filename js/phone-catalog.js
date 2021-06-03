@@ -100,18 +100,19 @@ class RotIcon {
         'Rephresh rate: ' + phonesInfo[`model${key + 1}`].rate;
 		}
 	}
+
 	settings(pict, info, name, opac, trans, opacPict) {
 		info.style.opacity = opac;
 		name.style.opacity = opac;
 		pict.style.transform = trans;
 		pict.style.opacity = opacPict;
 	}
-	
+
 	visibleRotate(pict, info, name) {
 		if (info.style.opacity === '0') {
 			this.settings(pict, info, name, '1', 'rotateY(180deg)', '0.05');
 		} else {
-			this.settings(pict, info, name, 0, '', 1);
+			this.settings(pict, info, name, '0', '', '1');
 		}
 	}
 }
