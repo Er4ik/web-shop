@@ -142,7 +142,7 @@ class Like {
   }
 }
 const likeChange = new Like();
-likeChange.heart.forEach((item) => {
+likeChange.heart.forEach(item => {
   item.style.opacity = 0.9;
   item.addEventListener('click', () => {
     likeChange.likeClick(item);
@@ -158,7 +158,7 @@ class DataFilter {
     this.infoGap = [];
   }
   formFilter() {
-    this.form.addEventListener('click', (event) => {
+    this.form.addEventListener('click', event => {
       if (
         event.target.className !== 'variant' &&
         event.target.className !== 'reset'
@@ -168,7 +168,7 @@ class DataFilter {
       this.filterClass = event.target.dataset['f'];
       this.infoGap = ['brand', 'priceGap', 'memory', 'rate'];
       for (let elem = 0; elem < 9; elem++) {
-        this.infoGap.forEach((item) => {
+        this.infoGap.forEach(item => {
           this.filterBox[elem].classList.add(
             `${phonesInfo[`model${elem + 1}`][item]}`
           );
@@ -266,7 +266,7 @@ class Slider {
     });
   }
   dotTap() {
-    this.dotsArea.addEventListener('click', (event) => {
+    this.dotsArea.addEventListener('click', event => {
       for (let i = 0; i < this.dots.length + 1; i++) {
         if (
           event.target.classList.contains('dot') &&

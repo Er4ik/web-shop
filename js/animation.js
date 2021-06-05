@@ -63,8 +63,6 @@
       this.wheelColor1 = document.querySelector('.wh1');
       this.wheelColor2 = document.querySelector('.wh2');
       this.wheelColor3 = document.querySelector('.wh3');
-      this.goLeftWidthPixels1 = 555;
-      this.goLeftWidthPixels2 = 0;
       this.numberDescr = [1, 2, 3];
 
       this.aboutCatalog = {
@@ -88,7 +86,7 @@
       this.whColor = [this.wheelColor1, this.wheelColor2, this.wheelColor3];
       this.countNum = countNum;
       this.offset = offset;
-      this.offset = this.goLeftWidthPixels2;
+      this.offset = this.widthResetL;
       this.scrollNumber.innerHTML = this.countNum;
       this.wheelColor1.style.backgroundColor = 'darkorange';
       this.nameProd.innerHTML = this.aboutCatalog.Head1;
@@ -118,9 +116,11 @@
     }
 
     scrollPict() {
-      this.offset += this.goLeftWidthPixels1;
-      if (this.offset > this.goLeftWidthPixels1 * 2) {
-        this.offset = this.goLeftWidthPixels2;
+      const shiftWidthL = 555;
+      const widthResetL = 0;
+      this.offset += shiftWidthL;
+      if (this.offset > shiftWidthL * 2) {
+        this.offset = widthResetL;
       }
       this.sliderLine.style.left = -this.offset + 'px';
       return this.offset;
@@ -220,7 +220,7 @@
 
   const rotatePicture = new RotPict(true);
 
-  rotatePicture.prodPict.forEach((elem) => {
+  rotatePicture.prodPict.forEach(elem => {
     elem.addEventListener('click', () => {
       rotatePicture.rotatePict(elem);
     });
@@ -348,7 +348,7 @@
 
   const desrcServ = new ServiceDesrc();
 
-  desrcServ.bodyValue.but.map((elem) => {
+  desrcServ.bodyValue.but.map(elem => {
     document.querySelector(elem).addEventListener('click', () => {
       desrcServ.changeDescrService(
         ...desrcServ.bodyValue[
@@ -449,15 +449,15 @@
 
   const scrollWin = new ScrollIconPicture();
 
-  scrollWin.headDescrPict.forEach((elem) => {
+  scrollWin.headDescrPict.forEach(elem => {
     elem.innerHTML = scrollWin.descrProdPict[`head${scrollWin.numHead++}`];
   });
 
-  scrollWin.DescrPict.forEach((elem) => {
+  scrollWin.DescrPict.forEach(elem => {
     elem.innerHTML = scrollWin.descrProdPict[`descr${scrollWin.numText++}`];
   });
 
-  scrollWin.upDownElem.map((elem) => {
+  scrollWin.upDownElem.map(elem => {
     elem.addEventListener('click', () => {
       scrollWin.handleButtonClick(
         scrollWin.hidElem[scrollWin.upDownElem.indexOf(elem)]
