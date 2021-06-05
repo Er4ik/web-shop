@@ -19,7 +19,7 @@
       this.plusCat.style.color = colour;
       this.plusCat.style.opacity = opac;
       this.flag = flag;
-      this.opacityVis = [0.3, 1];
+      this.opacityVis = ['0.3', '1'];
       return true;
     }
 
@@ -34,7 +34,7 @@
           true
         );
       }
-      this.opacityCatalog = this.opacityVis[1];
+      this.opacityCatalog = 1;
       return this.showCatalog(
         'flex',
         'rotate(225deg)',
