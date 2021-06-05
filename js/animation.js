@@ -159,7 +159,6 @@
   document.querySelector('.next').addEventListener('click', () => {
     change.scrollNum();
   });
-
 }
 
 // slider picture_Back_Text
@@ -210,16 +209,18 @@
       if (pict.style.opacity === `${this.opacityVis[0]}`) {
         return this.conditionForRetutrn(pict, '', true, this.opacityVis[1]);
       }
-      return this.conditionForRetutrn(pict,
+      return this.conditionForRetutrn(
+        pict,
         'rotateY(180deg)',
         false,
-        this.opacityVis[0]);
+        this.opacityVis[0]
+      );
     }
   }
 
   const rotatePicture = new RotPict(true);
 
-  rotatePicture.prodPict.forEach(elem => {
+  rotatePicture.prodPict.forEach((elem) => {
     elem.addEventListener('click', () => {
       rotatePicture.rotatePict(elem);
     });
@@ -275,20 +276,38 @@
         but: ['.s1', '.s2', '.s3'],
         valArr1: [
           'Serv1',
-          [this.color[0], this.color[2], this.color[2],
-            this.color[1], this.color[0], this.color[0]],
+          [
+            this.color[0],
+            this.color[2],
+            this.color[2],
+            this.color[1],
+            this.color[0],
+            this.color[0],
+          ],
           [this.blockVis[0], this.blockVis[1], this.blockVis[1]],
         ],
         valArr2: [
           'Serv2',
-          [this.color[2], this.color[0], this.color[2],
-            this.color[0], this.color[1], this.color[0]],
+          [
+            this.color[2],
+            this.color[0],
+            this.color[2],
+            this.color[0],
+            this.color[1],
+            this.color[0],
+          ],
           [this.blockVis[1], this.blockVis[0], this.blockVis[1]],
         ],
         valArr3: [
           'Serv3',
-          [this.color[2], this.color[2], this.color[0],
-            this.color[0], this.color[0], this.color[1]],
+          [
+            this.color[2],
+            this.color[2],
+            this.color[0],
+            this.color[0],
+            this.color[0],
+            this.color[1],
+          ],
           [this.blockVis[1], this.blockVis[1], this.blockVis[0]],
         ],
       };
@@ -329,7 +348,7 @@
 
   const desrcServ = new ServiceDesrc();
 
-  desrcServ.bodyValue.but.map(elem => {
+  desrcServ.bodyValue.but.map((elem) => {
     document.querySelector(elem).addEventListener('click', () => {
       desrcServ.changeDescrService(
         ...desrcServ.bodyValue[
@@ -430,15 +449,15 @@
 
   const scrollWin = new ScrollIconPicture();
 
-  scrollWin.headDescrPict.forEach(elem => {
+  scrollWin.headDescrPict.forEach((elem) => {
     elem.innerHTML = scrollWin.descrProdPict[`head${scrollWin.numHead++}`];
   });
 
-  scrollWin.DescrPict.forEach(elem => {
+  scrollWin.DescrPict.forEach((elem) => {
     elem.innerHTML = scrollWin.descrProdPict[`descr${scrollWin.numText++}`];
   });
 
-  scrollWin.upDownElem.map(elem => {
+  scrollWin.upDownElem.map((elem) => {
     elem.addEventListener('click', () => {
       scrollWin.handleButtonClick(
         scrollWin.hidElem[scrollWin.upDownElem.indexOf(elem)]

@@ -97,7 +97,7 @@ signForm.viewRepeatPassword.addEventListener('click', () => {
   signForm.viewPass(signForm.inPasswordCorrect, signForm.viewRepeatPassword);
 });
 
-signForm.submitForm.addEventListener('submit', event => {
+signForm.submitForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
   if (

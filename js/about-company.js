@@ -22,7 +22,7 @@ const aboutCompany = {
     is the most important thing! Thank you for reading up to
     this point, I started to write it as a joke to fill this
     page, but by the end I was so drawn in that I wanted to 
-    write something from the heart, enjoy the site :)`
+    write something from the heart, enjoy the site :)`,
   ],
 };
 
