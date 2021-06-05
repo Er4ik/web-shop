@@ -268,23 +268,28 @@
       this.serviceDescr.innerHTML = this.aboutService.DescrServ1;
       this.servIcon2.style.display = 'none';
       this.servIcon3.style.display = 'none';
+      this.color = ['black', 'white', ''];
+      this.blockVis = ['block', 'none'];
 
       this.bodyValue = {
         but: ['.s1', '.s2', '.s3'],
         valArr1: [
           'Serv1',
-          ['black', '', '', 'white', 'black', 'black'],
-          ['block', 'none', 'none'],
+          [this.color[0], this.color[2], this.color[2],
+            this.color[1], this.color[0], this.color[0]],
+          [this.blockVis[0], this.blockVis[1], this.blockVis[1]],
         ],
         valArr2: [
           'Serv2',
-          ['', 'black', '', 'black', 'white', 'black'],
-          ['none', 'block', 'none'],
+          [this.color[2], this.color[0], this.color[2],
+            this.color[0], this.color[1], this.color[0]],
+          [this.blockVis[1], this.blockVis[0], this.blockVis[1]],
         ],
         valArr3: [
           'Serv3',
-          ['', '', 'black', 'black', 'black', 'white'],
-          ['none', 'none', 'block'],
+          [this.color[2], this.color[2], this.color[0],
+            this.color[0], this.color[0], this.color[1]],
+          [this.blockVis[1], this.blockVis[1], this.blockVis[0]],
         ],
       };
     }
