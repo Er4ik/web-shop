@@ -10,7 +10,6 @@
       this.flag = flag;
       this.catDescr.classList.add('p-show');
       this.catDescr.style.display = 'none';
-      this.opacityCatalog = 0;
     }
 
     showCatalog(disp, transform, colour, opac, flag) {
@@ -24,22 +23,23 @@
     }
 
     showCat() {
+      let opacityCatalog = 0;
       if (!this.flag) {
-        this.opacityCatalog = this.opacityVis[0];
+        opacityCatalog = this.opacityVis[0];
         return this.showCatalog(
           'none',
           'rotate(-180deg)',
           'white',
-          this.opacityCatalog,
+          opacityCatalog,
           true
         );
       }
-      this.opacityCatalog = 1;
+      opacityCatalog = 1;
       return this.showCatalog(
         'flex',
         'rotate(225deg)',
         'darkorange',
-        this.opacityCatalog,
+        opacityCatalog,
         false
       );
     }
@@ -63,7 +63,6 @@
       this.wheelColor1 = document.querySelector('.wh1');
       this.wheelColor2 = document.querySelector('.wh2');
       this.wheelColor3 = document.querySelector('.wh3');
-      this.numberDescr = [1, 2, 3];
 
       this.aboutCatalog = {
         Head1: ['NEW GENERATION<br>SMARTPHONES'],
@@ -127,13 +126,14 @@
     }
 
     scrollNum() {
+      const numberDescr = [1, 2, 3];
       this.countNum++;
-      if (this.countNum > this.numberDescr[2]) {
-        this.countNum = this.numberDescr[0];
+      if (this.countNum > numberDescr[2]) {
+        this.countNum = numberDescr[0];
       }
-      if (this.countNum === this.numberDescr[0]) {
+      if (this.countNum === numberDescr[0]) {
         this.wheelColorChange('darkorange', 'white', 'white');
-      } else if (this.countNum === this.numberDescr[1]) {
+      } else if (this.countNum === numberDescr[1]) {
         this.wheelColorChange('white', 'darkorange', 'white');
       } else {
         this.wheelColorChange('white', 'white', 'darkorange');
