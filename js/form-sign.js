@@ -120,7 +120,7 @@ signForm.submitForm.addEventListener('submit', event => {
       name: signForm.inName.value,
       email: signForm.inEmail.value,
       password: signForm.inPassword.value,
-      passwordCipher: signForm.encryptionPass(8),
+      passwordCipher: signForm.encryptionPass(Math.random() * 10),
     };
 
     const requestForm = new XMLHttpRequest();
