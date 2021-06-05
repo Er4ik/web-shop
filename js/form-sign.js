@@ -106,11 +106,12 @@ signForm.submitForm.addEventListener('submit', event => {
     signForm.validateForm(signForm.inPassword, signForm.minimum8Chars) &&
     signForm.validPassword(signForm.inPassword, signForm.inPasswordCorrect)
   ) {
+    const shiftNumbers = 8;
     const dataPerson = {
       name: signForm.inName.value,
       email: signForm.inEmail.value,
       password: signForm.inPassword.value,
-      passwordCipher: signForm.encryptionPass(8),
+      passwordCipher: signForm.encryptionPass(shiftNumbers),
     };
 
     const requestForm = new XMLHttpRequest();

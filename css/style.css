@@ -323,11 +323,6 @@ header {
   background-color: #ff8c00;
 }
 
-.wh:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
 .wh {
   width: 15px;
   height: 15px;
@@ -543,17 +538,6 @@ header {
   margin: 100px auto;
   width: 550px;
   height: 555px;
-}
-
-.phoneDescr,
-.laptopDescr,
-.watchDescr {
-  opacity: 0;
-}
-
-.showObj {
-  transition: 4.5s;
-  opacity: 1;
 }
 
 /*Footer*/
