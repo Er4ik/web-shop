@@ -10,7 +10,6 @@
       this.flag = flag;
       this.catDescr.classList.add('p-show');
       this.catDescr.style.display = 'none';
-      this.opacityCatalog = 0;
     }
 
     showCatalog(disp, transform, colour, opac, flag) {
@@ -19,26 +18,28 @@
       this.plusCat.style.color = colour;
       this.plusCat.style.opacity = opac;
       this.flag = flag;
+      this.opacityVis = ['0.3', '1'];
       return true;
     }
 
     showCat() {
+      let opacityCatalog = 0;
       if (!this.flag) {
-        this.opacityCatalog = 0.3;
+        opacityCatalog = this.opacityVis[0];
         return this.showCatalog(
           'none',
           'rotate(-180deg)',
           'white',
-          this.opacityCatalog,
+          opacityCatalog,
           true
         );
       }
-      this.opacityCatalog = 1;
+      opacityCatalog = 1;
       return this.showCatalog(
         'flex',
         'rotate(225deg)',
         'darkorange',
-        this.opacityCatalog,
+        opacityCatalog,
         false
       );
     }
@@ -84,24 +85,7 @@
       this.whColor = [this.wheelColor1, this.wheelColor2, this.wheelColor3];
       this.countNum = countNum;
       this.offset = offset;
-      this.changeWh2 = [
-        (this.countNum = 2),
-        (this.offset = 0),
-        ['white', 'darkorange', 'white'],
-      ];
-      this.changeWh3 = [
-        (this.countNum = 3),
-        (this.offset = 555),
-        ['white', 'white', 'darkorange'],
-      ];
-      this.changeWh1 = [
-        (this.countNum = 1),
-        (this.offset = -555),
-        ['darkorange', 'white', 'white'],
-      ];
-      this.changeWh = [this.changeWh1, this.changeWh2, this.changeWh3];
-
-      this.offset = 0;
+      this.offset = this.widthResetL;
       this.scrollNumber.innerHTML = this.countNum;
       this.wheelColor1.style.backgroundColor = 'darkorange';
       this.nameProd.innerHTML = this.aboutCatalog.Head1;
@@ -131,18 +115,25 @@
     }
 
     scrollPict() {
-      this.offset += 555;
-      if (this.offset > 1110) this.offset = 0;
+      const shiftWidthL = 555;
+      const widthResetL = 0;
+      this.offset += shiftWidthL;
+      if (this.offset > shiftWidthL * 2) {
+        this.offset = widthResetL;
+      }
       this.sliderLine.style.left = -this.offset + 'px';
       return this.offset;
     }
 
     scrollNum() {
+      const numberDescr = [1, 2, 3];
       this.countNum++;
-      if (this.countNum > 3) this.countNum = 1;
-      if (this.countNum === 1) {
+      if (this.countNum > numberDescr[2]) {
+        this.countNum = numberDescr[0];
+      }
+      if (this.countNum === numberDescr[0]) {
         this.wheelColorChange('darkorange', 'white', 'white');
-      } else if (this.countNum === 2) {
+      } else if (this.countNum === numberDescr[1]) {
         this.wheelColorChange('white', 'darkorange', 'white');
       } else {
         this.wheelColorChange('white', 'white', 'darkorange');
@@ -168,12 +159,6 @@
   document.querySelector('.next').addEventListener('click', () => {
     change.scrollNum();
   });
-
-  change.whColor.map(elem => {
-    elem.addEventListener('click', () => {
-      change.changeWheel(...change.changeWh[change.whColor.indexOf(elem)]);
-    });
-  });
 }
 
 // slider picture_Back_Text
@@ -184,6 +169,7 @@
       this.dataBackPict1 = document.querySelector('.pictBack1');
       this.dataBackPict2 = document.querySelector('.pictBack2');
       this.dataBackPict3 = document.querySelector('.pictBack3');
+      this.opacityVis = [0.2, 1];
 
       this.aboutProductBack = {
         prod1: [
@@ -220,10 +206,15 @@
     }
 
     rotatePict(pict) {
-      if (pict.style.opacity === '0.2') {
-        return this.conditionForRetutrn(pict, '', true, 1);
+      if (pict.style.opacity === `${this.opacityVis[0]}`) {
+        return this.conditionForRetutrn(pict, '', true, this.opacityVis[1]);
       }
-      return this.conditionForRetutrn(pict, 'rotateY(180deg)', false, 0.2);
+      return this.conditionForRetutrn(
+        pict,
+        'rotateY(180deg)',
+        false,
+        this.opacityVis[0]
+      );
     }
   }
 
@@ -278,23 +269,46 @@
       this.serviceDescr.innerHTML = this.aboutService.DescrServ1;
       this.servIcon2.style.display = 'none';
       this.servIcon3.style.display = 'none';
+      this.color = ['black', 'white', ''];
+      this.blockVis = ['block', 'none'];
 
       this.bodyValue = {
         but: ['.s1', '.s2', '.s3'],
         valArr1: [
           'Serv1',
-          ['black', '', '', 'white', 'black', 'black'],
-          ['block', 'none', 'none'],
+          [
+            this.color[0],
+            this.color[2],
+            this.color[2],
+            this.color[1],
+            this.color[0],
+            this.color[0],
+          ],
+          [this.blockVis[0], this.blockVis[1], this.blockVis[1]],
         ],
         valArr2: [
           'Serv2',
-          ['', 'black', '', 'black', 'white', 'black'],
-          ['none', 'block', 'none'],
+          [
+            this.color[2],
+            this.color[0],
+            this.color[2],
+            this.color[0],
+            this.color[1],
+            this.color[0],
+          ],
+          [this.blockVis[1], this.blockVis[0], this.blockVis[1]],
         ],
         valArr3: [
           'Serv3',
-          ['', '', 'black', 'black', 'black', 'white'],
-          ['none', 'none', 'block'],
+          [
+            this.color[2],
+            this.color[2],
+            this.color[0],
+            this.color[0],
+            this.color[0],
+            this.color[1],
+          ],
+          [this.blockVis[1], this.blockVis[1], this.blockVis[0]],
         ],
       };
     }
@@ -449,41 +463,5 @@
         scrollWin.hidElem[scrollWin.upDownElem.indexOf(elem)]
       );
     });
-  });
-}
-
-//animate-scroll-picture
-{
-  class AnimationScrollVisible {
-    constructor() {
-      this.phoneDescr = document.querySelector('.phoneDescr');
-      this.watchDescr = document.querySelector('.watchDescr');
-      this.laptopDescr = document.querySelector('.laptopDescr');
-    }
-
-    scrollPage() {
-      const windowWidth = window.innerWidth;
-      if (windowWidth < 768) {
-        this.phoneDescr.classList.add('showObj');
-        this.watchDescr.classList.add('showObj');
-        this.laptopDescr.classList.add('showObj');
-        return true;
-      } else {
-        const scrollTop = window.scrollY;
-        if (scrollTop >= 1500 && scrollTop <= 3100)
-          this.phoneDescr.classList.add('showObj');
-        if (scrollTop >= 2300 && scrollTop <= 4000)
-          this.watchDescr.classList.add('showObj');
-        if (scrollTop >= 3100 && scrollTop <= 5200)
-          this.laptopDescr.classList.add('showObj');
-        return true;
-      }
-    }
-  }
-
-  const scrollToPict = new AnimationScrollVisible();
-
-  window.addEventListener('scroll', () => {
-    scrollToPict.scrollPage();
   });
 }
