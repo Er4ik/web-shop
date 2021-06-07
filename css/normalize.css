@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 600;
   margin-top: 20px;
   -webkit-input-placeholder: Georgia;
@@ -9,8 +9,8 @@ body {
 input::-webkit-input-placeholder {
   font-weight: 600;
 }
-input[type~="name"],
-input[type~="email"] {
+input[type~='name'],
+input[type~='email'] {
   font-weight: 600;
 }
 input {
@@ -43,7 +43,7 @@ input {
   margin: 0;
   padding: 0;
   /* box-sizing: border-box; */
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 input {
