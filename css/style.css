@@ -45,7 +45,7 @@ header {
   overflow: hidden;
 }
 
-.menu-icon > span {
+.menu-icon>span {
   width: 50px;
   height: 3.2px;
   display: block;
@@ -54,19 +54,19 @@ header {
   justify-self: end;
 }
 
-.menu-icon > span:nth-child(1) {
+.menu-icon>span:nth-child(1) {
   width: 42px;
 }
 
-.menu-icon > span:nth-child(2) {
+.menu-icon>span:nth-child(2) {
   width: 35px;
 }
 
-.menu-icon:hover > span:nth-child(1) {
+.menu-icon:hover>span:nth-child(1) {
   width: 30px;
 }
 
-.menu-icon:hover > span:nth-child(2) {
+.menu-icon:hover>span:nth-child(2) {
   width: 40px;
 }
 
@@ -527,8 +527,8 @@ header {
   color: #fff;
 }
 
-.text-left > h3,
-.text-left > p {
+.text-left>h3,
+.text-left>p {
   margin-left: 0px;
   width: 600px;
   color: #000;
@@ -746,8 +746,7 @@ hr {
   font-size: 30px;
 }
 
-.interaction {
-}
+.interaction {}
 
 .chart_buy {
   display: inline-block;
@@ -851,8 +850,7 @@ hr {
   margin: 0px 0px 1em 0px;
 }
 
-.popup_text {
-}
+.popup_text {}
 
 .other_list {
   display: flex;
@@ -1048,12 +1046,10 @@ hr {
   height: 372px;
   width: 230px;
   margin: 0 50px 50px 50px;
-  background: linear-gradient(
-    to top,
-    rgb(17, 17, 17),
-    rgb(158, 156, 156),
-    rgb(255, 142, 67)
-  );
+  background: linear-gradient(to top,
+      rgb(17, 17, 17),
+      rgb(158, 156, 156),
+      rgb(255, 142, 67));
 }
 
 .buy-buts {
@@ -1189,7 +1185,7 @@ hr {
   cursor: pointer;
   position: absolute;
   font-size: 25px;
-  z-index: 99;
+  z-index: 90;
 }
 
 .prev-button {
@@ -1201,7 +1197,7 @@ hr {
 }
 
 .dots-block {
-  z-index: 100;
+  z-index: 95;
   display: flex;
   justify-content: center;
   position: absolute;
@@ -1223,4 +1219,51 @@ hr {
 
 .dot-active {
   background: #000;
+}
+
+/*modal-cart*/
+.modal-cart {
+  display: flex;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  left: 50%;
+  height: 1000px;
+  max-height: 100%;
+  overflow: auto;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  justify-content: flex-end;
+  border: #000 solid 4px;
+  width: 95%;
+}
+
+.modal-active {
+  display: flex;
+}
+
+.modal-hide {
+  display: none;
+}
+
+.close-but {
+  margin: 10px 10px 0 0;
+  height: 40px;
+  width: 40px;
+  align-self: flex-start;
+  border: #000 solid 4px;
+  padding: 3px;
+}
+
+.close-but:hover {
+  cursor: pointer;
+  background: rgba(255, 68, 68, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.1s ease;
+}
+
+.close-cart {
+  height: 100%;
+  width: 100%;
 }
