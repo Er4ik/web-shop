@@ -108,10 +108,10 @@ class RotIcon {
   }
 
   visibleRotate(pict, info, name) {
-    if (info.style.opacity === '0') {
+    if (info.style.opacity === '') {
       this.settings(pict, info, name, '1', 'rotateY(180deg)', '0.05');
     } else {
-      this.settings(pict, info, name, '0', '', '1');
+      this.settings(pict, info, name, '', '', '1');
     }
   }
 }
