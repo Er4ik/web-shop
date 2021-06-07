@@ -84,7 +84,18 @@ class SignMenuForm {
     this.passCipher = this.passArrCipher.join('');
     return this.passCipher;
   }
+
+  saveToLocalStorage(value) {
+    localStorage.setItem('PersonalData', JSON.stringify(value));
+  }
+
+  randomInteger(min, max) {
+    const rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+  }
 }
+
+//main
 
 const signForm = new SignMenuForm(
   'https://er4ik.github.io/Web_Site_Shop/',
@@ -116,12 +127,15 @@ signForm.submitForm.addEventListener('submit', event => {
   }
 
   if (flagRx) {
+
     const dataPerson = {
       name: signForm.inName.value,
       email: signForm.inEmail.value,
       password: signForm.inPassword.value,
-      passwordCipher: signForm.encryptionPass(Math.random() * 10),
+      passwordCipher: signForm.encryptionPass(signForm.randomInteger(5, 10)),
     };
+
+    signForm.saveToLocalStorage(dataPerson);
 
     const requestForm = new XMLHttpRequest();
     requestForm.open('GET', signForm.url);

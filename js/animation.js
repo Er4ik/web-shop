@@ -18,14 +18,14 @@
       this.plusCat.style.color = colour;
       this.plusCat.style.opacity = opac;
       this.flag = flag;
-      this.opacityVis = ['0.3', '1'];
       return true;
     }
 
     showCat() {
       let opacityCatalog = 0;
+      const opacityVis = ['0.3', '1'];
       if (!this.flag) {
-        opacityCatalog = this.opacityVis[0];
+        opacityCatalog = opacityVis[0];
         return this.showCatalog(
           'none',
           'rotate(-180deg)',
@@ -34,7 +34,7 @@
           true
         );
       }
-      opacityCatalog = 1;
+      opacityCatalog = opacityVis[1];
       return this.showCatalog(
         'flex',
         'rotate(225deg)',
