@@ -1,5 +1,5 @@
 'use strict';
-
+//modal-window
 const openCart = document.querySelector('.modal-cart');
 const closeCart = document.querySelector('.close-but');
 const buyButtons = document.querySelectorAll('.basket');
