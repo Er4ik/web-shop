@@ -1,8 +1,8 @@
 'use strict';
 
-//slider catalog
+document.addEventListener('DOMContentLoaded', () => {
+//-------------------slider catalog-------------------
 
-{
   class SliderCatalog {
     constructor(flag) {
       this.plusCat = document.querySelector('.plusCat');
@@ -50,10 +50,10 @@
   slider.plusCat.addEventListener('click', () => {
     slider.showCat();
   });
-}
 
-//slider description
-{
+
+  //-------------------slider description-------------------
+
   class SliderProd {
     constructor(offset, countNum) {
       this.sliderLine = document.querySelector('.slider-line');
@@ -70,22 +70,21 @@
         Head3: ['THE BEST LAPTOPS<br>OF OUR RIME'],
         Description1: [
           `The latest technology, the highest speed of work,
-			<br>compactness and incredibly beautiful appearance`,
+      <br>compactness and incredibly beautiful appearance`,
         ],
         Description2: [
           `A computerized wristwatch with extended functionality:
-			comfortable, beautiful, cool`,
+      comfortable, beautiful, cool`,
         ],
         Description3: [
           `Excellent laptops with high performance and <br>autonomy, 
-			thin bezels and luminous keyboard`,
+      thin bezels and luminous keyboard`,
         ],
       };
 
       this.whColor = [this.wheelColor1, this.wheelColor2, this.wheelColor3];
       this.countNum = countNum;
       this.offset = offset;
-      this.offset = this.widthResetL;
       this.scrollNumber.innerHTML = this.countNum;
       this.wheelColor1.style.backgroundColor = 'darkorange';
       this.nameProd.innerHTML = this.aboutCatalog.Head1;
@@ -125,7 +124,7 @@
       return this.offset;
     }
 
-    scrollNum() {
+    scroll() {
       const numberDescr = [1, 2, 3];
       this.countNum++;
       if (this.countNum > numberDescr[2]) {
@@ -143,52 +142,42 @@
       this.changeDataPict(this.countNum);
       return true;
     }
-
-    changeWheel(num, off, color) {
-      this.countNum = num;
-      this.offset = off;
-      this.changeNum(this.countNum);
-      this.scrollPict();
-      this.changeDataPict(this.countNum);
-      this.wheelColorChange(...color);
-    }
   }
 
   const change = new SliderProd(0, 1);
 
   document.querySelector('.next').addEventListener('click', () => {
-    change.scrollNum();
+    change.scroll();
   });
-}
 
-// slider picture_Back_Text
-{
+
+  //-------------------slider picture_Back_Text-------------------
+
   class RotPict {
     constructor(flag) {
       this.prodPict = document.querySelectorAll('.product-picture');
       this.dataBackPict1 = document.querySelector('.pictBack1');
       this.dataBackPict2 = document.querySelector('.pictBack2');
       this.dataBackPict3 = document.querySelector('.pictBack3');
-      this.opacityVis = [0.2, 1];
 
       this.aboutProductBack = {
         prod1: [
           `Packed with Innovative Features Including a Super Retina Display,
-			TrueDepth Camera System, Face ID and A13 Bionic Chipwith Neural
-			Engine`,
+      TrueDepth Camera System, Face ID and A13 Bionic Chipwith Neural
+      Engine`,
         ],
         prod2: [
           `Move. Exercise. Stand. Track all the ways you're active.
-			Activity rings show your daily activity.Make it your 
-			goal to close them every day.
-			Tokeep you motivated there are awards, personalized 
-			coaching, and Activity competitions`,
+      Activity rings show your daily activity.Make it your 
+      goal to close them every day.
+      Tokeep you motivated there are awards, personalized 
+      coaching, and Activity competitions`,
         ],
         prod3: [
           `13.3-inch (diagonal) LED-backlit display with IPS
-			technology;
-			2560-by-1600 native resolution at 227 pixels per 
-			inch with support for millions of colors`,
+      technology;
+      2560-by-1600 native resolution at 227 pixels per 
+      inch with support for millions of colors`,
         ],
       };
 
@@ -206,29 +195,30 @@
     }
 
     rotatePict(pict) {
-      if (pict.style.opacity === `${this.opacityVis[0]}`) {
-        return this.conditionForRetutrn(pict, '', true, this.opacityVis[1]);
+      const opacityVis = [0.2, 1];
+      if (pict.style.opacity === `${opacityVis[0]}`) {
+        return this.conditionForRetutrn(pict, '', true, opacityVis[1]);
       }
       return this.conditionForRetutrn(
         pict,
         'rotateY(180deg)',
         false,
-        this.opacityVis[0]
+        opacityVis[0]
       );
     }
   }
 
   const rotatePicture = new RotPict(true);
 
-  rotatePicture.prodPict.forEach(elem => {
+  for (const elem of rotatePicture.prodPict) {
     elem.addEventListener('click', () => {
       rotatePicture.rotatePict(elem);
     });
-  });
-}
+  }
 
-//description service
-{
+
+  //-------------------description service-------------------
+
   class ServiceDesrc {
     constructor() {
       this.backButton1 = document.querySelector('.serv1');
@@ -246,20 +236,20 @@
         HeadServ3: ['CREDIT'],
         DescrServ1: [
           `We will be happy to deliver your goods directly
-			to your entrance for free!
-			After all, we will make good money by lifting it
-			to your floor.`,
+      to your entrance for free!
+      After all, we will make good money by lifting it
+      to your floor.`,
         ],
         DescrServ2: [
           `Our company provides you with a guarantee for 
-			all purchased products
-			for a year, as well as the ability to return 
-			goods within 14 days.`,
+      all purchased products
+      for a year, as well as the ability to return 
+      goods within 14 days.`,
         ],
         DescrServ3: [
           `The company EAshop also provides the opportunity 
-			to purchase goods on credit for up to a year at
-			20 percent<br> per annum.`,
+      to purchase goods on credit for up to a year at
+      20 percent<br> per annum.`,
         ],
       };
 
@@ -357,10 +347,10 @@
       );
     });
   });
-}
 
-//scroll icon-picture
-{
+
+  //-----------------scroll icon-picture-------------------
+
   class ScrollIconPicture {
     constructor() {
       this.numHead = 1;
@@ -380,56 +370,56 @@
         head3: ['Macbook Pro M1'],
         descr1: [
           `The iPhone 12 Pro features a 6.1-inch display and
-			the larger iPhone 12 Pro Max variant features a <br>
-			6.7-inch display. Both models have the Super Retina XDR 
-			OLED display with thinner 
-			bezels than previous generation 
-			iPhones. The iPhone 12 Pro Max features 
-			the largest display on any iPhone
-			to date. The phones also introduce a 
-			new glass-ceramic covering, named
-			'Ceramic Shield', which was co-developed 
-			with Corning Inc. Apple claims the Ceramic Shield has 
-			'4 times better drop performance' and that it is 
-			'tougher than any smartphone glass'.`,
+      the larger iPhone 12 Pro Max variant features a <br>
+      6.7-inch display. Both models have the Super Retina XDR 
+      OLED display with thinner 
+      bezels than previous generation 
+      iPhones. The iPhone 12 Pro Max features 
+      the largest display on any iPhone
+      to date. The phones also introduce a 
+      new glass-ceramic covering, named
+      'Ceramic Shield', which was co-developed 
+      with Corning Inc. Apple claims the Ceramic Shield has 
+      '4 times better drop performance' and that it is 
+      'tougher than any smartphone glass'.`,
         ],
         descr2: [
           `Cupertino, California — Apple today announced 
-			Apple Watch Series 6,introducing a revolutionary 
-			Blood Oxygen feature that offers users 
-			even more insight into their overall wellness. 
-			Apple Watch Series 6delivers many notable hardware 
-			improvements, including a faster S6
-			System in Package (SiP) and next-generation 
-			always-on altimeter, along with its most colorful
-			lineup yet, featuring a beautiful 
-			palette of new case finishes and bands. 
-			watchOS 7 brings Family Setup, sleep tracking, 
-			automatic handwashing detection, new workout
-			types, and the ability to curate and share watch
-			faces, encouraging customers to be more active,
-			stay connected, and better manage their
-			health in new ways.`,
+      Apple Watch Series 6,introducing a revolutionary 
+      Blood Oxygen feature that offers users 
+      even more insight into their overall wellness. 
+      Apple Watch Series 6delivers many notable hardware 
+      improvements, including a faster S6
+      System in Package (SiP) and next-generation 
+      always-on altimeter, along with its most colorful
+      lineup yet, featuring a beautiful 
+      palette of new case finishes and bands. 
+      watchOS 7 brings Family Setup, sleep tracking, 
+      automatic handwashing detection, new workout
+      types, and the ability to curate and share watch
+      faces, encouraging customers to be more active,
+      stay connected, and better manage their
+      health in new ways.`,
         ],
         descr3: [
           `Apple MacBook Pro is a macOS laptop with a 
-			13.30-inch display that has
-			a resolution of 2560x1600 pixels. It is 
-			powered by a Core i5 processor
-			and it comes with 12GB of RAM. The Apple 
-			MacBook Pro packs 512GB of SSD
-			storage. Connectivity options include 
-			Wi - Fi 802.11 ac, Bluetooth 
-			and it comes with 2 USB ports(2 x USB 3.0), 
-			Mic In ports. As of 14th 
-			April 2021, Apple MacBook Pro price in 
-			India starts at Rs. 159, 900. 
-			That compared to the cheaper MacBook Air, 
-			the chips used in the Air 
-			are older than those in the MacBook, not 
-			to mention the high-resolution
-			innovative display and design of the 
-			more upscale MacBook.`,
+      13.30-inch display that has
+      a resolution of 2560x1600 pixels. It is 
+      powered by a Core i5 processor
+      and it comes with 12GB of RAM. The Apple 
+      MacBook Pro packs 512GB of SSD
+      storage. Connectivity options include 
+      Wi - Fi 802.11 ac, Bluetooth 
+      and it comes with 2 USB ports(2 x USB 3.0), 
+      Mic In ports. As of 14th 
+      April 2021, Apple MacBook Pro price in 
+      India starts at Rs. 159, 900. 
+      That compared to the cheaper MacBook Air, 
+      the chips used in the Air 
+      are older than those in the MacBook, not 
+      to mention the high-resolution
+      innovative display and design of the 
+      more upscale MacBook.`,
         ],
       };
 
@@ -442,23 +432,20 @@
     }
 
     handleButtonClick(elem) {
-      elem.scrollIntoView({
-        block: 'center',
-        behavior: 'smooth'
-      });
+      elem.scrollIntoView({ block: 'center', behavior: 'smooth' });
       return true;
     }
   }
 
   const scrollWin = new ScrollIconPicture();
 
-  scrollWin.headDescrPict.forEach(elem => {
+  for (const elem of scrollWin.headDescrPict) {
     elem.innerHTML = scrollWin.descrProdPict[`head${scrollWin.numHead++}`];
-  });
+  }
 
-  scrollWin.DescrPict.forEach(elem => {
+  for (const elem of scrollWin.DescrPict) {
     elem.innerHTML = scrollWin.descrProdPict[`descr${scrollWin.numText++}`];
-  });
+  }
 
   scrollWin.upDownElem.map(elem => {
     elem.addEventListener('click', () => {
@@ -467,4 +454,4 @@
       );
     });
   });
-}
+});

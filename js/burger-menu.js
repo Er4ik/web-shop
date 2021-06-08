@@ -1,7 +1,7 @@
 'use strict';
 
 // burger-menu
-{
+document.addEventListener('DOMContentLoaded', () => {
   class Burger {
     constructor(flag) {
       this.flag = flag;
@@ -30,4 +30,4 @@
     burgerMenu.toggleMenuIcon();
     burgerMenu.showButtons();
   });
-}
+});
