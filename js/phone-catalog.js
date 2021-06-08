@@ -89,15 +89,16 @@ class RotIcon {
 
   infoSet(n) {
     for (let key = 0; key < n; key++) {
-      this.positionName[key].innerHTML = phonesInfo[`model${key + 1}`].name;
+      let paramIndex = key + 1;
+      this.positionName[key].innerHTML = phonesInfo[`model${paramIndex}`].name;
       this.price[key].innerHTML =
-        'Price: ' + phonesInfo[`model${key + 1}`].price;
+        'Price: ' + phonesInfo[`model${paramIndex}`].price;
       this.brand[key].innerHTML =
-        'Brand: ' + phonesInfo[`model${key + 1}`].brand;
+        'Brand: ' + phonesInfo[`model${paramIndex}`].brand;
       this.memory[key].innerHTML =
-        'Memory size: ' + phonesInfo[`model${key + 1}`].memory;
+        'Memory size: ' + phonesInfo[`model${paramIndex}`].memory;
       this.rate[key].innerHTML =
-        'Rephresh rate: ' + phonesInfo[`model${key + 1}`].rate;
+        'Rephresh rate: ' + phonesInfo[`model${paramIndex}`].rate;
     }
   }
   settings(pict, info, name, opac, trans, opacPict) {
@@ -108,17 +109,18 @@ class RotIcon {
   }
 
   visibleRotate(pict, info, name) {
-    if (info.style.opacity === '') {
-      this.settings(pict, info, name, '1', 'rotateY(180deg)', '0.05');
+    const visiBox = ['', '1', '0.05'];
+    if (info.style.opacity === visiBox[0]) {
+      this.settings(pict, info, name, visiBox[1], 'rotateY(180deg)', visiBox[2]);
     } else {
-      this.settings(pict, info, name, '', '', '1');
+      this.settings(pict, info, name, visiBox[0], visiBox[0], visiBox[1]);
     }
   }
 }
 const Rotor = new RotIcon();
 Rotor.icons.forEach((icn, indx) => {
   icn.addEventListener('click', () => {
-    Rotor.infoSet(9);
+    Rotor.infoSet(Rotor.icons.length);
     Rotor.visibleRotate(icn, Rotor.info[indx], Rotor.positionName[indx]);
   });
 });
@@ -127,6 +129,7 @@ Rotor.icons.forEach((icn, indx) => {
 class Like {
   constructor() {
     this.heart = document.querySelectorAll('.like');
+    this.opacChanger = ['0.9', '1'];
   }
   setUp(heartpic, link, opa) {
     heartpic.src = link;
@@ -134,20 +137,24 @@ class Like {
   }
 
   likeClick(heartpic) {
-    if (heartpic.style.opacity === '0.9') {
-      this.setUp(heartpic, 'pictures/product-icons/heart-clicked.png', 1);
+    let src = '';
+    if (heartpic.style.opacity === this.opacChanger[0]) {
+      src = 'pictures/product-icons/heart-clicked.png';
+      this.setUp(heartpic, src, this.opacChanger[1]);
     } else {
-      this.setUp(heartpic, 'pictures/product-icons/heart.png', 0.9);
+      src = 'pictures/product-icons/heart.png'
+      this.setUp(heartpic, src, this.opacChanger[0]);
     }
   }
 }
+
 const likeChange = new Like();
-likeChange.heart.forEach(item => {
-  item.style.opacity = 0.9;
+for (let item of likeChange.heart) {
+  item.style.opacity = likeChange.opacChanger[0];
   item.addEventListener('click', () => {
     likeChange.likeClick(item);
   });
-});
+};
 
 //filterForm
 class DataFilter {
@@ -157,6 +164,7 @@ class DataFilter {
     this.filterClass = '';
     this.infoGap = [];
   }
+
   formFilter() {
     this.form.addEventListener('click', event => {
       if (
@@ -167,10 +175,11 @@ class DataFilter {
       }
       this.filterClass = event.target.dataset['f'];
       this.infoGap = ['brand', 'priceGap', 'memory', 'rate'];
-      for (let elem = 0; elem < 9; elem++) {
+      for (let elem = 0; elem < this.filterBox.length; elem++) {
+        let sortIndex = elem + 1;
         this.infoGap.forEach(item => {
           this.filterBox[elem].classList.add(
-            `${phonesInfo[`model${elem + 1}`][item]}`
+            `${phonesInfo[`model${sortIndex}`][item]}`
           );
         });
       }
@@ -186,6 +195,7 @@ class DataFilter {
     });
   }
 }
+
 const filterEx = new DataFilter();
 filterEx.formFilter();
 
@@ -197,22 +207,26 @@ class DeskRot {
     this.text = `Click on the product picture 
 	to see information about the model`;
   }
+
   setvisible(description, rotate, marg, text) {
     description.style.transform = rotate;
     description.style.marginRight = marg;
     description.innerHTML = text;
   }
+
   changeR() {
     this.container.addEventListener('mouseover', () => {
       this.setvisible(this.description, 'rotateZ(720deg)', '820px', this.text);
     });
   }
+
   reverseR() {
     this.container.addEventListener('mouseout', () => {
       this.setvisible(this.description, 'rotateZ(-720deg)', '1400px', '');
     });
   }
 }
+
 const descriptAnim = new DeskRot();
 descriptAnim.changeR();
 descriptAnim.reverseR();
@@ -229,6 +243,7 @@ class Slider {
     this.slideIndex = 1;
     this.timer;
   }
+
   showSlides(n) {
     if (n < 1) {
       this.slideIndex = this.slides.length;
@@ -248,23 +263,28 @@ class Slider {
   plusSlides(n) {
     this.showSlides((this.slideIndex += n));
   }
+
   currentSlide(n) {
     this.showSlides((this.slideIndex = n));
   }
 
   autoSlider() {
-    this.timer = setInterval(() => this.plusSlides(1), 5000);
+    const workTime = 5000;
+    this.timer = setInterval(() => this.plusSlides(1), workTime);
   }
+
   prevBut() {
     this.prev.addEventListener('click', () => {
       this.plusSlides(-this.picIndx);
     });
   }
+
   nextBut() {
     this.next.addEventListener('click', () => {
       this.plusSlides(this.picIndx);
     });
   }
+
   dotTap() {
     this.dotsArea.addEventListener('click', event => {
       for (let i = 0; i < this.dots.length + 1; i++) {
@@ -278,6 +298,7 @@ class Slider {
     });
   }
 }
+
 const sliderEx = new Slider();
 sliderEx.showSlides(sliderEx.slideIndex);
 sliderEx.autoSlider();
