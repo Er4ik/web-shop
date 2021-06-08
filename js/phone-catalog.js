@@ -137,13 +137,17 @@ class Like {
   }
 
   likeClick(heartpic) {
+    let src = '';
     if (heartpic.style.opacity === this.opacChanger[0]) {
-      this.setUp(heartpic, 'pictures/product-icons/heart-clicked.png', this.opacChanger[1]);
+      src = 'pictures/product-icons/heart-clicked.png';
+      this.setUp(heartpic, src, this.opacChanger[1]);
     } else {
-      this.setUp(heartpic, 'pictures/product-icons/heart.png', this.opacChanger[0]);
+      src = 'pictures/product-icons/heart.png'
+      this.setUp(heartpic, src, this.opacChanger[0]);
     }
   }
 }
+
 const likeChange = new Like();
 for (let item of likeChange.heart) {
   item.style.opacity = likeChange.opacChanger[0];
@@ -160,6 +164,7 @@ class DataFilter {
     this.filterClass = '';
     this.infoGap = [];
   }
+
   formFilter() {
     this.form.addEventListener('click', event => {
       if (
@@ -190,6 +195,7 @@ class DataFilter {
     });
   }
 }
+
 const filterEx = new DataFilter();
 filterEx.formFilter();
 
@@ -201,22 +207,26 @@ class DeskRot {
     this.text = `Click on the product picture 
 	to see information about the model`;
   }
+
   setvisible(description, rotate, marg, text) {
     description.style.transform = rotate;
     description.style.marginRight = marg;
     description.innerHTML = text;
   }
+
   changeR() {
     this.container.addEventListener('mouseover', () => {
       this.setvisible(this.description, 'rotateZ(720deg)', '820px', this.text);
     });
   }
+
   reverseR() {
     this.container.addEventListener('mouseout', () => {
       this.setvisible(this.description, 'rotateZ(-720deg)', '1400px', '');
     });
   }
 }
+
 const descriptAnim = new DeskRot();
 descriptAnim.changeR();
 descriptAnim.reverseR();
@@ -233,6 +243,7 @@ class Slider {
     this.slideIndex = 1;
     this.timer;
   }
+
   showSlides(n) {
     if (n < 1) {
       this.slideIndex = this.slides.length;
@@ -252,6 +263,7 @@ class Slider {
   plusSlides(n) {
     this.showSlides((this.slideIndex += n));
   }
+
   currentSlide(n) {
     this.showSlides((this.slideIndex = n));
   }
@@ -260,16 +272,19 @@ class Slider {
     const workTime = 5000;
     this.timer = setInterval(() => this.plusSlides(1), workTime);
   }
+
   prevBut() {
     this.prev.addEventListener('click', () => {
       this.plusSlides(-this.picIndx);
     });
   }
+
   nextBut() {
     this.next.addEventListener('click', () => {
       this.plusSlides(this.picIndx);
     });
   }
+
   dotTap() {
     this.dotsArea.addEventListener('click', event => {
       for (let i = 0; i < this.dots.length + 1; i++) {
@@ -283,6 +298,7 @@ class Slider {
     });
   }
 }
+
 const sliderEx = new Slider();
 sliderEx.showSlides(sliderEx.slideIndex);
 sliderEx.autoSlider();
