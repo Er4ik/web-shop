@@ -84,7 +84,6 @@ class SliderProd {
     this.whColor = [this.wheelColor1, this.wheelColor2, this.wheelColor3];
     this.countNum = countNum;
     this.offset = offset;
-    this.offset = this.widthResetL;
     this.scrollNumber.innerHTML = this.countNum;
     this.wheelColor1.style.backgroundColor = 'darkorange';
     this.nameProd.innerHTML = this.aboutCatalog.Head1;
@@ -124,7 +123,7 @@ class SliderProd {
     return this.offset;
   }
 
-  scrollNum() {
+  scroll() {
     const numberDescr = [1, 2, 3];
     this.countNum++;
     if (this.countNum > numberDescr[2]) {
@@ -147,7 +146,7 @@ class SliderProd {
 const change = new SliderProd(0, 1);
 
 document.querySelector('.next').addEventListener('click', () => {
-  change.scrollNum();
+  change.scroll();
 });
 
 
