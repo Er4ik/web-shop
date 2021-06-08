@@ -92,7 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
     infoSet(n) {
       for (let key = 0; key < n; key++) {
         const paramIndex = key + 1;
-        this.positionName[key].innerHTML = phonesInfo[`model${paramIndex}`].name;
+        this.positionName[key].
+          innerHTML = phonesInfo[`model${paramIndex}`].name;
         this.price[key].innerHTML =
           'Price: ' + phonesInfo[`model${paramIndex}`].price;
         this.brand[key].innerHTML =
@@ -219,7 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     changeR() {
       this.container.addEventListener('mouseover', () => {
-        this.setvisible(this.description, 'rotateZ(720deg)', '820px', this.text);
+        this.setvisible(this.description,
+          'rotateZ(720deg)', '820px', this.text);
       });
     }
 

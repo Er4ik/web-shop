@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
   const popupLinks = document.querySelectorAll('.popup_link');
   const body = document.querySelector('body');
   const lockPadding = document.querySelectorAll('.lock_padding');

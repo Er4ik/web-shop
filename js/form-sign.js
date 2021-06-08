@@ -114,11 +114,11 @@ document.addEventListener('DOMContentLoaded', () => {
     true
   );
 
-  signForm.validation(signForm.viewPassword, signForm.viewRepeatPassword)
+  signForm.validation(signForm.viewPassword, signForm.viewRepeatPassword);
 
   signForm.submitForm.addEventListener('submit', event => {
     event.preventDefault();
-    
+
     let flagRx = true;
 
     (signForm.names.map(item => {
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
 
     if (!signForm.validPassword(signForm.inPassword,
-        signForm.inPasswordCorrect)) {
+      signForm.inPasswordCorrect)) {
       flagRx = false;
     }
 
