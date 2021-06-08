@@ -122,7 +122,7 @@ signForm.submitForm.addEventListener('submit', event => {
   }));
 
   if (!signForm.validPassword(signForm.inPassword,
-    signForm.inPasswordCorrect)) {
+      signForm.inPasswordCorrect)) {
     flagRx = false;
   }
 
