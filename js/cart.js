@@ -2,28 +2,33 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   //modal-window
-  const openCart = document.querySelector('.modal-cart');
-  const closeCart = document.querySelector('.close-but');
-  const buyButtons = document.querySelectorAll('.basket');
+  class Modal {
+    constructor() {
+      this.openCart = document.querySelector('.modal-cart');
+      this.closeCart = document.querySelector('.close-but');
+      this.buyButtons = document.querySelectorAll('.basket');
+    }
 
-  const closeModalCart = function () {
-    if (openCart.classList.contains('modal-active')) {
-      openCart.classList.remove('modal-active');
-      openCart.classList.add('modal-hide');
+    closeModalCart() {
+      if (this.openCart.classList.contains('modal-active')) {
+        this.openCart.classList.remove('modal-active');
+        this.openCart.classList.add('modal-hide');
+      }
+    }
+
+    openModalCart() {
+      this.openCart.classList.remove('modal-hide');
+      this.openCart.classList.add('modal-active');
     }
   }
 
-  const openModalCart = function () {
-    openCart.classList.remove('modal-hide');
-    openCart.classList.add('modal-active');
-  }
-
-  for (const key of buyButtons) {
+  const cartWindow = new Modal();
+  for (const key of cartWindow.buyButtons) {
     key.addEventListener('click', () => {
-      openModalCart();
+      cartWindow.openModalCart();
     });
   }
-  closeCart.addEventListener('click', () => {
-    closeModalCart();
+  cartWindow.closeCart.addEventListener('click', () => {
+    cartWindow.closeModalCart();
   });
 });
