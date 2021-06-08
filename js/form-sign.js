@@ -93,6 +93,16 @@ class SignMenuForm {
     const rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
   }
+
+  validation(pass, passRep) {
+    pass.addEventListener('click', () => {
+      this.viewPass(this.inPassword, this.viewPassword);
+    });
+
+    passRep.addEventListener('click', () => {
+      this.viewPass(this.inPasswordCorrect, this.viewRepeatPassword);
+    });
+  }
 }
 
 //main
@@ -102,31 +112,20 @@ const signForm = new SignMenuForm(
   true
 );
 
-signForm.viewPassword.addEventListener('click', () => {
-  signForm.viewPass(signForm.inPassword, signForm.viewPassword);
-});
-
-signForm.viewRepeatPassword.addEventListener('click', () => {
-  signForm.viewPass(signForm.inPasswordCorrect, signForm.viewRepeatPassword);
-});
-
 signForm.submitForm.addEventListener('submit', event => {
   event.preventDefault();
 
-  let flagRx = true;
+  signForm.validation(signForm.viewPassword, signForm.viewRepeatPassword);
 
-  (signForm.names.map(item => {
-    flagRx = signForm.validateForm(item,
+  const flagRx = (signForm.names.map(item => {
+    signForm.validateForm(item,
       signForm.regx[signForm.names.indexOf(item)]);
-    if (!flagRx) return flagRx;
   }));
 
-  if (!signForm.validPassword(signForm.inPassword,
-    signForm.inPasswordCorrect)) {
-    flagRx = false;
-  }
+  const flagVal = (!signForm.validPassword(signForm.inPassword,
+    signForm.inPasswordCorrect));
 
-  if (flagRx) {
+  if (flagRx && flagVal) {
 
     const dataPerson = {
       name: signForm.inName.value,
