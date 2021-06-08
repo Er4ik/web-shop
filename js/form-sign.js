@@ -117,13 +117,13 @@ signForm.submitForm.addEventListener('submit', event => {
 
   signForm.validation(signForm.viewPassword, signForm.viewRepeatPassword);
 
-  const flagRx = (signForm.names.map(item => {
+  const flagRx = signForm.names.map(item => {
     signForm.validateForm(item,
       signForm.regx[signForm.names.indexOf(item)]);
-  }));
+  });
 
-  const flagVal = (!signForm.validPassword(signForm.inPassword,
-    signForm.inPasswordCorrect));
+  const flagVal = signForm.validPassword(signForm.inPassword,
+    signForm.inPasswordCorrect);
 
   if (flagRx && flagVal) {
 

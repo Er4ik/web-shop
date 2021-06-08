@@ -89,7 +89,7 @@ class RotIcon {
 
   infoSet(n) {
     for (let key = 0; key < n; key++) {
-      let paramIndex = key + 1;
+      const paramIndex = key + 1;
       this.positionName[key].innerHTML = phonesInfo[`model${paramIndex}`].name;
       this.price[key].innerHTML =
         'Price: ' + phonesInfo[`model${paramIndex}`].price;
@@ -111,7 +111,8 @@ class RotIcon {
   visibleRotate(pict, info, name) {
     const visiBox = ['', '1', '0.05'];
     if (info.style.opacity === visiBox[0]) {
-      this.settings(pict, info, name, visiBox[1], 'rotateY(180deg)', visiBox[2]);
+      this.settings(pict, info, name, visiBox[1],
+        'rotateY(180deg)', visiBox[2]);
     } else {
       this.settings(pict, info, name, visiBox[0], visiBox[0], visiBox[1]);
     }
@@ -142,19 +143,19 @@ class Like {
       src = 'pictures/product-icons/heart-clicked.png';
       this.setUp(heartpic, src, this.opacChanger[1]);
     } else {
-      src = 'pictures/product-icons/heart.png'
+      src = 'pictures/product-icons/heart.png';
       this.setUp(heartpic, src, this.opacChanger[0]);
     }
   }
 }
 
 const likeChange = new Like();
-for (let item of likeChange.heart) {
+for (const item of likeChange.heart) {
   item.style.opacity = likeChange.opacChanger[0];
   item.addEventListener('click', () => {
     likeChange.likeClick(item);
   });
-};
+}
 
 //filterForm
 class DataFilter {
@@ -176,7 +177,7 @@ class DataFilter {
       this.filterClass = event.target.dataset['f'];
       this.infoGap = ['brand', 'priceGap', 'memory', 'rate'];
       for (let elem = 0; elem < this.filterBox.length; elem++) {
-        let sortIndex = elem + 1;
+        const sortIndex = elem + 1;
         this.infoGap.forEach(item => {
           this.filterBox[elem].classList.add(
             `${phonesInfo[`model${sortIndex}`][item]}`

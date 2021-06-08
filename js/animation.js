@@ -213,7 +213,7 @@ for (const elem of rotatePicture.prodPict) {
   elem.addEventListener('click', () => {
     rotatePicture.rotatePict(elem);
   });
-};
+}
 
 
 //-------------------description service-------------------
@@ -440,11 +440,11 @@ const scrollWin = new ScrollIconPicture();
 
 for (const elem of scrollWin.headDescrPict) {
   elem.innerHTML = scrollWin.descrProdPict[`head${scrollWin.numHead++}`];
-};
+}
 
 for (const elem of scrollWin.DescrPict) {
   elem.innerHTML = scrollWin.descrProdPict[`descr${scrollWin.numText++}`];
-};
+}
 
 scrollWin.upDownElem.map(elem => {
   elem.addEventListener('click', () => {
