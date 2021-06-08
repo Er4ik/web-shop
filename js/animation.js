@@ -442,7 +442,10 @@
     }
 
     handleButtonClick(elem) {
-      elem.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      elem.scrollIntoView({
+        block: 'center',
+        behavior: 'smooth'
+      });
       return true;
     }
   }
