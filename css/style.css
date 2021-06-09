@@ -944,12 +944,13 @@ hr {
   font-family: Trebuchet MS;
   font-size: 15px;
   font-weight: 100;
+  transition: all 0.5s ease-out;
 }
 
 .variant:hover {
   color: #ff8c00;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.5s ease-out;
   transform: scale(1.1);
 }
 
@@ -1065,6 +1066,7 @@ hr {
   border-radius: 10px;
   font-size: 20px;
   background-color: rgb(245, 132, 57);
+  transition: all 0.5s ease-out;
 }
 
 .wrap2 {
@@ -1075,13 +1077,14 @@ hr {
   border-radius: 10px;
   font-size: 20px;
   background-color: rgb(245, 132, 57);
+  transition: all 0.5s ease-out;
 }
 
 .wrap1:hover,
 .wrap2:hover {
   cursor: pointer;
   transform: scale(0.95);
-  transition: 1s;
+  transition: all 1s ease-out;
 }
 
 .basket {
@@ -1288,4 +1291,31 @@ hr {
 .close-cart {
   height: 100%;
   width: 100%;
+}
+
+.back_to_top {
+  position: fixed;
+  bottom: 150px;
+  right: 50px;
+  z-index: 200;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #d3d2d2;
+  color: #444;
+  border: rgb(119, 119, 119) solid 2px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 1s ease-out;
+}
+
+.back_to_top:hover {
+  transform: scale(1.2);
+  transition: all 1s ease-out;
+  background: #dbac80;
+}
+
+.back_to_top-show {
+  display: block;
 }
