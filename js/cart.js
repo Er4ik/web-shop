@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const cartWindow = new Modal();
+
   for (const key of cartWindow.buyButtons) {
     key.addEventListener('click', () => {
       cartWindow.openModalCart();

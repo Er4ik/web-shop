@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 //-------------------slider catalog-------------------
+//Данный класс предназначен для показа кнопок в каталоге второй страницы
 
   class SliderCatalog {
     constructor(flag) {
@@ -53,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   //-------------------slider description-------------------
+  // Класс работает с изменением описания и скроллом картинок
+  // при клике на кнопку 'next'
+
 
   class SliderProd {
     constructor(offset, countNum) {
@@ -83,8 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       this.whColor = [this.wheelColor1, this.wheelColor2, this.wheelColor3];
+
       this.countNum = countNum;
       this.offset = offset;
+
       this.scrollNumber.innerHTML = this.countNum;
       this.wheelColor1.style.backgroundColor = 'darkorange';
       this.nameProd.innerHTML = this.aboutCatalog.Head1;
@@ -153,6 +159,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //-------------------slider picture_Back_Text-------------------
 
+  // Класс предназначен для разворота картинок на второй
+  // странице при клике по ним
+
   class RotPict {
     constructor(flag) {
       this.prodPict = document.querySelectorAll('.product-picture');
@@ -218,6 +227,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   //-------------------description service-------------------
+
+  // Класс работает с данными на 3 странице.
+  // Изменяет цвета кнопок и описание при кликах
 
   class ServiceDesrc {
     constructor() {
@@ -350,6 +362,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   //-----------------scroll icon-picture-------------------
+
+  // Класс обеспечивает скролл страницы к определенным объектам на ней
+  // при клике на иконки
 
   class ScrollIconPicture {
     constructor() {

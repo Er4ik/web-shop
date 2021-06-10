@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Класс предназначен для валидации и отправки формы.
+  // Также происходит шифрация пароля через таблицу ASCII
+
   class SignMenuForm {
     constructor(url, flag) {
       this.flagPassView = flag;
@@ -96,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return Math.floor(rand);
     }
 
-    validation(pass, passRep) {
+    validViewPass(pass, passRep) {
       pass.addEventListener('click', () => {
         this.viewPass(this.inPassword, this.viewPassword);
       });
@@ -114,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     true
   );
 
-  signForm.validation(signForm.viewPassword, signForm.viewRepeatPassword);
+  signForm.validViewPass(signForm.viewPassword, signForm.viewRepeatPassword);
 
   signForm.submitForm.addEventListener('submit', event => {
     event.preventDefault();
@@ -127,12 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!flagRx) return flagRx;
     }));
 
-    if (!signForm.validPassword(signForm.inPassword,
-      signForm.inPasswordCorrect)) {
-      flagRx = false;
-    }
+    const flagCorPass = signForm.validPassword(signForm.inPassword,
+      signForm.inPasswordCorrect);
 
-    if (flagRx) {
+    if (flagRx && flagCorPass) {
       const dataPerson = {
         name: signForm.inName.value,
         email: signForm.inEmail.value,
