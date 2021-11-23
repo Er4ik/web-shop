@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const phonesInfo = {
     model1: {
       name: 'Iphone 12 Pro Max',
+      iconsrc: 'pictures/product-icons/Apple/pro-max.png',
       price: '1300$',
       priceGap: 'Over-1000$',
       brand: 'Apple',
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     model2: {
       name: 'Xiaomi Black Shark 3',
+      iconsrc: 'pictures/product-icons/Xiaomi/black-shark3.png',
       price: '900$',
       priceGap: '700-1000$',
       brand: 'Xiaomi',
@@ -21,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     model3: {
       name: 'Xiaomi Mi 11 Lite',
+      iconsrc: 'pictures/product-icons/Xiaomi/mi11-lite.png',
       price: '499$',
       priceGap: '300-700$',
       brand: 'Xiaomi',
@@ -29,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     model4: {
       name: 'Iphone XS',
+      iconsrc: 'pictures/product-icons/Apple/XS.png',
       price: '800$',
       priceGap: '700-1000$',
       brand: 'Apple',
@@ -37,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     model5: {
       name: 'OnePlus 8 Pro',
+      iconsrc: 'pictures/product-icons/OnePlus/8pro.png',
       price: '700$',
       priceGap: '700-1000$',
       brand: 'OnePlus',
@@ -45,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     model6: {
       name: 'Samsung Note 20 Ultra',
+      iconsrc: 'pictures/product-icons/Samsung/note-20ultra.png',
       price: '1400$',
       priceGap: 'Over-1000$',
       brand: 'Samsung',
@@ -53,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     model7: {
       name: 'Huawei P Smart 2021',
+      iconsrc: 'pictures/product-icons/Huawei/p-smart.png',
       price: '250$',
       priceGap: '100-300$',
       brand: 'Huawei',
@@ -61,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     model8: {
       name: 'Honor 9X',
+      iconsrc: 'pictures/product-icons/Huawei/honor-9x.png',
       priceGap: '300-700$',
       price: '500$',
       brand: 'Huawei',
@@ -69,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     model9: {
       name: 'Samsung gt-e1202 Duos',
+      iconsrc: 'pictures/product-icons/Samsung/duos.png',
       priceGap: '100$',
       price: '49$',
       brand: 'Samsung',
@@ -76,6 +85,52 @@ document.addEventListener('DOMContentLoaded', () => {
       rate: '30Hz',
     },
   };
+
+
+  class CreateCards {
+    constructor(src, alt) {
+      this.parent = document.querySelector('.prod-list');
+      this.src = src;
+      this.alt = alt;
+      this.createNewCards();
+    }
+
+    createNewCards() {
+      const cardFrame = document.createElement('div');
+      cardFrame.classList.add('frame');
+      cardFrame.innerHTML = `<div class="product">
+      <div class="icon">
+        <img class="model" src=${this.src} alt=${this.alt} />
+        <p class="p-name"></p>
+        <div class="info">
+          <p class="brand"></p>
+          <p class="rate"></p>
+          <p class="memory"></p>
+          <p class="price"></p>
+        </div>
+      </div>
+    </div>
+    <div class="buy-buts">
+      <div class="wrap1">
+        <img class="basket" src="pictures/product-icons/add-to-basket.png" alt="Buy" />
+      </div>
+      <div class="wrap2">
+        <img class="like" src="pictures/product-icons/heart.png" alt="Like" />
+      </div>
+    </div>`
+      this.parent.append(cardFrame);
+    }
+  }
+
+  const manufactCards = (n) => {
+    let cardsBase = [];
+    for (let i = 0; i < n; i++) {
+      cardsBase[i] = new CreateCards(phonesInfo[`model${i+1}`].iconsrc, phonesInfo[`model${i+1}`].name);
+    }
+    return cardsBase;
+  }
+  manufactCards(9);
+
 
   //icons-rotate
   class RotIcon {
@@ -93,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let key = 0; key < n; key++) {
         const paramIndex = key + 1;
         this.positionName[key].
-          innerHTML = phonesInfo[`model${paramIndex}`].name;
+        innerHTML = phonesInfo[`model${paramIndex}`].name;
         this.price[key].innerHTML =
           'Price: ' + phonesInfo[`model${paramIndex}`].price;
         this.brand[key].innerHTML =
@@ -171,10 +226,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     formFilter() {
       this.form.addEventListener('click', event => {
-        if (
-          event.target.className !== 'variant' &&
-          event.target.className !== 'reset'
-        ) {
+        const classN = event.target.className;
+        if (classN !== 'variant' && classN !== 'reset') {
           return false;
         }
         this.filterClass = event.target.dataset['f'];
